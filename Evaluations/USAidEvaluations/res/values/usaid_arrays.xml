@@ -93,6 +93,58 @@
         <item>Vietnam</item>
     </string-array>
     
+    <string-array name="usaid_filter_region_europe">
+        <item>Albania</item>
+        <item>Armenia</item>
+        <item>Georgia</item>
+        <item>Montenegro</item>
+        <item>Serbia</item>
+    </string-array>
+    
+    <string-array name="usaid_filter_region_latin">
+        <item>Brazil</item>
+        <item>Colombia</item>
+        <item>D. R.</item>
+        <item>Ecuador</item>
+        <item>El Salvador</item>
+        <item>Guatemala</item>
+        <item>Haiti</item>
+        <item>Mexico</item>
+        <item>Nicaragua</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+    </string-array>
+    
+    <string-array name="usaid_filter_region_middle_east">
+        <item>Egypt</item>
+        <item>Iraq</item>
+        <item>Lebanon</item>
+        <item>Morocco</item>
+        <item>WB Gaza</item>
+    </string-array>
+    
+    <string-array name="usaid_filter_region_africa">
+        <item>Angola</item>
+        <item>Chad</item>
+        <item>D. R. C.</item>
+        <item>Ethiopia</item>
+        <item>Ghana</item>
+        <item>Kenya</item>
+        <item>Liberia</item>
+        <item>Mali</item>
+        <item>Mauritania</item>
+        <item>Mozambique</item>
+        <item>Niger</item>
+        <item>Nigeria</item>
+        <item>Rwanda</item>
+        <item>Senegal</item>
+        <item>South Africa</item>
+        <item>South Sudan</item>
+        <item>Tanzania</item>
+        <item>Uganda</item>
+        <item>Zimbabwe</item>
+    </string-array>
+    
     <string-array name="usaid_filter_sectors">
         <item>Agriculture and Food Security</item>
         <item>Democracy, Human Rights and Governance</item>
