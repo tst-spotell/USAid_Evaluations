@@ -28,7 +28,9 @@ public class USAidMainFragment extends SherlockListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        // TODO Auto-generated method stub
+        
+        // TODO show the summary
+        
         super.onListItemClick(l, v, position, id);
     }
     

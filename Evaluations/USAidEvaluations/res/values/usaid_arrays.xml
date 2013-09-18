@@ -1,0 +1,115 @@
+<!-- Copyright (c) 2013 Thermopylae Sciences and Technology. All rights reserved. -->
+<resources>
+    <string-array name="usaid_filter_country">
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Angola</item>
+        <item>Armenia</item>
+        <item>Bangladesh</item>
+        <item>Brazil</item>
+        <item>Burma</item>
+        <item>Cambodia</item>
+        <item>Chad</item>
+        <item>Colombia</item>
+        <item>D. R.</item>
+        <item>D. R. C.</item>
+        <item>Ecuador</item>
+        <item>Egypt</item>
+        <item>El Salvador</item>
+        <item>Ethiopia</item>
+        <item>Georgia</item>
+        <item>Ghana</item>
+        <item>Guatemala</item>
+        <item>Haiti</item>
+        <item>India</item>
+        <item>Indonesia</item>
+        <item>Iraq</item>
+        <item>Kazakhstan</item>
+        <item>Kenya</item>
+        <item>Kyrgyzstan</item>
+        <item>Lebanon</item>
+        <item>Liberia</item>
+        <item>Mali</item>
+        <item>Mauritania</item>
+        <item>Mexico</item>
+        <item>Montenegro</item>
+        <item>Morocco</item>
+        <item>Mozambique</item>
+        <item>Nepal</item>
+        <item>Nicaragua</item>
+        <item>Niger</item>
+        <item>Nigeria</item>
+        <item>Pakistan</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+        <item>Rwanda</item>
+        <item>Senegal</item>
+        <item>Serbia</item>
+        <item>South Africa</item>
+        <item>South Sudan</item>
+        <item>Sri Lanka</item>
+        <item>Tajikistan</item>
+        <item>Tanzania</item>
+        <item>Timor-Leste</item>
+        <item>Turkmenistan</item>
+        <item>Uganda</item>
+        <item>Uzbekistan</item>
+        <item>Vietnam</item>
+        <item>WB Gaza</item>
+        <item>Zimbabwe</item>
+
+    </string-array>
+    
+    <string-array name="usaid_filter_regions">
+        <item>AFGHANISTAN AND PAKISTAN</item>
+        <item>ASIA</item>
+        <item>EUROPE AND EURASIA</item>
+        <item>LATIN AMERICA AND THE CARRIBEAN</item>
+        <item>MIDDLE EAST</item>
+        <item>SUB SAHARAN AFRICA</item>
+    </string-array>
+    
+    <string-array name="usaid_filter_region_afgan">
+        <item>Afghanistan</item>
+        <item>Pakistan</item>
+    </string-array>
+    
+    <string-array name="usaid_filter_region_asia">
+        <item>Bangladesh</item>
+        <item>Burma</item>
+        <item>Cambodia</item>
+        <item>India</item>
+        <item>Indonesia</item>
+        <item>Kazakhstan</item>
+        <item>Kyrgyzstan</item>
+        <item>Nepal</item>
+        <item>Philippines</item>
+        <item>Sri Lanka</item>
+        <item>Tajikistan</item>
+        <item>Timor-Leste</item>
+        <item>Turkmenistan</item>
+        <item>Uzbekistan</item>
+        <item>Vietnam</item>
+    </string-array>
+    
+    <string-array name="usaid_filter_sectors">
+        <item>Agriculture and Food Security</item>
+        <item>Democracy, Human Rights and Governance</item>
+        <item>Economic Growth and Trade</item>
+        <item>Education</item>
+        <item>Environment and Global Climate Change</item>
+        <item>Gender Equality and Women\'s Empowerment</item>
+        <item>Global Health</item>
+        <item>Science, Technology and Innovation</item>
+        <item>Water and Sanitation</item>
+        <item>Working in Crises and Conflict</item>
+    </string-array>
+    
+    <string-array name="usaid_filter_initiatives">
+        <item>Global Health Initiative</item>
+        <item>Feed the Future</item>
+        <item>Others</item>
+    </string-array>
+    
+</resources>
