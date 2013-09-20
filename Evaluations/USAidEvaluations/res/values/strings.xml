@@ -1,8 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2013 Thermopylae Sciences and Technology. All rights reserved. -->
 <resources>
 
     <string name="app_name">USAid Evaluations</string>
     <string name="action_settings">Settings</string>
     <string name="usaid_fragment_list_no_data">There is currently no available evaluations.</string>
+    
+    <!-- buttons -->
+    <string name="usaid_cancel_button">Cancel</string>
+    
+    <!--  connection  -->
+    <string name="usaid_connection_server">Connecting To Server ...</string>
+    
+    <!-- images -->
+    <string name="usaid_image">image</string>
 
 </resources>

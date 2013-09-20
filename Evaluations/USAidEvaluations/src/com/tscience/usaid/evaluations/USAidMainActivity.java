@@ -4,6 +4,7 @@
 package com.tscience.usaid.evaluations;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.tscience.usaid.evaluations.io.USAidListDataTask;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
@@ -33,6 +34,7 @@ public class USAidMainActivity extends SherlockFragmentActivity {
     
         // Commit the transaction
         transaction.commit();
+        
     }
 
 //    @Override
