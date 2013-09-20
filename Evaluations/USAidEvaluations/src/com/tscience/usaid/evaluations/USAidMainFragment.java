@@ -16,8 +16,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockListFragment;
-import com.tscience.jagwire.JagwireDataListFragment.SearchResultsViewHolder;
-import com.tscience.jagwire.util.ResourceUtils;
 import com.tscience.usaid.evaluations.io.USAidDataObject;
 import com.tscience.usaid.evaluations.io.USAidListDataTask;
 
