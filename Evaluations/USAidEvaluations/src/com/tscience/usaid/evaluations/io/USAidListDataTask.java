@@ -8,6 +8,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -203,6 +205,11 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
         // create the array of data objects
         ArrayList<USAidDataObject> items = new ArrayList<USAidDataObject>(arraySize);
         
+        // make the country hashmap
+        Map<String, Integer> countryMap = USAidUtils.makeCountryHashMap();
+        
+        Integer countryCode = null;
+        
         // parse the JSONArray and create the USAidDataObject array
         for (int i = 0; i < arraySize; i++) {
             
@@ -250,7 +257,14 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
                         tempValue.countryString = countryString;
                         
                         // set the country value
-                        tempValue.countryCode = USAidUtils.getTheCountryCode(countryString);
+                        countryCode = countryMap.get(countryString);
+                        
+                        if (countryCode != null) {
+                            tempValue.countryCode = countryCode.intValue();
+                        } else {
+                            // no code defined
+                            tempValue.countryCode = 0;
+                        }
                         
                         // set the region value
                         tempValue.regionValue = USAidUtils.getTheRegionValue(countryString);
