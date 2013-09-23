@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,8 +17,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockListFragment;
-import com.tscience.usaid.evaluations.io.USAidDataObject;
 import com.tscience.usaid.evaluations.io.USAidListDataTask;
+import com.tscience.usaid.evaluations.utils.USAidDataObject;
 
 /**
  * This fragment displays the main screen.
@@ -25,6 +26,9 @@ import com.tscience.usaid.evaluations.io.USAidListDataTask;
  * @author spotell at t-sciences.com
  */
 public class USAidMainFragment extends SherlockListFragment {
+    
+    /** Log id of this class name. */
+    private static final String LOG_TAG = "USAidMainFragment";
     
     private USAidListAdapter myListAdapter;
 
@@ -64,7 +68,9 @@ public class USAidMainFragment extends SherlockListFragment {
             
             myListAdapter.notifyDataSetChanged();
             
-        } catch (Exception ignore) {}
+        } catch (Exception ignore) {
+            Log.e(LOG_TAG, "---------------------------------------- " + ignore.toString());
+        }
         
     }
     
@@ -118,13 +124,16 @@ public class USAidMainFragment extends SherlockListFragment {
             // the jagwireDataObject object we are working with
             usaidViewHolder.usaidDataObject = items.get(position);
             
-            // TODO show the date published
+            // show the date published
+            usaidViewHolder.publishDateView.setText(usaidViewHolder.usaidDataObject.publishedString);
             
             // TODO show the type image
             
-            // TODO show the title
+            // show the title
+            usaidViewHolder.titleView.setText(usaidViewHolder.usaidDataObject.title);
             
-            // TODO show the description
+            // show the description
+            usaidViewHolder.descriptionView.setText(usaidViewHolder.usaidDataObject.abstractString);
             
             return currentView;
             

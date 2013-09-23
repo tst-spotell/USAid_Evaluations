@@ -2,6 +2,17 @@
 <!-- DO NOT TRANSLATE -->
 <resources>
     
-    <string name="usaid_json_query">https://dectest.usaid.gov/mobile/DECMobileApp.json</string>
+    <!-- <string name="usaid_json_query">https://dectest.usaid.gov/mobile/DECMobileApp.json</string> -->
+    <string name="usaid_json_query">https://dec.usaid.gov/mobile/DECMobileApp.json</string>
+    
+    <string name="usaid_jason_array">Documents</string>
+    <string name="usaid_jason_title">Title</string>
+    <string name="usaid_jason_published">Date Published</string>
+    <string name="usaid_jason_pdfurl">Document URL</string>
+    <string name="usaid_jason_thumbnailurl">Thumbnail URL"</string>
+    <string name="usaid_jason_abstract">Abstract</string>
+    <string name="usaid_jason_sector">Sector</string>
+    <string name="usaid_jason_country_array">Country</string>
+    <string name="usaid_jason_document_type">Document Type</string>
     
 </resources>

@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.ref.WeakReference;
+import java.util.ArrayList;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -17,6 +18,8 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.AbstractHttpClient;
 import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.ProgressDialog;
@@ -26,6 +29,8 @@ import android.util.Log;
 
 import com.tscience.usaid.evaluations.R;
 import com.tscience.usaid.evaluations.USAidMainFragment;
+import com.tscience.usaid.evaluations.utils.USAidDataObject;
+import com.tscience.usaid.evaluations.utils.USAidUtils;
 
 /**
  * This class get the data from the server to display the evaluations in the list.
@@ -39,13 +44,16 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
     private static final String LOG_TAG = "USAidListDataTask";
     
     // weak reference to check and make sure fragment is still there
-    private final WeakReference<USAidMainFragment> usaidMainFragment;
+    private final WeakReference<USAidMainFragment> usaidMainFragmentReference;
     
     // the context we are working with
     private Context context;
     
     // dialog used to show user that actions are running
     ProgressDialog progressDialog;
+    
+    private static final String COUNTRY_DIVIDER = "_qfvsq_";
+    private static final String ZERO_TIME = "T00:00:00";
     
     /**
      * Public constructor with weak reference to the fragment that launched it.
@@ -54,7 +62,7 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
      */
     public USAidListDataTask(USAidMainFragment value) {
         
-        usaidMainFragment = new WeakReference<USAidMainFragment>(value);
+        usaidMainFragmentReference = new WeakReference<USAidMainFragment>(value);
         
         context = value.getActivity();
         
@@ -179,7 +187,96 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
             
         }
         
-        // process the json object
+        // process the json array
+        JSONArray evaluationData = null;
+        try {
+            evaluationData = result.getJSONArray(context.getString(R.string.usaid_jason_array));
+        }
+        catch (JSONException e1) {
+            e1.printStackTrace();
+        }
+        
+        // get the size of the array
+        int arraySize = evaluationData.length();
+        Log.d(LOG_TAG, "----------------------------------------- arraySize: " + arraySize);
+        
+        // create the array of data objects
+        ArrayList<USAidDataObject> items = new ArrayList<USAidDataObject>(arraySize);
+        
+        // parse the JSONArray and create the USAidDataObject array
+        for (int i = 0; i < arraySize; i++) {
+            
+            JSONObject jsonObject;
+            
+            // load the individual objects
+            try {
+                
+                jsonObject = evaluationData.getJSONObject(i);
+                
+                // create the new data object
+                USAidDataObject tempValue = new USAidDataObject();
+                
+                tempValue.title = jsonObject.getString(context.getString(R.string.usaid_jason_title));
+                
+                String dateString = jsonObject.getString(context.getString(R.string.usaid_jason_published));
+                
+                tempValue.publishedString = dateString.substring(0, dateString.indexOf(ZERO_TIME));
+                
+                tempValue.pdfUrl = jsonObject.getString(context.getString(R.string.usaid_jason_pdfurl));
+                
+                tempValue.thumbnailUrl = jsonObject.getString(context.getString(R.string.usaid_jason_thumbnailurl));
+                
+                tempValue.abstractString = jsonObject.getString(context.getString(R.string.usaid_jason_abstract));
+                
+                tempValue.sectorString = jsonObject.getString(context.getString(R.string.usaid_jason_sector));
+                
+                // set the sector value
+                tempValue.sectorValue = USAidUtils.getTheSectorValue(tempValue.sectorString);
+                
+                JSONArray countryData = jsonObject.getJSONArray(context.getString(R.string.usaid_jason_country_array));
+                
+                // always only one string
+                String countryString = countryData.getString(0);
+                
+                if (countryString.contains(COUNTRY_DIVIDER)) {
+                    
+                    // TODO handle multi countries or regions
+                    
+                } else {
+                    
+                    // can be null
+                    if (countryString.length() > 0) {
+                        
+                        tempValue.countryString = countryString;
+                        
+                        // set the country value
+                        tempValue.countryCode = USAidUtils.getTheCountryCode(countryString);
+                        
+                        // set the region value
+                        tempValue.regionValue = USAidUtils.getTheRegionValue(countryString);
+                        
+                    }
+                    
+                }
+                
+                tempValue.documentType = jsonObject.getString(context.getString(R.string.usaid_jason_document_type));
+                
+                // add the new object to the array
+                items.add(tempValue);
+                
+            }
+            catch (Exception ignore) {
+                Log.e(LOG_TAG, "------------------------------ " + ignore.toString());
+            }
+            
+        } // end for loop processing json objects
+        
+        if (usaidMainFragmentReference != null) {
+            
+            USAidMainFragment usaidMainFragment = usaidMainFragmentReference.get();
+            usaidMainFragment.setTheListData(items);
+            
+        }
         
         // turn the progress dialog off
         try {
@@ -188,7 +285,8 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
         
         // little cleanup
         context = null;
-    }
+        
+    } // end onPostExecute
 
     // method for canceling this task
     private void cancelingTask() {
