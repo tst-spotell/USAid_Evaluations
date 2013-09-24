@@ -8,7 +8,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.http.HttpEntity;
@@ -30,6 +29,7 @@ import android.content.DialogInterface;
 import android.util.Log;
 
 import com.tscience.usaid.evaluations.R;
+import com.tscience.usaid.evaluations.USAidConstants;
 import com.tscience.usaid.evaluations.USAidMainFragment;
 import com.tscience.usaid.evaluations.utils.USAidDataObject;
 import com.tscience.usaid.evaluations.utils.USAidUtils;
@@ -53,9 +53,6 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
     
     // dialog used to show user that actions are running
     ProgressDialog progressDialog;
-    
-    private static final String COUNTRY_DIVIDER = "_qfvsq_";
-    private static final String ZERO_TIME = "T00:00:00";
     
     /**
      * Public constructor with weak reference to the fragment that launched it.
@@ -206,7 +203,7 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
         ArrayList<USAidDataObject> items = new ArrayList<USAidDataObject>(arraySize);
         
         // make the country hashmap
-        Map<String, Integer> countryMap = USAidUtils.makeCountryHashMap();
+        Map<String, Integer> countryMap = USAidUtils.makeCountryHashMap(context);
         
         Integer countryCode = null;
         
@@ -227,7 +224,7 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
                 
                 String dateString = jsonObject.getString(context.getString(R.string.usaid_jason_published));
                 
-                tempValue.publishedString = dateString.substring(0, dateString.indexOf(ZERO_TIME));
+                tempValue.publishedString = dateString.substring(0, dateString.indexOf(USAidConstants.ZERO_TIME));
                 
                 tempValue.pdfUrl = jsonObject.getString(context.getString(R.string.usaid_jason_pdfurl));
                 
@@ -237,7 +234,7 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
                 
                 tempValue.sectorString = jsonObject.getString(context.getString(R.string.usaid_jason_sector));
                 
-                // set the sector value
+                // TODO set the sector value
                 tempValue.sectorValue = USAidUtils.getTheSectorValue(tempValue.sectorString);
                 
                 JSONArray countryData = jsonObject.getJSONArray(context.getString(R.string.usaid_jason_country_array));
@@ -245,7 +242,7 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
                 // always only one string
                 String countryString = countryData.getString(0);
                 
-                if (countryString.contains(COUNTRY_DIVIDER)) {
+                if (countryString.contains(USAidConstants.COUNTRY_DIVIDER)) {
                     
                     // TODO handle multi countries or regions
                     
@@ -261,13 +258,14 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
                         
                         if (countryCode != null) {
                             tempValue.countryCode = countryCode.intValue();
+                            
+                            // set the region value
+                            tempValue.regionValue = USAidUtils.getTheRegionValue(tempValue.countryCode);
+                            
                         } else {
                             // no code defined
                             tempValue.countryCode = 0;
                         }
-                        
-                        // set the region value
-                        tempValue.regionValue = USAidUtils.getTheRegionValue(countryString);
                         
                     }
                     
