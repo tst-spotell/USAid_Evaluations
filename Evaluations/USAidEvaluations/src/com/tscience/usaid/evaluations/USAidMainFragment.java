@@ -163,7 +163,7 @@ public class USAidMainFragment extends SherlockListFragment {
     private void displaySectors() {
         
         // get the submenu
-        SubMenu subMenu = myMenu.getItem(1).getSubMenu();
+        SubMenu subMenu = myMenu.findItem(R.id.action_filter).getSubMenu();
         
         int menuSize = subMenu.size();
         
