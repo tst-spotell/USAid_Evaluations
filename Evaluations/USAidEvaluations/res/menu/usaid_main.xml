@@ -11,7 +11,7 @@
         android:title="@string/usaid_action_filter">
         
         <menu >
-            
+            <group android:checkableBehavior="all">
             <item
                 android:id="@+id/action_filter_sector_agriculture"
                 android:showAsAction="never"
@@ -61,7 +61,7 @@
                 android:id="@+id/action_filter_sector_water"
                 android:showAsAction="never"
                 android:title="@string/usaid_action_filter_sector_water"/>
-            
+            </group>
         </menu>
         
     </item>

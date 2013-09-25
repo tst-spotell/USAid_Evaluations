@@ -4,6 +4,7 @@
 package com.tscience.usaid.evaluations;
 
 import java.util.ArrayList;
+import java.util.Vector;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import com.actionbarsherlock.app.SherlockListFragment;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.view.SubMenu;
 import com.tscience.usaid.evaluations.io.USAidListDataTask;
 import com.tscience.usaid.evaluations.utils.USAidDataObject;
 
@@ -37,7 +39,7 @@ public class USAidMainFragment extends SherlockListFragment {
     
     private ArrayList<USAidDataObject> currentData;
     
-    private static int currentFilter = 0;
+    private Menu myMenu;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -71,9 +73,11 @@ public class USAidMainFragment extends SherlockListFragment {
         
         inflater.inflate(R.menu.usaid_main, menu);
         
+        // save instance of menu
+        myMenu = menu;
+        
     }
 
-    
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         
@@ -83,61 +87,48 @@ public class USAidMainFragment extends SherlockListFragment {
             
             setTheListData(currentData, false);
             
-        }
-        else if (currentItemId == R.id.action_filter_sector_agriculture) {
+            // uncheck everything
+            getActivity().invalidateOptionsMenu();
             
-            displayOnly(USAidConstants.USAID_SECTOR_AGRICULTURE);
-            
-        }
-        else if (currentItemId == R.id.action_filter_sector_democracy) {
-            
-            displayOnly(USAidConstants.USAID_SECTOR_DEMOCRACY);
+            return true;
             
         }
-        else if (currentItemId == R.id.action_filter_sector_finance) {
-            
-            displayOnly(USAidConstants.USAID_SECTOR_ECONOMIC);
-            
+        
+        if (item.isChecked()) {
+            item.setChecked(false);
+        } else {
+            item.setChecked(true);
         }
-        else if (currentItemId == R.id.action_filter_sector_education) {
+        
+        switch(currentItemId) {
             
-            displayOnly(USAidConstants.USAID_SECTOR_EDUCATION);
+            case R.id.action_filter_sector_agriculture:
+            case R.id.action_filter_sector_democracy:
+            case R.id.action_filter_sector_finance:
+            case R.id.action_filter_sector_education:
+            case R.id.action_filter_sector_environment:
+            case R.id.action_filter_sector_gender:
+            case R.id.action_filter_sector_health:
+            case R.id.action_filter_sector_technology:
+            case R.id.action_filter_sector_water:
+            case R.id.action_filter_sector_crisis: {
+                
+                displaySectors();
+                return true;
+                
+            }
             
-        }
-        else if (currentItemId == R.id.action_filter_sector_environment) {
-            
-            displayOnly(USAidConstants.USAID_SECTOR_ENVIRONMENT);
-            
-        }
-        else if (currentItemId == R.id.action_filter_sector_gender) {
-            
-            displayOnly(USAidConstants.USAID_SECTOR_GENDER);
-            
-        }
-        else if (currentItemId == R.id.action_filter_sector_health) {
-            
-            displayOnly(USAidConstants.USAID_SECTOR_HEALTH);
-            
-        }
-        else if (currentItemId == R.id.action_filter_sector_technology) {
-            
-            displayOnly(USAidConstants.USAID_SECTOR_SCIENCE);
-            
-        }
-        else if (currentItemId == R.id.action_filter_sector_water) {
-            
-            displayOnly(USAidConstants.USAID_SECTOR_WATER);
-            
-        }
-        else if (currentItemId == R.id.action_filter_sector_crisis) {
-            
-            displayOnly(USAidConstants.USAID_SECTOR_CRISIS);
-            
-        }
+        } // end switch
         
         return false;
     }
 
+    /**
+     * Display the list data.
+     * 
+     * @param value The array of USAidDataObject's to display.
+     * @param update    Update the current data (only when pull from server).
+     */
     public void setTheListData(ArrayList<USAidDataObject> value, boolean update) {
         
         if (update) {
@@ -164,23 +155,145 @@ public class USAidMainFragment extends SherlockListFragment {
         
     }
     
-    private void displayOnly(int value) {
+    /**
+     * Creates a new array of USAidDataObject's for a sector.
+     * 
+     * @param value The sector value to display (from USAidConstants--sector image values).
+     */
+    private void displaySectors() {
         
-        currentFilter = value;
+        // get the submenu
+        SubMenu subMenu = myMenu.getItem(1).getSubMenu();
+        
+        int menuSize = subMenu.size();
+        
+        Log.d(LOG_TAG, "----------------------------------------menuSize: " + menuSize);
+        
+        MenuItem menuItem = null;
+        
+        Vector<Integer> checkedVector = new Vector<Integer>();
+        
+        // what menu items are checked
+        for (int x = 0; x < menuSize; x++) {
+            
+            menuItem = subMenu.getItem(x);
+            
+            if (menuItem.isChecked()) {
+                
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked");
+                
+                int checkedNum = Integer.valueOf(getMenuItemSectorConstant(menuItem.getItemId()));
+                
+                if (checkedNum > 0) {
+                    checkedVector.add(checkedNum);
+                }
+                
+            }
+            
+        } // end looking for checked menu items
+        
+        // size of checked menu items
+        int numberChecked = checkedVector.size();
+        
+        Log.d(LOG_TAG, "---------------------------------------- numberChecked: " + numberChecked);
         
         ArrayList<USAidDataObject> newData = new ArrayList<USAidDataObject>();
         
         int maxValues = currentData.size();
         
         for (int i = 0; i < maxValues; i++) {
-            if (currentData.get(i).sectorValue == value) {
-                newData.add(currentData.get(i));
+            
+            // check each one of these against checked vector
+            for (int j = 0; j < numberChecked; j++) {
+            
+                if (currentData.get(i).sectorValue == checkedVector.get(j).intValue()) {
+                    newData.add(currentData.get(i));
+                }
+                
             }
-        }
+            
+        } // end maxValues
         
         setTheListData(newData, false);
         
     }
+    
+    /**
+     * Convience menthod to get what was constant for sorting.
+     * 
+     * @param value The id of the menuItem selected.
+     * 
+     * @return  The constant value used for sorting.
+     */
+    private int getMenuItemSectorConstant(int value) {
+        
+        switch(value) {
+            
+            case R.id.action_filter_sector_agriculture: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked AGRICULTURE");
+                return USAidConstants.USAID_SECTOR_AGRICULTURE;
+                
+            }
+            
+            case R.id.action_filter_sector_democracy: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked DEMOCRACY");
+                return USAidConstants.USAID_SECTOR_DEMOCRACY;
+                
+            }
+            
+            case R.id.action_filter_sector_finance: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked ECONOMIC");
+                return USAidConstants.USAID_SECTOR_ECONOMIC;
+                
+            }
+            
+            case R.id.action_filter_sector_education: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked EDUCATION");
+                return USAidConstants.USAID_SECTOR_EDUCATION;
+                
+            }
+            
+            case R.id.action_filter_sector_environment: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked ENVIRONMENT");
+                return USAidConstants.USAID_SECTOR_ENVIRONMENT;
+                
+            }
+
+            case R.id.action_filter_sector_gender: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked GENDER");
+                return USAidConstants.USAID_SECTOR_GENDER;
+                
+            }
+            
+            case R.id.action_filter_sector_health: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked HEALTH");
+                return USAidConstants.USAID_SECTOR_HEALTH;
+                
+            }
+            
+            case R.id.action_filter_sector_technology: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked SCIENCE");
+                return USAidConstants.USAID_SECTOR_SCIENCE;
+                
+            }
+            
+            case R.id.action_filter_sector_water: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked WATER");
+                return USAidConstants.USAID_SECTOR_WATER;
+                
+            }
+            
+            case R.id.action_filter_sector_crisis: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked CRISIS");
+                return USAidConstants.USAID_SECTOR_CRISIS;
+                
+            }
+            
+        } // end switch
+
+        return 0;
+        
+    } // end getMenuItemConstant
     
     /**
      * This is the array adapter class used for our custom view.
