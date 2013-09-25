@@ -209,7 +209,10 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
         // make the country hashmap
         Map<String, Integer> countryMap = USAidUtils.makeCountryHashMap(context);
         
-        Integer countryCode = null;
+        // make the sector hashmap
+        Map<String, Integer> sectorMap = USAidUtils.getTheSectorValue(context);
+        
+        Integer tempCode = null;
         
         // date formater
         String format = "yyyy-mm-dd";
@@ -246,8 +249,14 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
                 
                 tempValue.sectorString = jsonObject.getString(context.getString(R.string.usaid_jason_sector));
                 
-                // TODO set the sector value
-                tempValue.sectorValue = USAidUtils.getTheSectorValue(tempValue.sectorString);
+                // set the sector value
+                tempCode = sectorMap.get(tempValue.sectorString);
+                
+                if (tempCode != null) {
+                    tempValue.sectorValue = tempCode.intValue();
+                } else {
+                    tempValue.sectorValue = 0;
+                }
                 
                 JSONArray countryData = jsonObject.getJSONArray(context.getString(R.string.usaid_jason_country_array));
                 
@@ -266,10 +275,10 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
                         tempValue.countryString = countryString;
                         
                         // set the country value
-                        countryCode = countryMap.get(countryString);
+                        tempCode = countryMap.get(countryString);
                         
-                        if (countryCode != null) {
-                            tempValue.countryCode = countryCode.intValue();
+                        if (tempCode != null) {
+                            tempValue.countryCode = tempCode.intValue();
                             
                             // set the region value
                             tempValue.regionValue = USAidUtils.getTheRegionValue(tempValue.countryCode);

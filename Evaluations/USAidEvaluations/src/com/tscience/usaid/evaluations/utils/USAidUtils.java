@@ -18,9 +18,21 @@ import com.tscience.usaid.evaluations.R;
  */
 public class USAidUtils {
 
-    public static int getTheSectorValue(String value) {
+    public static Map<String, Integer> getTheSectorValue(Context context) {
         
-        return 0;
+        // make the sector hashmap
+        HashMap<String, Integer> sectorMap = new HashMap<String, Integer>();
+        
+        String[] sector_array = context.getResources().getStringArray(R.array.usaid_filter_sectors_types);
+        int[] sector_id_array = context.getResources().getIntArray(R.array.usaid_filter_sectors_types_id);
+        
+        int loopSize = sector_array.length;
+        
+        for (int i = 0; i < loopSize; i++) {
+            sectorMap.put(sector_array[i], sector_id_array[i]);
+        }
+        
+        return sectorMap;
         
     } // end getTheSectorValue
     

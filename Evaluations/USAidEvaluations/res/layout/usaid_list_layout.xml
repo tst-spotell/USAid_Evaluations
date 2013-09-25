@@ -16,8 +16,9 @@
     <!-- imageview -->
     <ImageView
         android:id="@+id/usaid_data_image_type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="4dp"
         android:layout_below="@id/usaid_publish_date"
         android:contentDescription="@string/usaid_image" />
     
@@ -35,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/usaid_title"
+        android:layout_alignLeft="@id/usaid_title"
         android:maxLines="2"
         android:layout_marginLeft="4sp" />
     
