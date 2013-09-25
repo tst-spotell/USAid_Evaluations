@@ -16,5 +16,16 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+    <style name="usaid_medium_text"
+        parent="@android:style/TextAppearance.Medium" >
+        
+        <item name="android:typeface">monospace</item>
+        
+    </style>
+    
+    <style name="usaid_medium_text.white">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
 
 </resources>
