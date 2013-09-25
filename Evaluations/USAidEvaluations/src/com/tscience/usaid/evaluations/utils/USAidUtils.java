@@ -50,7 +50,6 @@ public class USAidUtils {
         	countryMap.put(country_array[i], country_id_array[i]);
         }
         
-        
         return countryMap;
         
     }

@@ -7,7 +7,11 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.ref.WeakReference;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.Map;
 
 import org.apache.http.HttpEntity;
@@ -207,6 +211,10 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
         
         Integer countryCode = null;
         
+        // date formater
+        String format = "yyyy-mm-dd";
+        SimpleDateFormat formater = new SimpleDateFormat(format);
+        
         // parse the JSONArray and create the USAidDataObject array
         for (int i = 0; i < arraySize; i++) {
             
@@ -225,6 +233,10 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
                 String dateString = jsonObject.getString(context.getString(R.string.usaid_jason_published));
                 
                 tempValue.publishedString = dateString.substring(0, dateString.indexOf(USAidConstants.ZERO_TIME));
+                
+                // make the time value
+                Date publishDate = formater.parse(tempValue.publishedString);
+                tempValue.publishedValue = publishDate.getTime();
                 
                 tempValue.pdfUrl = jsonObject.getString(context.getString(R.string.usaid_jason_pdfurl));
                 
@@ -283,6 +295,10 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
             
         } // end for loop processing json objects
         
+        
+        // before we display this lets sort by date
+        Collections.sort(items, new PublishedTimeComparator());
+        
         if (usaidMainFragmentReference != null) {
             
             USAidMainFragment usaidMainFragment = usaidMainFragmentReference.get();
@@ -303,6 +319,18 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
     // method for canceling this task
     private void cancelingTask() {
         this.cancel(true);
+    }
+    
+    /**
+     * This class sorts data by published date.
+     * 
+     * @author spotell at t-sciences.com
+     *
+     */
+    class PublishedTimeComparator implements Comparator<USAidDataObject> {
+        public int compare(USAidDataObject object1, USAidDataObject object2) {
+            return (Long.valueOf(object2.publishedValue).compareTo(Long.valueOf(object1.publishedValue)));
+        }
     }
 
 } // end USAidListDataTask
