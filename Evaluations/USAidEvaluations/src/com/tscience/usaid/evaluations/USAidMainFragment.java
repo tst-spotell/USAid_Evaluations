@@ -17,6 +17,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockListFragment;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 import com.tscience.usaid.evaluations.io.USAidListDataTask;
 import com.tscience.usaid.evaluations.utils.USAidDataObject;
 
@@ -31,6 +34,16 @@ public class USAidMainFragment extends SherlockListFragment {
     private static final String LOG_TAG = "USAidMainFragment";
     
     private USAidListAdapter myListAdapter;
+    
+    private ArrayList<USAidDataObject> currentData;
+    
+    private static int currentFilter = 0;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -47,12 +60,89 @@ public class USAidMainFragment extends SherlockListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         
-        // TODO open pdf
+        // TODO open large view dialog
         
         super.onListItemClick(l, v, position, id);
     }
     
-    public void setTheListData(ArrayList<USAidDataObject> value) {
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        
+        inflater.inflate(R.menu.usaid_main, menu);
+        
+    }
+
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        
+        int currentItemId = item.getItemId();
+        
+        if (currentItemId == R.id.action_filter_reset) {
+            
+            setTheListData(currentData, false);
+            
+        }
+        else if (currentItemId == R.id.action_filter_sector_agriculture) {
+            
+            displayOnly(USAidConstants.USAID_SECTOR_AGRICULTURE);
+            
+        }
+        else if (currentItemId == R.id.action_filter_sector_democracy) {
+            
+            displayOnly(USAidConstants.USAID_SECTOR_DEMOCRACY);
+            
+        }
+        else if (currentItemId == R.id.action_filter_sector_finance) {
+            
+            displayOnly(USAidConstants.USAID_SECTOR_ECONOMIC);
+            
+        }
+        else if (currentItemId == R.id.action_filter_sector_education) {
+            
+            displayOnly(USAidConstants.USAID_SECTOR_EDUCATION);
+            
+        }
+        else if (currentItemId == R.id.action_filter_sector_environment) {
+            
+            displayOnly(USAidConstants.USAID_SECTOR_ENVIRONMENT);
+            
+        }
+        else if (currentItemId == R.id.action_filter_sector_gender) {
+            
+            displayOnly(USAidConstants.USAID_SECTOR_GENDER);
+            
+        }
+        else if (currentItemId == R.id.action_filter_sector_health) {
+            
+            displayOnly(USAidConstants.USAID_SECTOR_HEALTH);
+            
+        }
+        else if (currentItemId == R.id.action_filter_sector_technology) {
+            
+            displayOnly(USAidConstants.USAID_SECTOR_SCIENCE);
+            
+        }
+        else if (currentItemId == R.id.action_filter_sector_water) {
+            
+            displayOnly(USAidConstants.USAID_SECTOR_WATER);
+            
+        }
+        else if (currentItemId == R.id.action_filter_sector_crisis) {
+            
+            displayOnly(USAidConstants.USAID_SECTOR_CRISIS);
+            
+        }
+        
+        return false;
+    }
+
+    public void setTheListData(ArrayList<USAidDataObject> value, boolean update) {
+        
+        if (update) {
+            currentData = value;
+        }
         
         try {
             // add padding around list
@@ -71,6 +161,24 @@ public class USAidMainFragment extends SherlockListFragment {
         } catch (Exception ignore) {
             Log.e(LOG_TAG, "---------------------------------------- " + ignore.toString());
         }
+        
+    }
+    
+    private void displayOnly(int value) {
+        
+        currentFilter = value;
+        
+        ArrayList<USAidDataObject> newData = new ArrayList<USAidDataObject>();
+        
+        int maxValues = currentData.size();
+        
+        for (int i = 0; i < maxValues; i++) {
+            if (currentData.get(i).sectorValue == value) {
+                newData.add(currentData.get(i));
+            }
+        }
+        
+        setTheListData(newData, false);
         
     }
     

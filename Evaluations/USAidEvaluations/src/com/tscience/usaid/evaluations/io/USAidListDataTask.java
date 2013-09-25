@@ -311,7 +311,7 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
         if (usaidMainFragmentReference != null) {
             
             USAidMainFragment usaidMainFragment = usaidMainFragmentReference.get();
-            usaidMainFragment.setTheListData(items);
+            usaidMainFragment.setTheListData(items, true);
             
         }
         

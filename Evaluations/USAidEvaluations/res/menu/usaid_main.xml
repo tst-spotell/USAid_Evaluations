@@ -1,9 +1,69 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
+        android:id="@+id/action_filter_reset"
+        android:showAsAction="always"
+        android:title="@string/usaid_action_filter_reset"/>
+    
+    <item
+        android:id="@+id/action_filter"
         android:showAsAction="never"
-        android:title="@string/action_settings"/>
+        android:title="@string/usaid_action_filter">
+        
+        <menu >
+            
+            <item
+                android:id="@+id/action_filter_sector_agriculture"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_sector_agriculture"/>
+            
+            <item
+                android:id="@+id/action_filter_sector_crisis"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_sector_crisis"/>
+            
+            <item
+                android:id="@+id/action_filter_sector_democracy"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_sector_democracy"/>
+            
+            <item
+                android:id="@+id/action_filter_sector_education"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_sector_education"/>
+            
+            <item
+                android:id="@+id/action_filter_sector_environment"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_sector_environment"/>
+            
+            <item
+                android:id="@+id/action_filter_sector_finance"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_sector_finance"/>
+            
+            <item
+                android:id="@+id/action_filter_sector_gender"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_sector_gender"/>
+            
+            <item
+                android:id="@+id/action_filter_sector_health"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_sector_health"/>
+            
+            <item
+                android:id="@+id/action_filter_sector_technology"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_sector_technology"/>
+            
+            <item
+                android:id="@+id/action_filter_sector_water"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_sector_water"/>
+            
+        </menu>
+        
+    </item>
 
 </menu>

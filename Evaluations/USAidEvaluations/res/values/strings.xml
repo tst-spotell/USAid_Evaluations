@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">USAid Evaluations</string>
-    <string name="action_settings">Settings</string>
     <string name="usaid_fragment_list_no_data">There is currently no available evaluations.</string>
     
     <!-- buttons -->
@@ -13,5 +12,22 @@
     
     <!-- images -->
     <string name="usaid_image">image</string>
+    
+    <!-- menu -->
+    <string name="action_settings">Settings</string>
+    <string name="usaid_action_filter">Filter</string>
+    <string name="usaid_action_filter_reset">Reset</string>
+    <string name="usaid_action_filter_sector">Sector</string>
+    <string name="usaid_action_filter_sector_agriculture">Agriculture</string>
+    <string name="usaid_action_filter_sector_crisis">Crisis</string>
+    <string name="usaid_action_filter_sector_democracy">Democracy</string>
+    <string name="usaid_action_filter_sector_education">Education</string>
+    <string name="usaid_action_filter_sector_environment">Environment</string>
+    <string name="usaid_action_filter_sector_finance">Finance</string>
+    <string name="usaid_action_filter_sector_gender">Gender</string>
+    <string name="usaid_action_filter_sector_health">Health</string>
+    <string name="usaid_action_filter_sector_technology">Technology</string>
+    <string name="usaid_action_filter_sector_water">Water</string>
+    
 
 </resources>
