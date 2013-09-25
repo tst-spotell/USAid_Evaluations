@@ -26,5 +26,7 @@ public class USAidConstants {
 	public static final int USAID_SECTOR_SCIENCE = 8;
 	public static final int USAID_SECTOR_WATER = 9;
 	public static final int USAID_SECTOR_CRISIS = 10;
+	
+	public static final String USAID_BUNDLE_DATA_OBJECT = "usaid_data";
 
 } // end USAidConstants
