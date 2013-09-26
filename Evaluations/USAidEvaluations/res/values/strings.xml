@@ -6,9 +6,14 @@
     
     <!-- buttons -->
     <string name="usaid_cancel_button">Cancel</string>
+    <string name="usaid_get_pdf_button">Get PDF</string>
     
     <!--  connection  -->
     <string name="usaid_connection_server">Connecting To Server ...</string>
+    
+    <!-- description -->
+    <string name="usaid_description_title_none">No Defined Title</string>
+    <string name="usaid_description_value_none">No Description Available</string>
     
     <!-- images -->
     <string name="usaid_image">image</string>

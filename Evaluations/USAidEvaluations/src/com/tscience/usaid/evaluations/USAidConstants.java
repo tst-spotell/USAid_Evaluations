@@ -28,5 +28,6 @@ public class USAidConstants {
 	public static final int USAID_SECTOR_CRISIS = 10;
 	
 	public static final String USAID_BUNDLE_DATA_OBJECT = "usaid_data";
+	public static final String LESS_THAN_SIGN = "<";
 
 } // end USAidConstants

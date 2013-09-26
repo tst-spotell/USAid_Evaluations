@@ -1,0 +1,26 @@
+<!-- Copyright (c) 2013 Thermopylae Sciences and Technology. All rights reserved. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:paddingBottom="18dp" >
+    
+    <TextView
+        android:id="@+id/usaid_description_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/usaid_description_title_none" />
+
+    <TextView
+        android:id="@+id/usaid_description_value_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24sp"
+        android:text="@string/usaid_description_value_none" />
+    
+    <WebView
+        android:id="@+id/usaid_description_value_web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24sp" />
+    
+</LinearLayout>

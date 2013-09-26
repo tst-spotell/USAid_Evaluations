@@ -62,9 +62,17 @@ public class USAidMainFragment extends SherlockListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         
-        // TODO open large view dialog
-        
-        super.onListItemClick(l, v, position, id);
+    	// get the data object
+    	USAidDataObject usaidDataObject = currentData.get(position);
+    	
+    	// make the new bundle
+    	Bundle bundle = new Bundle();
+    	bundle.putParcelable(USAidConstants.USAID_BUNDLE_DATA_OBJECT, usaidDataObject);
+    	
+    	// create the view
+    	USAidDescriptionDialog usaidDescriptionDialog = USAidDescriptionDialog.newInstance(bundle);
+    	usaidDescriptionDialog.show(getActivity().getSupportFragmentManager(), "description");
+    	
     }
     
     @Override
