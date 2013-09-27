@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.net.Uri;
 
 import com.tscience.usaid.evaluations.R;
+import com.tscience.usaid.evaluations.USAidConstants;
 
 /**
  * This class holds the various utility methods used by the application.
@@ -33,6 +34,13 @@ public class USAidUtils {
         
     }
 
+    /**
+     * Returns a map of the sector values with key mappings.
+     * 
+     * @param context   The context requesting the hashmap.
+     * 
+     * @return  Hashmap of sector types mapped to a sector code.
+     */
     public static Map<String, Integer> getTheSectorValue(Context context) {
         
         // make the sector hashmap
@@ -51,9 +59,20 @@ public class USAidUtils {
         
     } // end getTheSectorValue
     
+    /**
+     * Country codes are 1 to ... so -1 gives the correct array value.
+     * 
+     * @param countryCode   The country code we want the region value for.
+     * 
+     * @return  The region value for this countryCode.
+     */
     public static int getTheRegionValue(int countryCode) {
         
-        return 0;
+        if (countryCode <= 0) {
+            return 0;
+        }
+        
+        return USAidConstants.REGION_ARRAY[countryCode - 1];
         
     }
     
@@ -79,6 +98,6 @@ public class USAidUtils {
         
         return countryMap;
         
-    }
+    } // end makeCountryHashMap
     
 } // end USAidUtils

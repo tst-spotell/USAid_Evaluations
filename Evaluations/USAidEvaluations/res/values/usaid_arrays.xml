@@ -139,19 +139,19 @@
     </integer-array>
     
     <string-array name="usaid_filter_regions">
-        <item>AFGHANISTAN AND PAKISTAN</item>
+        <item>AFGHANISTAN</item>
+        <item>PAKISTAN</item>
         <item>ASIA</item>
         <item>EUROPE AND EURASIA</item>
-        <item>EAST AFRICA</item>
         <item>LATIN AMERICA AND THE CARRIBEAN</item>
         <item>MIDDLE EAST</item>
         <item>SUB SAHARAN AFRICA</item>
     </string-array>
     
     <integer-array name="usaid_filter_regions_id">
-        <item>1</item> <!-- AFGHANISTAN AND PAKISTAN -->
-        <item>2</item> <!-- ASIA -->
-        <item>3</item> <!-- EAST AFRICA -->
+        <item>1</item> <!-- AFGHANISTAN -->
+        <item>2</item> <!-- PAKISTAN -->
+        <item>3</item> <!-- ASIA -->
         <item>4</item> <!-- EUROPE AND EURASIA -->
         <item>5</item> <!-- LATIN AMERICA AND THE CARRIBEAN -->
         <item>6</item> <!-- MIDDLE EAST -->
@@ -164,63 +164,63 @@
         <item>4</item> <!-- Albania -->
         <item>7</item> <!-- Angola -->
         <item>4</item> <!-- Armenia -->
-        <item>2</item> <!-- Bangladesh -->
+        <item>3</item> <!-- Bangladesh -->
         <item>4</item> <!-- Bosnia and Hercegovina -->
         <item>5</item> <!-- Brazil -->
-        <item>2</item> <!-- Burma -->
-        <item>3</item> <!-- Burundi -->
-        <item>2</item> <!-- Cambodia -->
+        <item>3</item> <!-- Burma -->
+        <item>7</item> <!-- Burundi -->
+        <item>3</item> <!-- Cambodia -->
         <item>7</item> <!-- Chad -->
         <item>5</item> <!-- Colombia -->
         <item>5</item> <!-- Dominican Republic -->
-        <item>3</item> <!-- 7 Congo DR -->
+        <item>7</item> <!-- Congo DR -->
         <item>5</item> <!-- Ecuador -->
-        <item>3</item> <!-- 6 Egypt -->
+        <item>6</item> <!-- Egypt -->
         <item>5</item> <!-- El Salvador -->
-        <item>3</item> <!-- 7 Ethiopia -->
+        <item>7</item> <!-- Ethiopia -->
         <item>4</item> <!-- Georgia -->
         <item>7</item> <!-- Ghana -->
         <item>5</item> <!-- Guatemala -->
         <item>5</item> <!-- Haiti -->
-        <item>2</item> <!-- India -->
-        <item>2</item> <!-- Indonesia -->
+        <item>3</item> <!-- India -->
+        <item>3</item> <!-- Indonesia -->
         <item>6</item> <!-- Iraq -->
-        <item>2</item> <!-- Kazakhstan -->
-        <item>3</item> <!-- 7 Kenya -->
+        <item>3</item> <!-- Kazakhstan -->
+        <item>7</item> <!-- Kenya -->
         <item>4</item> <!-- Kosovo -->
-        <item>2</item> <!-- Kyrgyzstan -->
+        <item>3</item> <!-- Kyrgyzstan -->
         <item>6</item> <!-- Lebanon -->
         <item>7</item> <!-- Liberia -->
-        <item>3</item> <!-- Libya -->
+        <item>6</item> <!-- Libya -->
         <item>7</item> <!-- Mali -->
         <item>7</item> <!-- Mauritania -->
         <item>5</item> <!-- Mexico -->
         <item>4</item> <!-- Montenegro -->
         <item>6</item> <!-- Morocco -->
         <item>7</item> <!-- Mozambique -->
-        <item>2</item> <!-- Nepal -->
+        <item>3</item> <!-- Nepal -->
         <item>5</item> <!-- Nicaragua -->
         <item>7</item> <!-- Niger -->
         <item>7</item> <!-- Nigeria -->
-        <item>1</item> <!-- Pakistan -->
+        <item>2</item> <!-- Pakistan -->
         <item>5</item> <!-- Paraguay -->
         <item>5</item> <!-- Peru -->
-        <item>2</item> <!-- Philippines -->
-        <item>3</item> <!-- 7 Rwanda -->
+        <item>3</item> <!-- Philippines -->
+        <item>7</item> <!-- Rwanda -->
         <item>7</item> <!-- Senegal -->
         <item>4</item> <!-- Serbia -->
         <item>7</item> <!-- South Africa -->
         <item>7</item> <!-- South Sudan -->
-        <item>2</item> <!-- Sri Lanka -->
-        <item>3</item> <!-- Sudan -->
-        <item>2</item> <!-- Tajikistan -->
-        <item>3</item> <!-- 7 Tanzania -->
-        <item>2</item> <!-- Timor-Leste -->
-        <item>2</item> <!-- Turkmenistan -->
-        <item>3</item> <!-- 7 Uganda -->
+        <item>3</item> <!-- Sri Lanka -->
+        <item>7</item> <!-- Sudan -->
+        <item>3</item> <!-- Tajikistan -->
+        <item>7</item> <!-- Tanzania -->
+        <item>3</item> <!-- Timor-Leste -->
+        <item>3</item> <!-- Turkmenistan -->
+        <item>7</item> <!-- Uganda -->
         <item>4</item> <!-- Ukraine -->
-        <item>2</item> <!-- Uzbekistan -->
-        <item>2</item> <!-- Vietnam -->
+        <item>3</item> <!-- Uzbekistan -->
+        <item>3</item> <!-- Vietnam -->
         <item>6</item> <!-- WB Gaza -->
         <item>6</item> <!-- Yemen -->
         <item>7</item> <!-- Zimbabwe -->
