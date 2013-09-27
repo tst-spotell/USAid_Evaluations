@@ -5,8 +5,12 @@ package com.tscience.usaid.evaluations;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.webkit.WebView;
@@ -21,6 +25,9 @@ import com.tscience.usaid.evaluations.utils.USAidDataObject;
  *
  */
 public class USAidDescriptionDialog extends SherlockDialogFragment {
+    
+    /** Log id of this class name. */
+    private static final String LOG_TAG = "USAidDescriptionDialog";
     
     private USAidDataObject currentData;
 
@@ -113,6 +120,17 @@ public class USAidDescriptionDialog extends SherlockDialogFragment {
      */
     private void getThePdf() {
     	
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(currentData.pdfUrl));
+        
+        try {
+            startActivity(intent);
+        } 
+        catch (ActivityNotFoundException e) {
+            Log.d(LOG_TAG, "-------------------------------------------------- " + e.toString());
+            
+            ((USAidMainActivity)getActivity()).noPdfViewer();
+            
+        }
     	
     }
 
