@@ -125,7 +125,14 @@ public class USAidMainFragment extends SherlockListFragment {
             case R.id.action_filter_sector_health:
             case R.id.action_filter_sector_technology:
             case R.id.action_filter_sector_water:
-            case R.id.action_filter_sector_crisis: {
+            case R.id.action_filter_sector_crisis:
+            case R.id.action_filter_region_afganistan:
+            case R.id.action_filter_region_pakistan:
+            case R.id.action_filter_region_asia:
+            case R.id.action_filter_region_europe:
+            case R.id.action_filter_region_latin_america:
+            case R.id.action_filter_region_middle_east:
+            case R.id.action_filter_region_africa:{
                 
                 displaySectors();
                 return true;
@@ -184,7 +191,7 @@ public class USAidMainFragment extends SherlockListFragment {
         
         int menuSize = subMenu.size();
         
-        Log.d(LOG_TAG, "----------------------------------------menuSize: " + menuSize);
+        Log.d(LOG_TAG, "----------------------------------------menuSize sectors: " + menuSize);
         
         MenuItem menuItem = null;
         
@@ -196,8 +203,6 @@ public class USAidMainFragment extends SherlockListFragment {
             menuItem = subMenu.getItem(x);
             
             if (menuItem.isChecked()) {
-                
-                Log.d(LOG_TAG, "---------------------------------------- menu is checked");
                 
                 int checkedNum = Integer.valueOf(getMenuItemSectorConstant(menuItem.getItemId()));
                 
@@ -212,31 +217,117 @@ public class USAidMainFragment extends SherlockListFragment {
         // size of checked menu items
         int numberChecked = checkedVector.size();
         
-        Log.d(LOG_TAG, "---------------------------------------- numberChecked: " + numberChecked);
+        Log.d(LOG_TAG, "---------------------------------------- numberChecked sectors: " + numberChecked);
         
-        ArrayList<USAidDataObject> newData = new ArrayList<USAidDataObject>();
+        ArrayList<USAidDataObject> newData = null;
         
-        int maxValues = currentData.size();
-        
-        for (int i = 0; i < maxValues; i++) {
+        if (numberChecked == 0) {
             
-            // check each one of these against checked vector
-            for (int j = 0; j < numberChecked; j++) {
+            // display all
+            newData = currentData;
             
-                if (currentData.get(i).sectorValue == checkedVector.get(j).intValue()) {
-                    newData.add(currentData.get(i));
+        } else {
+            
+            // only display filtered items
+            newData = new ArrayList<USAidDataObject>();
+            
+            int maxValues = currentData.size();
+            
+            for (int i = 0; i < maxValues; i++) {
+                
+                // check each one of these against checked vector
+                for (int j = 0; j < numberChecked; j++) {
+                
+                    if (currentData.get(i).sectorValue == checkedVector.get(j).intValue()) {
+                        newData.add(currentData.get(i));
+                    }
+                    
+                }
+                
+            } // end maxValues
+        
+        }
+        
+        // now check the regions before set datalist
+        displayRegions(newData);
+        
+    } // end displaySectors
+    
+    /**
+     * This method does the same thing as displaySectors but for the regions.
+     * 
+     * @param value The sorted list with sector selections.
+     */
+    private void displayRegions(ArrayList<USAidDataObject> value) {
+        
+        // get the submenu
+        SubMenu subMenu = myMenu.findItem(R.id.action_region).getSubMenu();
+        
+        int menuSize = subMenu.size();
+        
+        Log.d(LOG_TAG, "----------------------------------------menuSize region: " + menuSize);
+        
+        MenuItem menuItem = null;
+        
+        Vector<Integer> checkedVector = new Vector<Integer>();
+        
+        // what menu items are checked
+        for (int x = 0; x < menuSize; x++) {
+            
+            menuItem = subMenu.getItem(x);
+            
+            if (menuItem.isChecked()) {
+                
+                int checkedNum = Integer.valueOf(getMenuItemRegionConstant(menuItem.getItemId()));
+                
+                if (checkedNum > 0) {
+                    checkedVector.add(checkedNum);
                 }
                 
             }
             
-        } // end maxValues
+        } // end looking for checked menu items
+        
+        // size of checked menu items
+        int numberChecked = checkedVector.size();
+        
+        Log.d(LOG_TAG, "---------------------------------------- numberChecked region: " + numberChecked);
+        
+        ArrayList<USAidDataObject> newData = null;
+        
+        if (numberChecked == 0) {
+            
+            // display all
+            newData = value;
+            
+        } else {
+            
+            // only display filtered items
+            newData = new ArrayList<USAidDataObject>();
+            
+            int maxValues = value.size();
+            
+            for (int i = 0; i < maxValues; i++) {
+                
+                // check each one of these against checked vector
+                for (int j = 0; j < numberChecked; j++) {
+                
+                    if (value.get(i).regionValue == checkedVector.get(j).intValue()) {
+                        newData.add(value.get(i));
+                    }
+                    
+                }
+                
+            } // end maxValues
+        
+        }
         
         setTheListData(newData, false);
         
-    }
+    } // end displayRegions
     
     /**
-     * Convience menthod to get what was constant for sorting.
+     * Convenience method to get what was constant for sorting.
      * 
      * @param value The id of the menuItem selected.
      * 
@@ -310,7 +401,67 @@ public class USAidMainFragment extends SherlockListFragment {
 
         return 0;
         
-    } // end getMenuItemConstant
+    } // end getMenuItemSectorConstant
+    
+    /**
+     * Convenience method to get what was constant for sorting.
+     * 
+     * @param value The id of the menuItem selected.
+     * 
+     * @return  The constant value used for sorting.
+     */
+    private int getMenuItemRegionConstant(int value) {
+        
+        switch(value) {
+            
+            case R.id.action_filter_region_afganistan: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked AFGHANISTAN");
+                return USAidConstants.USAID_REGION_AFGHANISTAN;
+                
+            }
+            
+            case R.id.action_filter_region_pakistan: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked PAKISTAN");
+                return USAidConstants.USAID_REGION_PAKISTAN;
+                
+            }
+            
+            case R.id.action_filter_region_asia: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked ASIA");
+                return USAidConstants.USAID_REGION_ASIA;
+                
+            }
+            
+            case R.id.action_filter_region_europe: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked EUROPE");
+                return USAidConstants.USAID_REGION_EUROPE;
+                
+            }
+            
+            case R.id.action_filter_region_latin_america: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked LATIN_AMERICA");
+                return USAidConstants.USAID_REGION_LATIN_AMERICA;
+                
+            }
+
+            case R.id.action_filter_region_middle_east: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked MIDDLE_EAST");
+                return USAidConstants.USAID_REGION_MIDDLE_EAST;
+                
+            }
+            
+            case R.id.action_filter_region_africa: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked AFRICA");
+                return USAidConstants.USAID_REGION_AFRICA;
+                
+            }
+
+            
+        } // end switch
+
+        return 0;
+        
+    } // end getMenuItemRegionConstant
     
     /**
      * This is the array adapter class used for our custom view.
@@ -438,6 +589,16 @@ public class USAidMainFragment extends SherlockListFragment {
             
         }
         
+        /**
+         * Gets the current displayed array list for sorting.
+         * 
+         * @return Current displayed arraylist.
+         */
+        public ArrayList<USAidDataObject> getCurrentDisplayedArrayList() {
+            
+            return items;
+            
+        }
         
     } // end USAidListAdapter
     

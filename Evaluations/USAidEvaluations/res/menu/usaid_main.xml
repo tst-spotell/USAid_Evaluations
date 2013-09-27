@@ -68,6 +68,52 @@
     </item>
     
     <item
+        android:id="@+id/action_region"
+        android:showAsAction="never"
+        android:title="@string/usaid_action_filter_region">
+        
+        <menu >
+            <group android:checkableBehavior="all">
+            <item
+                android:id="@+id/action_filter_region_afganistan"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_region_afganistan"/>
+            
+            <item
+                android:id="@+id/action_filter_region_pakistan"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_region_pakistan"/>
+            
+            <item
+                android:id="@+id/action_filter_region_asia"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_region_asia"/>
+            
+            <item
+                android:id="@+id/action_filter_region_europe"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_region_europe"/>
+            
+            <item
+                android:id="@+id/action_filter_region_latin_america"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_region_latin_america"/>
+            
+            <item
+                android:id="@+id/action_filter_region_middle_east"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_region_middle_east"/>
+            
+            <item
+                android:id="@+id/action_filter_region_africa"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_region_africa"/>
+            </group>
+        </menu>
+        
+    </item>
+    
+    <item
         android:id="@+id/action_download_pdf_viewer"
         android:showAsAction="never"
         android:title="@string/usaid_action_download_pdf_viewer"/>
