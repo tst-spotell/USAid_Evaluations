@@ -66,5 +66,15 @@
         </menu>
         
     </item>
+    
+    <item
+        android:id="@+id/action_download_pdf_viewer"
+        android:showAsAction="never"
+        android:title="@string/usaid_action_download_pdf_viewer"/>
+    
+    <item
+        android:id="@+id/action_about"
+        android:showAsAction="never"
+        android:title="@string/usaid_action_about"/>
 
 </menu>

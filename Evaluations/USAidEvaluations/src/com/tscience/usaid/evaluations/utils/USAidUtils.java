@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 
 import com.tscience.usaid.evaluations.R;
 
@@ -17,6 +19,19 @@ import com.tscience.usaid.evaluations.R;
  *
  */
 public class USAidUtils {
+    
+    /**
+     * This method opens the market with adobe reader for downloading.
+     * 
+     * @param context   The context requesting the intent.
+     */
+    public static void getAdobeReader(Context context) {
+        
+        Intent marketIntent = new Intent(Intent.ACTION_VIEW);
+        marketIntent.setData(Uri.parse("market://details?id=com.adobe.reader"));
+        context.startActivity(marketIntent);
+        
+    }
 
     public static Map<String, Integer> getTheSectorValue(Context context) {
         

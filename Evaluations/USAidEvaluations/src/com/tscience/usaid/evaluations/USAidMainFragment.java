@@ -24,6 +24,7 @@ import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.SubMenu;
 import com.tscience.usaid.evaluations.io.USAidListDataTask;
 import com.tscience.usaid.evaluations.utils.USAidDataObject;
+import com.tscience.usaid.evaluations.utils.USAidUtils;
 
 /**
  * This fragment displays the main screen.
@@ -102,10 +103,15 @@ public class USAidMainFragment extends SherlockListFragment {
             
         }
         
-        if (item.isChecked()) {
-            item.setChecked(false);
-        } else {
-            item.setChecked(true);
+        // handle if checkbox
+        if (item.isCheckable()) {
+        
+            if (item.isChecked()) {
+                item.setChecked(false);
+            } else {
+                item.setChecked(true);
+            }
+        
         }
         
         switch(currentItemId) {
@@ -124,6 +130,9 @@ public class USAidMainFragment extends SherlockListFragment {
                 displaySectors();
                 return true;
                 
+            }
+            case R.id.action_download_pdf_viewer: {
+                USAidUtils.getAdobeReader(getActivity());
             }
             
         } // end switch

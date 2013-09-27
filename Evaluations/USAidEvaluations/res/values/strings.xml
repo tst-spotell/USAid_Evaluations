@@ -33,6 +33,13 @@
     <string name="usaid_action_filter_sector_health">Health</string>
     <string name="usaid_action_filter_sector_technology">Technology</string>
     <string name="usaid_action_filter_sector_water">Water</string>
+    <string name="usaid_action_download_pdf_viewer">Download PDF Viewer</string>
+    <string name="usaid_action_about">About</string>
     
+    <!-- pdf viewer -->
+    <string name="usaid_nopdf_title">No PDF Viewer</string>
+    <string name="usaid_nopdf_message">Download one from Android Market?</string>
+    <string name="usaid_nopdf_yes_please">Yes, Please</string>
+    <string name="usaid_nopdf_no_thanks">No, Thanks</string>
 
 </resources>
