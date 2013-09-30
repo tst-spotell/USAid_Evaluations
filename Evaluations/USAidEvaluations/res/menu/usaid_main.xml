@@ -38,6 +38,301 @@
                 android:showAsAction="never"
                 android:title="@string/usaid_action_filter_country_bangladesh"/>
             
+            <item
+                android:id="@+id/action_filter_country_bosnia"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_bosnia"/>
+            
+            <item
+                android:id="@+id/action_filter_country_brazil"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_brazil"/>
+            
+            <item
+                android:id="@+id/action_filter_country_burma"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_burma"/>
+            
+            <item
+                android:id="@+id/action_filter_country_burundi"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_burundi"/>
+            
+            <item
+                android:id="@+id/action_filter_country_cambodia"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_cambodia"/>
+            
+            <item
+                android:id="@+id/action_filter_country_chad"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_chad"/>
+            
+            <item
+                android:id="@+id/action_filter_country_colombia"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_colombia"/>
+            
+            <item
+                android:id="@+id/action_filter_country_dominican_republic"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_dominican_republic"/>
+            
+            <item
+                android:id="@+id/action_filter_country_congo"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_congo"/>
+            
+            <item
+                android:id="@+id/action_filter_country_ecuador"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_ecuador"/>
+            
+            <item
+                android:id="@+id/action_filter_country_egypt"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_egypt"/>
+            
+            <item
+                android:id="@+id/action_filter_country_el_salvador"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_el_salvador"/>
+            
+            <item
+                android:id="@+id/action_filter_country_ethiopia"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_ethiopia"/>
+            
+            <item
+                android:id="@+id/action_filter_country_georgia"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_georgia"/>
+            
+            <item
+                android:id="@+id/action_filter_country_ghana"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_ghana"/>
+            
+            <item
+                android:id="@+id/action_filter_country_guatemala"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_guatemala"/>
+            
+            <item
+                android:id="@+id/action_filter_country_haiti"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_haiti"/>
+            
+            <item
+                android:id="@+id/action_filter_country_india"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_india"/>
+            
+            <item
+                android:id="@+id/action_filter_country_indonesia"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_indonesia"/>
+            
+            <item
+                android:id="@+id/action_filter_country_iraq"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_iraq"/>
+            
+            <item
+                android:id="@+id/action_filter_country_kazakhstan"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_kazakhstan"/>
+            
+            <item
+                android:id="@+id/action_filter_country_kenya"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_kenya"/>
+            
+            <item
+                android:id="@+id/action_filter_country_kosovo"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_kosovo"/>
+            
+            <item
+                android:id="@+id/action_filter_country_kyrgyzstan"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_kyrgyzstan"/>
+            
+            <item
+                android:id="@+id/action_filter_country_lebanon"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_lebanon"/>
+            
+            <item
+                android:id="@+id/action_filter_country_liberia"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_liberia"/>
+            
+            <item
+                android:id="@+id/action_filter_country_libya"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_libya"/>
+            
+            <item
+                android:id="@+id/action_filter_country_mali"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_mali"/>
+            
+            <item
+                android:id="@+id/action_filter_country_mauritania"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_mauritania"/>
+            
+            <item
+                android:id="@+id/action_filter_country_mexico"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_mexico"/>
+            
+            <item
+                android:id="@+id/action_filter_country_montenegro"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_montenegro"/>
+            
+            <item
+                android:id="@+id/action_filter_country_morocco"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_morocco"/>
+            
+            <item
+                android:id="@+id/action_filter_country_mozambique"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_mozambique"/>
+            
+            <item
+                android:id="@+id/action_filter_country_nepal"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_nepal"/>
+            
+            <item
+                android:id="@+id/action_filter_country_nicaragua"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_nicaragua"/>
+            
+            <item
+                android:id="@+id/action_filter_country_niger"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_niger"/>
+            
+            <item
+                android:id="@+id/action_filter_country_nigeria"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_nigeria"/>
+            
+            <item
+                android:id="@+id/action_filter_country_pakistan"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_pakistan"/>
+            
+            <item
+                android:id="@+id/action_filter_country_paraguay"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_paraguay"/>
+            
+            <item
+                android:id="@+id/action_filter_country_peru"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_peru"/>
+            
+            <item
+                android:id="@+id/action_filter_country_philippines"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_philippines"/>
+            
+            <item
+                android:id="@+id/action_filter_country_rwanda"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_rwanda"/>
+            
+            <item
+                android:id="@+id/action_filter_country_senegal"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_senegal"/>
+            
+            <item
+                android:id="@+id/action_filter_country_serbia"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_serbia"/>
+            
+            <item
+                android:id="@+id/action_filter_country_south_africa"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_south_africa"/>
+            
+            <item
+                android:id="@+id/action_filter_country_south_sudan"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_south_sudan"/>
+            
+            <item
+                android:id="@+id/action_filter_country_sri_lanka"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_sri_lanka"/>
+            
+            <item
+                android:id="@+id/action_filter_country_sudan"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_sudan"/>
+            
+            <item
+                android:id="@+id/action_filter_country_tajikistan"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_tajikistan"/>
+            
+            <item
+                android:id="@+id/action_filter_country_tanzania"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_tanzania"/>
+            
+            <item
+                android:id="@+id/action_filter_country_timor_leste"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_timor_leste"/>
+            
+            <item
+                android:id="@+id/action_filter_country_turkmenistan"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_turkmenistan"/>
+            
+            <item
+                android:id="@+id/action_filter_country_uganda"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_uganda"/>
+            
+            <item
+                android:id="@+id/action_filter_country_ukraine"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_ukraine"/>
+            
+            <item
+                android:id="@+id/action_filter_country_uzbekistan"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_uzbekistan"/>
+            
+            <item
+                android:id="@+id/action_filter_country_vietnam"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_vietnam"/>
+            
+            <item
+                android:id="@+id/action_filter_country_gaza"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_gaza"/>
+            
+            <item
+                android:id="@+id/action_filter_country_yemen"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_yemen"/>
+            
+            <item
+                android:id="@+id/action_filter_country_zimbabwe"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_zimbabwe"/>
+            
             </group>
         </menu>
         

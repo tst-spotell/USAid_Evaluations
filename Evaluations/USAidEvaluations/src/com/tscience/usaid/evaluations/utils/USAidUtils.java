@@ -72,7 +72,7 @@ public class USAidUtils {
             return 0;
         }
         
-        return USAidConstants.REGION_ARRAY[countryCode - 1];
+        return USAidConstants.REGION_ARRAY_ID[countryCode - 1];
         
     }
     

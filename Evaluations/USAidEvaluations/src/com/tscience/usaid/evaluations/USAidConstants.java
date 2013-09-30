@@ -15,6 +15,74 @@ public class USAidConstants {
 	public static final String COUNTRY_DIVIDER = "_qfvsq_";
 	public static final String ZERO_TIME = "T00:00:00";
 	
+	/** Country array id. */
+    public static final int[]  COUNTRY_ARRAY_ID  = new int[] {
+        1, // Afghanistan
+        2, // Albania
+        3, // Angola
+        4, // Armenia
+        5, // Bangladesh
+        6, // Bosnia and Hercegovina
+        7, // Brazil
+        8, // Burma
+        9, // Burundi
+        10, // Cambodia
+        11, // Chad
+        12, // Colombia
+        13, // Dominican Republic
+        14, // Congo DR
+        15, // Ecuador
+        16, // Egypt
+        17, // El Salvador
+        18, // Ethiopia
+        19, // Georgia
+        20, // Ghana
+        21, // Guatemala
+        22, // Haiti
+        23, // India
+        24, // Indonesia
+        25, // Iraq
+        26, // Kazakhstan
+        27, // Kenya
+        28, // Kosovo
+        29, // Kyrgyzstan
+        30, // Lebanon
+        31, // Liberia
+        32, // Libya
+        33, // Mali
+        34, // Mauritania
+        35, // Mexico
+        36, // Montenegro
+        37, // Morocco
+        38, // Mozambique
+        39, // Nepal
+        40, // Nicaragua
+        41, // Niger
+        42, // Nigeria
+        43, // Pakistan
+        44, // Paraguay
+        45, // Peru
+        46, // Philippines
+        47, // Rwanda
+        48, // Senegal
+        49, // Serbia
+        50, // South Africa
+        51, // South Sudan
+        52, // Sri Lanka
+        53, // Sudan
+        54, // Tajikistan
+        55, // Tanzania
+        56, // Timor-Leste
+        57, // Turkmenistan
+        58, // Uganda
+        59, // Ukraine
+        60, // Uzbekistan
+        61, // Vietnam
+        62, // WB Gaza
+        63, // Yemen
+        64 // Zimbabwe
+    };
+	
 	// sector image values
 	public static final int USAID_SECTOR_AGRICULTURE = 1;
 	public static final int USAID_SECTOR_DEMOCRACY = 2;
@@ -39,7 +107,7 @@ public class USAidConstants {
     public static final int USAID_REGION_AFRICA = 7;
 	
 	/** Region array id. */
-	public static final int[]  REGION_ARRAY  = new int[] {
+	public static final int[]  REGION_ARRAY_ID  = new int[] {
 	    1, // Afghanistan
 	    4, // Albania
 	    7, // Angola

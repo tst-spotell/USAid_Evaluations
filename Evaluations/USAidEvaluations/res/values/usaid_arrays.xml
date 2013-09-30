@@ -7,65 +7,65 @@
         <item>@string/usaid_action_filter_country_angola</item>
         <item>@string/usaid_action_filter_country_armenia</item>
         <item>@string/usaid_action_filter_country_bangladesh</item>
-        <item>Bosnia and Hercegovina</item>
-        <item>Brazil</item>
-        <item>Burma</item>
-        <item>Burundi</item>
-        <item>Cambodia</item>
-        <item>Chad</item>
-        <item>Colombia</item>
-        <item>Dominican Republic</item>
-        <item>Congo DR</item>
-        <item>Ecuador</item>
-        <item>Egypt</item>
-        <item>El Salvador</item>
-        <item>Ethiopia</item>
-        <item>Georgia</item>
-        <item>Ghana</item>
-        <item>Guatemala</item>
-        <item>Haiti</item>
-        <item>India</item>
-        <item>Indonesia</item>
-        <item>Iraq</item>
-        <item>Kazakhstan</item>
-        <item>Kenya</item>
-        <item>Kosovo</item>
-        <item>Kyrgyzstan</item>
-        <item>Lebanon</item>
-        <item>Liberia</item>
-        <item>Libya</item>
-        <item>Mali</item>
-        <item>Mauritania</item>
-        <item>Mexico</item>
-        <item>Montenegro</item>
-        <item>Morocco</item>
-        <item>Mozambique</item>
-        <item>Nepal</item>
-        <item>Nicaragua</item>
-        <item>Niger</item>
-        <item>Nigeria</item>
-        <item>Pakistan</item>
-        <item>Paraguay</item>
-        <item>Peru</item>
-        <item>Philippines</item>
-        <item>Rwanda</item>
-        <item>Senegal</item>
-        <item>Serbia</item>
-        <item>South Africa</item>
-        <item>South Sudan</item>
-        <item>Sri Lanka</item>
-        <item>Sudan</item>
-        <item>Tajikistan</item>
-        <item>Tanzania</item>
-        <item>Timor-Leste</item>
-        <item>Turkmenistan</item>
-        <item>Uganda</item>
-        <item>Ukraine</item>
-        <item>Uzbekistan</item>
-        <item>Vietnam</item>
-        <item>WB Gaza</item>
-        <item>Yemen</item>
-        <item>Zimbabwe</item>
+        <item>@string/usaid_action_filter_country_bosnia</item>
+        <item>@string/usaid_action_filter_country_brazil</item>
+        <item>@string/usaid_action_filter_country_burma</item>
+        <item>@string/usaid_action_filter_country_burundi</item>
+        <item>@string/usaid_action_filter_country_cambodia</item>
+        <item>@string/usaid_action_filter_country_chad</item>
+        <item>@string/usaid_action_filter_country_colombia</item>
+        <item>@string/usaid_action_filter_country_dominican_republic</item>
+        <item>@string/usaid_action_filter_country_congo</item>
+        <item>@string/usaid_action_filter_country_ecuador</item>
+        <item>@string/usaid_action_filter_country_egypt</item>
+        <item>@string/usaid_action_filter_country_el_salvador</item>
+        <item>@string/usaid_action_filter_country_ethiopia</item>
+        <item>@string/usaid_action_filter_country_georgia</item>
+        <item>@string/usaid_action_filter_country_ghana</item>
+        <item>@string/usaid_action_filter_country_guatemala</item>
+        <item>@string/usaid_action_filter_country_haiti</item>
+        <item>@string/usaid_action_filter_country_india</item>
+        <item>@string/usaid_action_filter_country_indonesia</item>
+        <item>@string/usaid_action_filter_country_iraq</item>
+        <item>@string/usaid_action_filter_country_kazakhstan</item>
+        <item>@string/usaid_action_filter_country_kenya</item>
+        <item>@string/usaid_action_filter_country_kosovo</item>
+        <item>@string/usaid_action_filter_country_kyrgyzstan</item>
+        <item>@string/usaid_action_filter_country_lebanon</item>
+        <item>@string/usaid_action_filter_country_liberia</item>
+        <item>@string/usaid_action_filter_country_libya</item>
+        <item>@string/usaid_action_filter_country_mali</item>
+        <item>@string/usaid_action_filter_country_mauritania</item>
+        <item>@string/usaid_action_filter_country_mexico</item>
+        <item>@string/usaid_action_filter_country_montenegro</item>
+        <item>@string/usaid_action_filter_country_morocco</item>
+        <item>@string/usaid_action_filter_country_mozambique</item>
+        <item>@string/usaid_action_filter_country_nepal</item>
+        <item>@string/usaid_action_filter_country_nicaragua</item>
+        <item>@string/usaid_action_filter_country_niger</item>
+        <item>@string/usaid_action_filter_country_nigeria</item>
+        <item>@string/usaid_action_filter_country_pakistan</item>
+        <item>@string/usaid_action_filter_country_paraguay</item>
+        <item>@string/usaid_action_filter_country_peru</item>
+        <item>@string/usaid_action_filter_country_philippines</item>
+        <item>@string/usaid_action_filter_country_rwanda</item>
+        <item>@string/usaid_action_filter_country_senegal</item>
+        <item>@string/usaid_action_filter_country_serbia</item>
+        <item>@string/usaid_action_filter_country_south_africa</item>
+        <item>@string/usaid_action_filter_country_south_sudan</item>
+        <item>@string/usaid_action_filter_country_sri_lanka</item>
+        <item>@string/usaid_action_filter_country_sudan</item>
+        <item>@string/usaid_action_filter_country_tajikistan</item>
+        <item>@string/usaid_action_filter_country_tanzania</item>
+        <item>@string/usaid_action_filter_country_timor_leste</item>
+        <item>@string/usaid_action_filter_country_turkmenistan</item>
+        <item>@string/usaid_action_filter_country_uganda</item>
+        <item>@string/usaid_action_filter_country_ukraine</item>
+        <item>@string/usaid_action_filter_country_uzbekistan</item>
+        <item>@string/usaid_action_filter_country_vietnam</item>
+        <item>@string/usaid_action_filter_country_gaza</item>
+        <item>@string/usaid_action_filter_country_yemen</item>
+        <item>@string/usaid_action_filter_country_zimbabwe</item>
 
     </string-array>
     
@@ -139,13 +139,13 @@
     </integer-array>
     
     <string-array name="usaid_filter_regions">
-        <item>AFGHANISTAN</item>
-        <item>PAKISTAN</item>
-        <item>ASIA</item>
-        <item>EUROPE AND EURASIA</item>
-        <item>LATIN AMERICA AND THE CARRIBEAN</item>
-        <item>MIDDLE EAST</item>
-        <item>SUB SAHARAN AFRICA</item>
+        <item>@string/usaid_action_filter_region_afganistan</item>
+        <item>@string/usaid_action_filter_region_pakistan</item>
+        <item>@string/usaid_action_filter_region_asia</item>
+        <item>@string/usaid_action_filter_region_europe</item>
+        <item>@string/usaid_action_filter_region_latin_america</item>
+        <item>@string/usaid_action_filter_region_middle_east</item>
+        <item>@string/usaid_action_filter_region_africa</item>
     </string-array>
     
     <integer-array name="usaid_filter_regions_id">
