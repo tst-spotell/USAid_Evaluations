@@ -20,8 +20,16 @@
     
     <!-- menu -->
     <string name="action_settings">Settings</string>
-    <string name="usaid_action_filter">Filter</string>
     <string name="usaid_action_filter_reset">Reset</string>
+    
+    <string name="usaid_action_filter_country">Country</string>
+    <string name="usaid_action_filter_country_afghanistan">Afghanistan</string>
+    <string name="usaid_action_filter_country_albania">Albania</string>
+    <string name="usaid_action_filter_country_angola">Angola</string>
+    <string name="usaid_action_filter_country_armenia">Armenia</string>
+    <string name="usaid_action_filter_country_bangladesh">Bangladesh</string>
+    <string name="usaid_action_filter_country">Country</string>
+    
     <string name="usaid_action_filter_sector">Sector</string>
     <string name="usaid_action_filter_sector_agriculture">Agriculture</string>
     <string name="usaid_action_filter_sector_crisis">Crisis</string>

@@ -52,7 +52,7 @@ public class USAidMainFragment extends SherlockListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         
         View listView = inflater.inflate(R.layout.fragment_usaid_main, container, false);
-        
+            
         // start getting data
         USAidListDataTask usaidListDataTask = new USAidListDataTask(this);
         usaidListDataTask.execute(getString(R.string.usaid_json_query));
@@ -140,6 +140,7 @@ public class USAidMainFragment extends SherlockListFragment {
             }
             case R.id.action_download_pdf_viewer: {
                 USAidUtils.getAdobeReader(getActivity());
+                return true;
             }
             
         } // end switch
@@ -180,14 +181,21 @@ public class USAidMainFragment extends SherlockListFragment {
     }
     
     /**
+     * Creates a new array of USAidDataObject's for a selected country.
+     */
+    private void displayCountry() {
+        
+        
+        
+    } // end displayCountry
+    
+    /**
      * Creates a new array of USAidDataObject's for a sector.
-     * 
-     * @param value The sector value to display (from USAidConstants--sector image values).
      */
     private void displaySectors() {
         
         // get the submenu
-        SubMenu subMenu = myMenu.findItem(R.id.action_filter).getSubMenu();
+        SubMenu subMenu = myMenu.findItem(R.id.action_sector).getSubMenu();
         
         int menuSize = subMenu.size();
         

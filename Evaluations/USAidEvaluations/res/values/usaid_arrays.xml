@@ -2,11 +2,11 @@
 <resources>
     <string-array name="usaid_filter_country">
         
-        <item>Afghanistan</item>
-        <item>Albania</item>
-        <item>Angola</item>
-        <item>Armenia</item>
-        <item>Bangladesh</item>
+        <item>@string/usaid_action_filter_country_afghanistan</item>
+        <item>@string/usaid_action_filter_country_albania</item>
+        <item>@string/usaid_action_filter_country_angola</item>
+        <item>@string/usaid_action_filter_country_armenia</item>
+        <item>@string/usaid_action_filter_country_bangladesh</item>
         <item>Bosnia and Hercegovina</item>
         <item>Brazil</item>
         <item>Burma</item>

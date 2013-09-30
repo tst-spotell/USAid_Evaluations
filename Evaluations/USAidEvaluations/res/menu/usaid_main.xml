@@ -5,11 +5,48 @@
         android:id="@+id/action_filter_reset"
         android:showAsAction="always"
         android:title="@string/usaid_action_filter_reset"/>
+
+    <item
+        android:id="@+id/action_country"
+        android:showAsAction="never"
+        android:title="@string/usaid_action_filter_country">
+        
+        <menu >
+            <group android:checkableBehavior="all">
+            <item
+                android:id="@+id/action_filter_country_afghanistan"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_afghanistan"/>
+            
+            <item
+                android:id="@+id/action_filter_country_albania"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_albania"/>
+            
+            <item
+                android:id="@+id/action_filter_country_angola"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_angola"/>
+            
+            <item
+                android:id="@+id/action_filter_country_armenia"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_armenia"/>
+            
+            <item
+                android:id="@+id/action_filter_country_bangladesh"
+                android:showAsAction="never"
+                android:title="@string/usaid_action_filter_country_bangladesh"/>
+            
+            </group>
+        </menu>
+        
+    </item>
     
     <item
-        android:id="@+id/action_filter"
+        android:id="@+id/action_sector"
         android:showAsAction="never"
-        android:title="@string/usaid_action_filter">
+        android:title="@string/usaid_action_filter_sector">
         
         <menu >
             <group android:checkableBehavior="all">
