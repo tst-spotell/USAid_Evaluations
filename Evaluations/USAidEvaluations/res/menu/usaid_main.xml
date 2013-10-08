@@ -16,72 +16,72 @@
             <item
                 android:id="@+id/action_filter_country_afghanistan"
                 android:showAsAction="never"
-                android:title="@string/usaid_action_filter_country_afghanistan"/>
+                android:title="@string/usaid_action_filter_country_afghanistan" />
             
             <item
                 android:id="@+id/action_filter_country_albania"
                 android:showAsAction="never"
-                android:title="@string/usaid_action_filter_country_albania"/>
+                android:title="@string/usaid_action_filter_country_albania" />
             
             <item
                 android:id="@+id/action_filter_country_angola"
                 android:showAsAction="never"
-                android:title="@string/usaid_action_filter_country_angola"/>
+                android:title="@string/usaid_action_filter_country_angola" />
             
             <item
                 android:id="@+id/action_filter_country_armenia"
                 android:showAsAction="never"
-                android:title="@string/usaid_action_filter_country_armenia"/>
+                android:title="@string/usaid_action_filter_country_armenia" />
             
             <item
                 android:id="@+id/action_filter_country_bangladesh"
                 android:showAsAction="never"
-                android:title="@string/usaid_action_filter_country_bangladesh"/>
+                android:title="@string/usaid_action_filter_country_bangladesh" />
             
             <item
                 android:id="@+id/action_filter_country_bosnia"
                 android:showAsAction="never"
-                android:title="@string/usaid_action_filter_country_bosnia"/>
+                android:title="@string/usaid_action_filter_country_bosnia" />
             
             <item
                 android:id="@+id/action_filter_country_brazil"
                 android:showAsAction="never"
-                android:title="@string/usaid_action_filter_country_brazil"/>
+                android:title="@string/usaid_action_filter_country_brazil" />
             
             <item
                 android:id="@+id/action_filter_country_burma"
                 android:showAsAction="never"
-                android:title="@string/usaid_action_filter_country_burma"/>
+                android:title="@string/usaid_action_filter_country_burma" />
             
             <item
                 android:id="@+id/action_filter_country_burundi"
                 android:showAsAction="never"
-                android:title="@string/usaid_action_filter_country_burundi"/>
+                android:title="@string/usaid_action_filter_country_burundi" />
             
             <item
                 android:id="@+id/action_filter_country_cambodia"
                 android:showAsAction="never"
-                android:title="@string/usaid_action_filter_country_cambodia"/>
+                android:title="@string/usaid_action_filter_country_cambodia" />
             
             <item
                 android:id="@+id/action_filter_country_chad"
                 android:showAsAction="never"
-                android:title="@string/usaid_action_filter_country_chad"/>
+                android:title="@string/usaid_action_filter_country_chad" />
             
             <item
                 android:id="@+id/action_filter_country_colombia"
                 android:showAsAction="never"
-                android:title="@string/usaid_action_filter_country_colombia"/>
+                android:title="@string/usaid_action_filter_country_colombia" />
             
             <item
                 android:id="@+id/action_filter_country_dominican_republic"
                 android:showAsAction="never"
-                android:title="@string/usaid_action_filter_country_dominican_republic"/>
+                android:title="@string/usaid_action_filter_country_dominican_republic" />
             
             <item
                 android:id="@+id/action_filter_country_congo"
                 android:showAsAction="never"
-                android:title="@string/usaid_action_filter_country_congo"/>
+                android:title="@string/usaid_action_filter_country_congo" />
             
             <item
                 android:id="@+id/action_filter_country_ecuador"

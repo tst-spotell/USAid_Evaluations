@@ -3,6 +3,7 @@
  */
 package com.tscience.usaid.evaluations.utils;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -75,6 +76,29 @@ public class USAidUtils {
         return USAidConstants.REGION_ARRAY_ID[countryCode - 1];
         
     }
+    
+    /**
+     * Convenience method to check country array for existing country selected.
+     * 
+     * @param arrayValue    The array of selected country USAidDataObject's.
+     * @param countryCode   The country code to test.
+     * @return              True if already in the list, False if not in the list.
+     */
+    public static boolean isCountryAlreadySelected(ArrayList<USAidDataObject> arrayValue, int countryCode) {
+        
+        int arraySize = arrayValue.size();
+        
+        for (int i = 0; i < arraySize; i++) {
+            
+            if (arrayValue.get(i).countryCode == countryCode) {
+                return true;
+            }
+            
+        }
+        
+        return false;
+        
+    } // end isCountryAlreadySelected
     
     /**
      * This method creates the hashmap with all country codes so we

@@ -15,72 +15,137 @@ public class USAidConstants {
 	public static final String COUNTRY_DIVIDER = "_qfvsq_";
 	public static final String ZERO_TIME = "T00:00:00";
 	
+	public static final int USAID_COUNTRY_AFGHANISTAN = 1;
+	public static final int USAID_COUNTRY_ALBANIA = 2;
+	public static final int USAID_COUNTRY_ANGOLA = 3;
+	public static final int USAID_COUNTRY_ARMENIA = 4;
+	public static final int USAID_COUNTRY_BANGLADESH = 5;
+	public static final int USAID_COUNTRY_BOSNIA = 6;
+	public static final int USAID_COUNTRY_BRAZIL = 7;
+	public static final int USAID_COUNTRY_BURMA = 8;
+	public static final int USAID_COUNTRY_BURUNDI = 9;
+	public static final int USAID_COUNTRY_CAMBODIA = 10;
+	public static final int USAID_COUNTRY_CHAD = 11;
+	public static final int USAID_COUNTRY_COLOMBIA = 12;
+	public static final int USAID_COUNTRY_DOMINICAN_REPUBLIC = 13;
+	public static final int USAID_COUNTRY_CONGO_DR = 14;
+	public static final int USAID_COUNTRY_ECUADOR = 15;
+	public static final int USAID_COUNTRY_EGYPT = 16;
+	public static final int USAID_COUNTRY_EL_SALVADOR = 17;
+	public static final int USAID_COUNTRY_ETHIOPIA = 18;
+	public static final int USAID_COUNTRY_GEORGIA = 19;
+	public static final int USAID_COUNTRY_GHANA = 20;
+	public static final int USAID_COUNTRY_GUATEMALA = 21;
+	public static final int USAID_COUNTRY_HAITI = 22;
+	public static final int USAID_COUNTRY_INDIA = 23;
+	public static final int USAID_COUNTRY_INDONESIA = 24;
+    public static final int USAID_COUNTRY_IRAQ = 25;
+    public static final int USAID_COUNTRY_KAZAKHSTAN = 26;
+    public static final int USAID_COUNTRY_KENYA = 27;
+    public static final int USAID_COUNTRY_KOSOVO = 28;
+    public static final int USAID_COUNTRY_KYRGYZSTAN = 29;
+    public static final int USAID_COUNTRY_LEBANON = 30;
+    public static final int USAID_COUNTRY_LIBERIA = 31;
+    public static final int USAID_COUNTRY_LIBYA = 32;
+    public static final int USAID_COUNTRY_MALI = 33;
+    public static final int USAID_COUNTRY_MAURITANIA = 34;
+    public static final int USAID_COUNTRY_MEXICO = 35;
+    public static final int USAID_COUNTRY_MONTENEGRO = 36;
+    public static final int USAID_COUNTRY_MOROCCO = 37;
+    public static final int USAID_COUNTRY_MOZAMBIQUE = 38;
+    public static final int USAID_COUNTRY_NEPAL = 39;
+    public static final int USAID_COUNTRY_NICARAGUA = 40;
+    public static final int USAID_COUNTRY_NIGER = 41;
+    public static final int USAID_COUNTRY_NIGERIA = 42;
+    public static final int USAID_COUNTRY_PAKISTAN = 43;
+    public static final int USAID_COUNTRY_PARAGUAY = 44;
+    public static final int USAID_COUNTRY_PERU = 45;
+    public static final int USAID_COUNTRY_PHILIPPINES = 46;
+    public static final int USAID_COUNTRY_RWANDA = 47;
+    public static final int USAID_COUNTRY_SENEGAL = 48;
+    public static final int USAID_COUNTRY_SERBIA = 49;
+    public static final int USAID_COUNTRY_SOUTH_AFRICA = 50;
+    public static final int USAID_COUNTRY_SOUTH_SUDAN = 51;
+    public static final int USAID_COUNTRY_SRI_LANKA = 52;
+    public static final int USAID_COUNTRY_SUDAN = 53;
+    public static final int USAID_COUNTRY_TAJIKISTAN = 54;
+    public static final int USAID_COUNTRY_TANZANIA = 55;
+    public static final int USAID_COUNTRY_TIMOR_LESTE = 56;
+    public static final int USAID_COUNTRY_TURKMENISTAN = 57;
+    public static final int USAID_COUNTRY_UGANDA = 58;
+    public static final int USAID_COUNTRY_UKRAINE = 59;
+    public static final int USAID_COUNTRY_UZBEKISTAN = 60;
+    public static final int USAID_COUNTRY_VIETNAM = 61;
+    public static final int USAID_COUNTRY_WB_GAZA = 62;
+    public static final int USAID_COUNTRY_YEMEN = 63;
+    public static final int USAID_COUNTRY_ZIMBABWE = 64;
+	
 	/** Country array id. */
     public static final int[]  COUNTRY_ARRAY_ID  = new int[] {
-        1, // Afghanistan
-        2, // Albania
-        3, // Angola
-        4, // Armenia
-        5, // Bangladesh
-        6, // Bosnia and Hercegovina
-        7, // Brazil
-        8, // Burma
-        9, // Burundi
-        10, // Cambodia
-        11, // Chad
-        12, // Colombia
-        13, // Dominican Republic
-        14, // Congo DR
-        15, // Ecuador
-        16, // Egypt
-        17, // El Salvador
-        18, // Ethiopia
-        19, // Georgia
-        20, // Ghana
-        21, // Guatemala
-        22, // Haiti
-        23, // India
-        24, // Indonesia
-        25, // Iraq
-        26, // Kazakhstan
-        27, // Kenya
-        28, // Kosovo
-        29, // Kyrgyzstan
-        30, // Lebanon
-        31, // Liberia
-        32, // Libya
-        33, // Mali
-        34, // Mauritania
-        35, // Mexico
-        36, // Montenegro
-        37, // Morocco
-        38, // Mozambique
-        39, // Nepal
-        40, // Nicaragua
-        41, // Niger
-        42, // Nigeria
-        43, // Pakistan
-        44, // Paraguay
-        45, // Peru
-        46, // Philippines
-        47, // Rwanda
-        48, // Senegal
-        49, // Serbia
-        50, // South Africa
-        51, // South Sudan
-        52, // Sri Lanka
-        53, // Sudan
-        54, // Tajikistan
-        55, // Tanzania
-        56, // Timor-Leste
-        57, // Turkmenistan
-        58, // Uganda
-        59, // Ukraine
-        60, // Uzbekistan
-        61, // Vietnam
-        62, // WB Gaza
-        63, // Yemen
-        64 // Zimbabwe
+        USAID_COUNTRY_AFGHANISTAN, // Afghanistan
+        USAID_COUNTRY_ALBANIA, // Albania
+        USAID_COUNTRY_ANGOLA, // Angola
+        USAID_COUNTRY_ARMENIA, // Armenia
+        USAID_COUNTRY_BANGLADESH, // Bangladesh
+        USAID_COUNTRY_BOSNIA, // Bosnia and Hercegovina
+        USAID_COUNTRY_BRAZIL, // Brazil
+        USAID_COUNTRY_BURMA, // Burma
+        USAID_COUNTRY_BURUNDI, // Burundi
+        USAID_COUNTRY_CAMBODIA, // Cambodia
+        USAID_COUNTRY_CHAD, // Chad
+        USAID_COUNTRY_COLOMBIA, // Colombia
+        USAID_COUNTRY_DOMINICAN_REPUBLIC, // Dominican Republic
+        USAID_COUNTRY_CONGO_DR, // Congo DR
+        USAID_COUNTRY_ECUADOR, // Ecuador
+        USAID_COUNTRY_EGYPT, // Egypt
+        USAID_COUNTRY_EL_SALVADOR, // El Salvador
+        USAID_COUNTRY_ETHIOPIA, // Ethiopia
+        USAID_COUNTRY_GEORGIA, // Georgia
+        USAID_COUNTRY_GHANA, // Ghana
+        USAID_COUNTRY_GUATEMALA, // Guatemala
+        USAID_COUNTRY_HAITI, // Haiti
+        USAID_COUNTRY_INDIA, // India
+        USAID_COUNTRY_INDONESIA, // Indonesia
+        USAID_COUNTRY_IRAQ, // Iraq
+        USAID_COUNTRY_KAZAKHSTAN, // Kazakhstan
+        USAID_COUNTRY_KENYA, // Kenya
+        USAID_COUNTRY_KOSOVO, // Kosovo
+        USAID_COUNTRY_KYRGYZSTAN, // Kyrgyzstan
+        USAID_COUNTRY_LEBANON, // Lebanon
+        USAID_COUNTRY_LIBERIA, // Liberia
+        USAID_COUNTRY_LIBYA, // Libya
+        USAID_COUNTRY_MALI, // Mali
+        USAID_COUNTRY_MAURITANIA, // Mauritania
+        USAID_COUNTRY_MEXICO, // Mexico
+        USAID_COUNTRY_MONTENEGRO, // Montenegro
+        USAID_COUNTRY_MOROCCO, // Morocco
+        USAID_COUNTRY_MOZAMBIQUE, // Mozambique
+        USAID_COUNTRY_NEPAL, // Nepal
+        USAID_COUNTRY_NICARAGUA, // Nicaragua
+        USAID_COUNTRY_NIGER, // Niger
+        USAID_COUNTRY_NIGERIA, // Nigeria
+        USAID_COUNTRY_PAKISTAN, // Pakistan
+        USAID_COUNTRY_PARAGUAY, // Paraguay
+        USAID_COUNTRY_PERU, // Peru
+        USAID_COUNTRY_PHILIPPINES, // Philippines
+        USAID_COUNTRY_RWANDA, // Rwanda
+        USAID_COUNTRY_SENEGAL, // Senegal
+        USAID_COUNTRY_SERBIA, // Serbia
+        USAID_COUNTRY_SOUTH_AFRICA, // South Africa
+        USAID_COUNTRY_SOUTH_SUDAN, // South Sudan
+        USAID_COUNTRY_SRI_LANKA, // Sri Lanka
+        USAID_COUNTRY_SUDAN, // Sudan
+        USAID_COUNTRY_TAJIKISTAN, // Tajikistan
+        USAID_COUNTRY_TANZANIA, // Tanzania
+        USAID_COUNTRY_TIMOR_LESTE, // Timor-Leste
+        USAID_COUNTRY_TURKMENISTAN, // Turkmenistan
+        USAID_COUNTRY_UGANDA, // Uganda
+        USAID_COUNTRY_UKRAINE, // Ukraine
+        USAID_COUNTRY_UZBEKISTAN, // Uzbekistan
+        USAID_COUNTRY_VIETNAM, // Vietnam
+        USAID_COUNTRY_WB_GAZA, // WB Gaza
+        USAID_COUNTRY_YEMEN, // Yemen
+        USAID_COUNTRY_ZIMBABWE // Zimbabwe
     };
 	
 	// sector image values
@@ -108,70 +173,70 @@ public class USAidConstants {
 	
 	/** Region array id. */
 	public static final int[]  REGION_ARRAY_ID  = new int[] {
-	    1, // Afghanistan
-	    4, // Albania
-	    7, // Angola
-	    4, // Armenia
-	    3, // Bangladesh
-	    4, // Bosnia and Hercegovina
-	    5, // Brazil
-	    3, // Burma
-	    7, // Burundi
-	    3, // Cambodia
-	    7, // Chad
-	    5, // Colombia
-	    5, // Dominican Republic
-	    7, // Congo DR
-	    5, // Ecuador
-	    6, // Egypt
-	    5, // El Salvador
-	    7, // Ethiopia
-	    4, // Georgia
-	    7, // Ghana
-	    5, // Guatemala
-	    5, // Haiti
-	    3, // India
-	    3, // Indonesia
-	    6, // Iraq
-	    3, // Kazakhstan
-	    7, // Kenya
-	    4, // Kosovo
-	    3, // Kyrgyzstan
-	    6, // Lebanon
-	    7, // Liberia
-	    6, // Libya
-	    7, // Mali
-	    7, // Mauritania
-	    5, // Mexico
-	    4, // Montenegro
-	    6, // Morocco
-	    7, // Mozambique
-	    3, // Nepal
-	    5, // Nicaragua
-	    7, // Niger
-	    7, // Nigeria
-	    2, // Pakistan
-	    5, // Paraguay
-	    5, // Peru
-	    3, // Philippines
-	    7, // Rwanda
-	    7, // Senegal
-	    4, // Serbia
-	    7, // South Africa
-	    7, // South Sudan
-	    3, // Sri Lanka
-	    7, // Sudan
-	    3, // Tajikistan
-	    7, // Tanzania
-	    3, // Timor-Leste
-	    3, // Turkmenistan
-	    7, // Uganda
-	    4, // Ukraine
-	    3, // Uzbekistan
-	    3, // Vietnam
-	    6, // WB Gaza
-	    6, // Yemen
-	    7 // Zimbabwe
+	    USAID_REGION_AFGHANISTAN, // Afghanistan
+	    USAID_REGION_EUROPE, // Albania
+	    USAID_REGION_AFRICA, // Angola
+	    USAID_REGION_EUROPE, // Armenia
+	    USAID_REGION_ASIA, // Bangladesh
+	    USAID_REGION_EUROPE, // Bosnia and Hercegovina
+	    USAID_REGION_LATIN_AMERICA, // Brazil
+	    USAID_REGION_ASIA, // Burma
+	    USAID_REGION_AFRICA, // Burundi
+	    USAID_REGION_ASIA, // Cambodia
+	    USAID_REGION_AFRICA, // Chad
+	    USAID_REGION_LATIN_AMERICA, // Colombia
+	    USAID_REGION_LATIN_AMERICA, // Dominican Republic
+	    USAID_REGION_AFRICA, // Congo DR
+	    USAID_REGION_LATIN_AMERICA, // Ecuador
+	    USAID_REGION_MIDDLE_EAST, // Egypt
+	    USAID_REGION_LATIN_AMERICA, // El Salvador
+	    USAID_REGION_AFRICA, // Ethiopia
+	    USAID_REGION_EUROPE, // Georgia
+	    USAID_REGION_AFRICA, // Ghana
+	    USAID_REGION_LATIN_AMERICA, // Guatemala
+	    USAID_REGION_LATIN_AMERICA, // Haiti
+	    USAID_REGION_ASIA, // India
+	    USAID_REGION_ASIA, // Indonesia
+	    USAID_REGION_MIDDLE_EAST, // Iraq
+	    USAID_REGION_ASIA, // Kazakhstan
+	    USAID_REGION_AFRICA, // Kenya
+	    USAID_REGION_EUROPE, // Kosovo
+	    USAID_REGION_ASIA, // Kyrgyzstan
+	    USAID_REGION_MIDDLE_EAST, // Lebanon
+	    USAID_REGION_AFRICA, // Liberia
+	    USAID_REGION_MIDDLE_EAST, // Libya
+	    USAID_REGION_AFRICA, // Mali
+	    USAID_REGION_AFRICA, // Mauritania
+	    USAID_REGION_LATIN_AMERICA, // Mexico
+	    USAID_REGION_EUROPE, // Montenegro
+	    USAID_REGION_MIDDLE_EAST, // Morocco
+	    USAID_REGION_AFRICA, // Mozambique
+	    USAID_REGION_ASIA, // Nepal
+	    USAID_REGION_LATIN_AMERICA, // Nicaragua
+	    USAID_REGION_AFRICA, // Niger
+	    USAID_REGION_AFRICA, // Nigeria
+	    USAID_REGION_PAKISTAN, // Pakistan
+	    USAID_REGION_LATIN_AMERICA, // Paraguay
+	    USAID_REGION_LATIN_AMERICA, // Peru
+	    USAID_REGION_ASIA, // Philippines
+	    USAID_REGION_AFRICA, // Rwanda
+	    USAID_REGION_AFRICA, // Senegal
+	    USAID_REGION_EUROPE, // Serbia
+	    USAID_REGION_AFRICA, // South Africa
+	    USAID_REGION_AFRICA, // South Sudan
+	    USAID_REGION_ASIA, // Sri Lanka
+	    USAID_REGION_AFRICA, // Sudan
+	    USAID_REGION_ASIA, // Tajikistan
+	    USAID_REGION_AFRICA, // Tanzania
+	    USAID_REGION_ASIA, // Timor-Leste
+	    USAID_REGION_ASIA, // Turkmenistan
+	    USAID_REGION_AFRICA, // Uganda
+	    USAID_REGION_EUROPE, // Ukraine
+	    USAID_REGION_ASIA, // Uzbekistan
+	    USAID_REGION_ASIA, // Vietnam
+	    USAID_REGION_MIDDLE_EAST, // WB Gaza
+	    USAID_REGION_MIDDLE_EAST, // Yemen
+	    USAID_REGION_AFRICA // Zimbabwe
 	};
 	
 

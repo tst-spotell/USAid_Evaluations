@@ -101,6 +101,11 @@ public class USAidMainFragment extends SherlockListFragment {
             
             return true;
             
+        } else if (currentItemId == R.id.action_download_pdf_viewer) {
+            
+            USAidUtils.getAdobeReader(getActivity());
+            return true;
+            
         }
         
         // handle if checkbox
@@ -111,39 +116,38 @@ public class USAidMainFragment extends SherlockListFragment {
             } else {
                 item.setChecked(true);
             }
+            
+            displaySectors();
+            return true;
         
         }
         
-        switch(currentItemId) {
-            
-            case R.id.action_filter_sector_agriculture:
-            case R.id.action_filter_sector_democracy:
-            case R.id.action_filter_sector_finance:
-            case R.id.action_filter_sector_education:
-            case R.id.action_filter_sector_environment:
-            case R.id.action_filter_sector_gender:
-            case R.id.action_filter_sector_health:
-            case R.id.action_filter_sector_technology:
-            case R.id.action_filter_sector_water:
-            case R.id.action_filter_sector_crisis:
-            case R.id.action_filter_region_afganistan:
-            case R.id.action_filter_region_pakistan:
-            case R.id.action_filter_region_asia:
-            case R.id.action_filter_region_europe:
-            case R.id.action_filter_region_latin_america:
-            case R.id.action_filter_region_middle_east:
-            case R.id.action_filter_region_africa:{
-                
-                displaySectors();
-                return true;
-                
-            }
-            case R.id.action_download_pdf_viewer: {
-                USAidUtils.getAdobeReader(getActivity());
-                return true;
-            }
-            
-        } // end switch
+//        switch(currentItemId) {
+//            
+//            case R.id.action_filter_sector_agriculture:
+//            case R.id.action_filter_sector_democracy:
+//            case R.id.action_filter_sector_finance:
+//            case R.id.action_filter_sector_education:
+//            case R.id.action_filter_sector_environment:
+//            case R.id.action_filter_sector_gender:
+//            case R.id.action_filter_sector_health:
+//            case R.id.action_filter_sector_technology:
+//            case R.id.action_filter_sector_water:
+//            case R.id.action_filter_sector_crisis:
+//            case R.id.action_filter_region_afganistan:
+//            case R.id.action_filter_region_pakistan:
+//            case R.id.action_filter_region_asia:
+//            case R.id.action_filter_region_europe:
+//            case R.id.action_filter_region_latin_america:
+//            case R.id.action_filter_region_middle_east:
+//            case R.id.action_filter_region_africa:{
+//                
+//                displaySectors();
+//                return true;
+//                
+//            }
+//            
+//        } // end switch
         
         return false;
     }
@@ -181,16 +185,9 @@ public class USAidMainFragment extends SherlockListFragment {
     }
     
     /**
-     * Creates a new array of USAidDataObject's for a selected country.
-     */
-    private void displayCountry() {
-        
-        
-        
-    } // end displayCountry
-    
-    /**
      * Creates a new array of USAidDataObject's for a sector.
+     * 
+     * @param value The sorted list with sector selections.
      */
     private void displaySectors() {
         
@@ -257,18 +254,18 @@ public class USAidMainFragment extends SherlockListFragment {
         }
         
         // now check the regions before set datalist
-        displayRegions(newData);
+        displayCountryAndRegions(newData);
         
     } // end displaySectors
     
     /**
      * This method does the same thing as displaySectors but for the regions.
      * 
-     * @param value The sorted list with sector selections.
+     * @param value The sorted list with regions selections.
      */
-    private void displayRegions(ArrayList<USAidDataObject> value) {
+    private void displayCountryAndRegions(ArrayList<USAidDataObject> value) {
         
-        // get the submenu
+        // get the region submenu
         SubMenu subMenu = myMenu.findItem(R.id.action_region).getSubMenu();
         
         int menuSize = subMenu.size();
@@ -277,7 +274,7 @@ public class USAidMainFragment extends SherlockListFragment {
         
         MenuItem menuItem = null;
         
-        Vector<Integer> checkedVector = new Vector<Integer>();
+        Vector<Integer> checkedRegionVector = new Vector<Integer>();
         
         // what menu items are checked
         for (int x = 0; x < menuSize; x++) {
@@ -289,7 +286,35 @@ public class USAidMainFragment extends SherlockListFragment {
                 int checkedNum = Integer.valueOf(getMenuItemRegionConstant(menuItem.getItemId()));
                 
                 if (checkedNum > 0) {
-                    checkedVector.add(checkedNum);
+                    checkedRegionVector.add(checkedNum);
+                }
+                
+            }
+            
+        } // end looking for checked menu items
+        
+        // get the country's checked
+        subMenu = myMenu.findItem(R.id.action_country).getSubMenu();
+        
+        menuSize = subMenu.size();
+        
+        Log.d(LOG_TAG, "----------------------------------------menuSize country: " + menuSize);
+        
+        menuItem = null;
+        
+        Vector<Integer> checkedCountryVector = new Vector<Integer>();
+        
+        // what menu items are checked
+        for (int x = 0; x < menuSize; x++) {
+            
+            menuItem = subMenu.getItem(x);
+            
+            if (menuItem.isChecked()) {
+                
+                int checkedNum = Integer.valueOf(getMenuItemCountryConstant(menuItem.getItemId()));
+                
+                if (checkedNum > 0) {
+                    checkedCountryVector.add(checkedNum);
                 }
                 
             }
@@ -297,13 +322,17 @@ public class USAidMainFragment extends SherlockListFragment {
         } // end looking for checked menu items
         
         // size of checked menu items
-        int numberChecked = checkedVector.size();
+        int numberRegionChecked = checkedRegionVector.size();
         
-        Log.d(LOG_TAG, "---------------------------------------- numberChecked region: " + numberChecked);
+        Log.d(LOG_TAG, "---------------------------------------- numberRegionChecked: " + numberRegionChecked);
+        
+        int numberCountryChecked = checkedCountryVector.size();
+        
+        Log.d(LOG_TAG, "---------------------------------------- numberCountryChecked: " + numberCountryChecked);
         
         ArrayList<USAidDataObject> newData = null;
         
-        if (numberChecked == 0) {
+        if ((numberRegionChecked == 0) && (numberCountryChecked == 0)) {
             
             // display all
             newData = value;
@@ -315,20 +344,45 @@ public class USAidMainFragment extends SherlockListFragment {
             
             int maxValues = value.size();
             
+            boolean addedValue = false;
+            
             for (int i = 0; i < maxValues; i++) {
                 
-                // check each one of these against checked vector
-                for (int j = 0; j < numberChecked; j++) {
+                // reset added item
+                addedValue = false;
                 
-                    if (value.get(i).regionValue == checkedVector.get(j).intValue()) {
+                // check each one of these against region checked vector
+                for (int j = 0; j < numberRegionChecked; j++) {
+                
+                    // is this defined in the region
+                    if (value.get(i).regionValue == checkedRegionVector.get(j).intValue()) {
                         newData.add(value.get(i));
+                        addedValue = true;
+                        break;
                     }
                     
-                }
+                } // end checking regions
+                
+                // check against the country vector if not added by region
+                if (!addedValue) {
+                    
+                    for (int k = 0; k < numberCountryChecked; k++) {
+                        
+                        // is this defined for the country
+                        if (value.get(i).countryCode == checkedCountryVector.get(k).intValue()) {
+                            newData.add(value.get(i));
+                            break;
+                        }
+                        
+                    }
+                    
+                } // end checking countries
                 
             } // end maxValues
         
         }
+        
+        Log.d(LOG_TAG, "---------------------------------------- final number reports: " + newData.size());
         
         setTheListData(newData, false);
         
@@ -412,11 +466,11 @@ public class USAidMainFragment extends SherlockListFragment {
     } // end getMenuItemSectorConstant
     
     /**
-     * Convenience method to get what was constant for sorting.
+     * Convenience method to get what was region constant for sorting.
      * 
      * @param value The id of the menuItem selected.
      * 
-     * @return  The constant value used for sorting.
+     * @return  The region constant value used for sorting.
      */
     private int getMenuItemRegionConstant(int value) {
         
@@ -470,6 +524,406 @@ public class USAidMainFragment extends SherlockListFragment {
         return 0;
         
     } // end getMenuItemRegionConstant
+    
+    /**
+     * Convenience method to get what was country constant for sorting.
+     * 
+     * @param value The id of the menuItem selected.
+     * 
+     * @return  The country constant value used for sorting.
+     */
+    private int getMenuItemCountryConstant(int value) {
+        
+        switch(value) {
+            
+            case R.id.action_filter_country_afghanistan: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked afghanistan");
+                return USAidConstants.USAID_COUNTRY_AFGHANISTAN;
+                
+            }
+            
+            case R.id.action_filter_country_albania: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked albania");
+                return USAidConstants.USAID_COUNTRY_ALBANIA;
+                
+            }
+            
+            case R.id.action_filter_country_angola: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked angola");
+                return USAidConstants.USAID_COUNTRY_ANGOLA;
+                
+            }
+            
+            case R.id.action_filter_country_armenia: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked armenia");
+                return USAidConstants.USAID_COUNTRY_ARMENIA;
+                
+            }
+            
+            case R.id.action_filter_country_bangladesh: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked bangladesh");
+                return USAidConstants.USAID_COUNTRY_BANGLADESH;
+                
+            }
+
+            case R.id.action_filter_country_bosnia: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked bosnia");
+                return USAidConstants.USAID_COUNTRY_BOSNIA;
+                
+            }
+            
+            case R.id.action_filter_country_brazil: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked brazil");
+                return USAidConstants.USAID_COUNTRY_BRAZIL;
+                
+            }
+            
+            case R.id.action_filter_country_burma: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked burma");
+                return USAidConstants.USAID_COUNTRY_BURMA;
+                
+            }
+            
+            case R.id.action_filter_country_burundi: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked burundi");
+                return USAidConstants.USAID_COUNTRY_BURUNDI;
+                
+            }
+            
+            case R.id.action_filter_country_cambodia: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked cambodia");
+                return USAidConstants.USAID_COUNTRY_CAMBODIA;
+                
+            }
+            
+            case R.id.action_filter_country_chad: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked chad");
+                return USAidConstants.USAID_COUNTRY_CHAD;
+                
+            }
+            
+            case R.id.action_filter_country_colombia: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked colombia");
+                return USAidConstants.USAID_COUNTRY_COLOMBIA;
+                
+            }
+
+            case R.id.action_filter_country_dominican_republic: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked dominican_republic");
+                return USAidConstants.USAID_COUNTRY_DOMINICAN_REPUBLIC;
+                
+            }
+            
+            case R.id.action_filter_country_congo: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked congo");
+                return USAidConstants.USAID_COUNTRY_CONGO_DR;
+                
+            }
+            
+            case R.id.action_filter_country_ecuador: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked ecuador");
+                return USAidConstants.USAID_COUNTRY_ECUADOR;
+                
+            }
+            
+            case R.id.action_filter_country_egypt: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked egypt");
+                return USAidConstants.USAID_COUNTRY_EGYPT;
+                
+            }
+            
+            case R.id.action_filter_country_el_salvador: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked el_salvador");
+                return USAidConstants.USAID_COUNTRY_EL_SALVADOR;
+                
+            }
+            
+            case R.id.action_filter_country_ethiopia: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked ethiopia");
+                return USAidConstants.USAID_COUNTRY_ETHIOPIA;
+                
+            }
+            
+            case R.id.action_filter_country_georgia: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked georgia");
+                return USAidConstants.USAID_COUNTRY_GEORGIA;
+                
+            }
+
+            case R.id.action_filter_country_ghana: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked ghana");
+                return USAidConstants.USAID_COUNTRY_GHANA;
+                
+            }
+            
+            case R.id.action_filter_country_guatemala: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked guatemala");
+                return USAidConstants.USAID_COUNTRY_GUATEMALA;
+                
+            }
+            
+            case R.id.action_filter_country_haiti: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked haiti");
+                return USAidConstants.USAID_COUNTRY_HAITI;
+                
+            }
+            
+            case R.id.action_filter_country_india: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked india");
+                return USAidConstants.USAID_COUNTRY_INDIA;
+                
+            }
+            
+            case R.id.action_filter_country_indonesia: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked indonesia");
+                return USAidConstants.USAID_COUNTRY_INDONESIA;
+                
+            }
+            
+            case R.id.action_filter_country_iraq: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked iraq");
+                return USAidConstants.USAID_COUNTRY_IRAQ;
+                
+            }
+            
+            case R.id.action_filter_country_kazakhstan: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked kazakhstan");
+                return USAidConstants.USAID_COUNTRY_KAZAKHSTAN;
+                
+            }
+
+            case R.id.action_filter_country_kenya: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked kenya");
+                return USAidConstants.USAID_COUNTRY_KENYA;
+                
+            }
+            
+            case R.id.action_filter_country_kosovo: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked kosovo");
+                return USAidConstants.USAID_COUNTRY_KOSOVO;
+                
+            }
+            
+            case R.id.action_filter_country_kyrgyzstan: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked kyrgyzstan");
+                return USAidConstants.USAID_COUNTRY_KYRGYZSTAN;
+                
+            }
+            
+            case R.id.action_filter_country_lebanon: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked lebanon");
+                return USAidConstants.USAID_COUNTRY_LEBANON;
+                
+            }
+            
+            case R.id.action_filter_country_liberia: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked liberia");
+                return USAidConstants.USAID_COUNTRY_LIBERIA;
+                
+            }
+
+            case R.id.action_filter_country_libya: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked libya");
+                return USAidConstants.USAID_COUNTRY_LIBYA;
+                
+            }
+            
+            case R.id.action_filter_country_mali: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked mali");
+                return USAidConstants.USAID_COUNTRY_MALI;
+                
+            }
+            
+            case R.id.action_filter_country_mauritania: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked mauritania");
+                return USAidConstants.USAID_COUNTRY_MAURITANIA;
+                
+            }
+            
+            case R.id.action_filter_country_mexico: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked mexico");
+                return USAidConstants.USAID_COUNTRY_MEXICO;
+                
+            }
+            
+            case R.id.action_filter_country_montenegro: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked montenegro");
+                return USAidConstants.USAID_COUNTRY_MONTENEGRO;
+                
+            }
+
+            case R.id.action_filter_country_morocco: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked morocco");
+                return USAidConstants.USAID_COUNTRY_MOROCCO;
+                
+            }
+            
+            case R.id.action_filter_country_mozambique: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked mozambique");
+                return USAidConstants.USAID_COUNTRY_MOZAMBIQUE;
+                
+            }
+            
+            case R.id.action_filter_country_nepal: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked nepal");
+                return USAidConstants.USAID_COUNTRY_NEPAL;
+                
+            }
+            
+            case R.id.action_filter_country_nicaragua: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked nicaragua");
+                return USAidConstants.USAID_COUNTRY_NICARAGUA;
+                
+            }
+            
+            case R.id.action_filter_country_niger: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked niger");
+                return USAidConstants.USAID_COUNTRY_NIGER;
+                
+            }
+
+            case R.id.action_filter_country_nigeria: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked nigeria");
+                return USAidConstants.USAID_COUNTRY_NIGERIA;
+                
+            }
+            
+            case R.id.action_filter_country_pakistan: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked pakistan");
+                return USAidConstants.USAID_COUNTRY_PAKISTAN;
+                
+            }
+            
+            case R.id.action_filter_country_paraguay: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked paraguay");
+                return USAidConstants.USAID_COUNTRY_PARAGUAY;
+                
+            }
+            
+            case R.id.action_filter_country_peru: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked peru");
+                return USAidConstants.USAID_COUNTRY_PERU;
+                
+            }
+            
+            case R.id.action_filter_country_philippines: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked philippines");
+                return USAidConstants.USAID_COUNTRY_PHILIPPINES;
+                
+            }
+
+            case R.id.action_filter_country_rwanda: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked rwanda");
+                return USAidConstants.USAID_COUNTRY_RWANDA;
+                
+            }
+            
+            case R.id.action_filter_country_senegal: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked senegal");
+                return USAidConstants.USAID_COUNTRY_SENEGAL;
+                
+            }
+            
+            case R.id.action_filter_country_serbia: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked serbia");
+                return USAidConstants.USAID_COUNTRY_SERBIA;
+                
+            }
+
+            case R.id.action_filter_country_south_africa: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked south_africa");
+                return USAidConstants.USAID_COUNTRY_SOUTH_AFRICA;
+                
+            }
+            
+            case R.id.action_filter_country_south_sudan: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked south_sudan");
+                return USAidConstants.USAID_COUNTRY_SOUTH_SUDAN;
+                
+            }
+            
+            case R.id.action_filter_country_sri_lanka: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked sri_lanka");
+                return USAidConstants.USAID_COUNTRY_SRI_LANKA;
+                
+            }
+
+            case R.id.action_filter_country_sudan: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked sudan");
+                return USAidConstants.USAID_COUNTRY_SUDAN;
+                
+            }
+            
+            case R.id.action_filter_country_tajikistan: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked tajikistan");
+                return USAidConstants.USAID_COUNTRY_TAJIKISTAN;
+                
+            }
+            
+            case R.id.action_filter_country_tanzania: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked tanzania");
+                return USAidConstants.USAID_COUNTRY_TANZANIA;
+                
+            }
+
+            case R.id.action_filter_country_timor_leste: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked timor_leste");
+                return USAidConstants.USAID_COUNTRY_TIMOR_LESTE;
+                
+            }
+            
+            case R.id.action_filter_country_turkmenistan: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked turkmenistan");
+                return USAidConstants.USAID_COUNTRY_TURKMENISTAN;
+                
+            }
+            
+            case R.id.action_filter_country_uganda: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked uganda");
+                return USAidConstants.USAID_COUNTRY_UGANDA;
+                
+            }
+
+            case R.id.action_filter_country_ukraine: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked ukraine");
+                return USAidConstants.USAID_COUNTRY_UKRAINE;
+                
+            }
+            
+            case R.id.action_filter_country_uzbekistan: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked uzbekistan");
+                return USAidConstants.USAID_COUNTRY_UZBEKISTAN;
+                
+            }
+            
+            case R.id.action_filter_country_vietnam: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked vietnam");
+                return USAidConstants.USAID_COUNTRY_VIETNAM;
+                
+            }
+
+            case R.id.action_filter_country_gaza: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked gaza");
+                return USAidConstants.USAID_COUNTRY_WB_GAZA;
+                
+            }
+            
+            case R.id.action_filter_country_yemen: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked yemen");
+                return USAidConstants.USAID_COUNTRY_YEMEN;
+                
+            }
+            
+            case R.id.action_filter_country_zimbabwe: {
+                Log.d(LOG_TAG, "---------------------------------------- menu is checked zimbabwe");
+                return USAidConstants.USAID_COUNTRY_ZIMBABWE;
+                
+            }
+            
+        } // end switch
+        
+        return 0;
+    }
     
     /**
      * This is the array adapter class used for our custom view.
