@@ -33,52 +33,53 @@ public class USAidConstants {
 	public static final int USAID_COUNTRY_EGYPT = 16;
 	public static final int USAID_COUNTRY_EL_SALVADOR = 17;
 	public static final int USAID_COUNTRY_ETHIOPIA = 18;
-	public static final int USAID_COUNTRY_GEORGIA = 19;
-	public static final int USAID_COUNTRY_GHANA = 20;
-	public static final int USAID_COUNTRY_GUATEMALA = 21;
-	public static final int USAID_COUNTRY_HAITI = 22;
-	public static final int USAID_COUNTRY_INDIA = 23;
-	public static final int USAID_COUNTRY_INDONESIA = 24;
-    public static final int USAID_COUNTRY_IRAQ = 25;
-    public static final int USAID_COUNTRY_KAZAKHSTAN = 26;
-    public static final int USAID_COUNTRY_KENYA = 27;
-    public static final int USAID_COUNTRY_KOSOVO = 28;
-    public static final int USAID_COUNTRY_KYRGYZSTAN = 29;
-    public static final int USAID_COUNTRY_LEBANON = 30;
-    public static final int USAID_COUNTRY_LIBERIA = 31;
-    public static final int USAID_COUNTRY_LIBYA = 32;
-    public static final int USAID_COUNTRY_MALI = 33;
-    public static final int USAID_COUNTRY_MAURITANIA = 34;
-    public static final int USAID_COUNTRY_MEXICO = 35;
-    public static final int USAID_COUNTRY_MONTENEGRO = 36;
-    public static final int USAID_COUNTRY_MOROCCO = 37;
-    public static final int USAID_COUNTRY_MOZAMBIQUE = 38;
-    public static final int USAID_COUNTRY_NEPAL = 39;
-    public static final int USAID_COUNTRY_NICARAGUA = 40;
-    public static final int USAID_COUNTRY_NIGER = 41;
-    public static final int USAID_COUNTRY_NIGERIA = 42;
-    public static final int USAID_COUNTRY_PAKISTAN = 43;
-    public static final int USAID_COUNTRY_PARAGUAY = 44;
-    public static final int USAID_COUNTRY_PERU = 45;
-    public static final int USAID_COUNTRY_PHILIPPINES = 46;
-    public static final int USAID_COUNTRY_RWANDA = 47;
-    public static final int USAID_COUNTRY_SENEGAL = 48;
-    public static final int USAID_COUNTRY_SERBIA = 49;
-    public static final int USAID_COUNTRY_SOUTH_AFRICA = 50;
-    public static final int USAID_COUNTRY_SOUTH_SUDAN = 51;
-    public static final int USAID_COUNTRY_SRI_LANKA = 52;
-    public static final int USAID_COUNTRY_SUDAN = 53;
-    public static final int USAID_COUNTRY_TAJIKISTAN = 54;
-    public static final int USAID_COUNTRY_TANZANIA = 55;
-    public static final int USAID_COUNTRY_TIMOR_LESTE = 56;
-    public static final int USAID_COUNTRY_TURKMENISTAN = 57;
-    public static final int USAID_COUNTRY_UGANDA = 58;
-    public static final int USAID_COUNTRY_UKRAINE = 59;
-    public static final int USAID_COUNTRY_UZBEKISTAN = 60;
-    public static final int USAID_COUNTRY_VIETNAM = 61;
-    public static final int USAID_COUNTRY_WB_GAZA = 62;
-    public static final int USAID_COUNTRY_YEMEN = 63;
-    public static final int USAID_COUNTRY_ZIMBABWE = 64;
+	public static final int USAID_COUNTRY_GAMBIA = 19;
+	public static final int USAID_COUNTRY_GEORGIA = 20;
+	public static final int USAID_COUNTRY_GHANA = 21;
+	public static final int USAID_COUNTRY_GUATEMALA = 22;
+	public static final int USAID_COUNTRY_HAITI = 23;
+	public static final int USAID_COUNTRY_INDIA = 24;
+	public static final int USAID_COUNTRY_INDONESIA = 25;
+    public static final int USAID_COUNTRY_IRAQ = 26;
+    public static final int USAID_COUNTRY_KAZAKHSTAN = 27;
+    public static final int USAID_COUNTRY_KENYA = 28;
+    public static final int USAID_COUNTRY_KOSOVO = 29;
+    public static final int USAID_COUNTRY_KYRGYZSTAN = 30;
+    public static final int USAID_COUNTRY_LEBANON = 31;
+    public static final int USAID_COUNTRY_LIBERIA = 32;
+    public static final int USAID_COUNTRY_LIBYA = 33;
+    public static final int USAID_COUNTRY_MALI = 34;
+    public static final int USAID_COUNTRY_MAURITANIA = 35;
+    public static final int USAID_COUNTRY_MEXICO = 36;
+    public static final int USAID_COUNTRY_MONTENEGRO = 37;
+    public static final int USAID_COUNTRY_MOROCCO = 38;
+    public static final int USAID_COUNTRY_MOZAMBIQUE = 39;
+    public static final int USAID_COUNTRY_NEPAL = 40;
+    public static final int USAID_COUNTRY_NICARAGUA = 41;
+    public static final int USAID_COUNTRY_NIGER = 42;
+    public static final int USAID_COUNTRY_NIGERIA = 43;
+    public static final int USAID_COUNTRY_PAKISTAN = 44;
+    public static final int USAID_COUNTRY_PARAGUAY = 45;
+    public static final int USAID_COUNTRY_PERU = 46;
+    public static final int USAID_COUNTRY_PHILIPPINES = 47;
+    public static final int USAID_COUNTRY_RWANDA = 48;
+    public static final int USAID_COUNTRY_SENEGAL = 49;
+    public static final int USAID_COUNTRY_SERBIA = 50;
+    public static final int USAID_COUNTRY_SOUTH_AFRICA = 51;
+    public static final int USAID_COUNTRY_SOUTH_SUDAN = 52;
+    public static final int USAID_COUNTRY_SRI_LANKA = 53;
+    public static final int USAID_COUNTRY_SUDAN = 54;
+    public static final int USAID_COUNTRY_TAJIKISTAN = 55;
+    public static final int USAID_COUNTRY_TANZANIA = 56;
+    public static final int USAID_COUNTRY_TIMOR_LESTE = 57;
+    public static final int USAID_COUNTRY_TURKMENISTAN = 58;
+    public static final int USAID_COUNTRY_UGANDA = 59;
+    public static final int USAID_COUNTRY_UKRAINE = 60;
+    public static final int USAID_COUNTRY_UZBEKISTAN = 61;
+    public static final int USAID_COUNTRY_VIETNAM = 62;
+    public static final int USAID_COUNTRY_WB_GAZA = 63;
+    public static final int USAID_COUNTRY_YEMEN = 64;
+    public static final int USAID_COUNTRY_ZIMBABWE = 65;
 	
 	/** Country array id. */
     public static final int[]  COUNTRY_ARRAY_ID  = new int[] {
@@ -100,6 +101,7 @@ public class USAidConstants {
         USAID_COUNTRY_EGYPT, // Egypt
         USAID_COUNTRY_EL_SALVADOR, // El Salvador
         USAID_COUNTRY_ETHIOPIA, // Ethiopia
+        USAID_COUNTRY_GAMBIA, // Gambia
         USAID_COUNTRY_GEORGIA, // Georgia
         USAID_COUNTRY_GHANA, // Ghana
         USAID_COUNTRY_GUATEMALA, // Guatemala
@@ -191,6 +193,7 @@ public class USAidConstants {
 	    USAID_REGION_MIDDLE_EAST, // Egypt
 	    USAID_REGION_LATIN_AMERICA, // El Salvador
 	    USAID_REGION_AFRICA, // Ethiopia
+	    USAID_REGION_AFRICA, // Gambia
 	    USAID_REGION_EUROPE, // Georgia
 	    USAID_REGION_AFRICA, // Ghana
 	    USAID_REGION_LATIN_AMERICA, // Guatemala

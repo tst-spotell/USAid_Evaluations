@@ -10,7 +10,7 @@
         android:id="@+id/action_country"
         android:showAsAction="never"
         android:title="@string/usaid_action_filter_country">
-        
+
         <menu >
             <group android:checkableBehavior="all">
             <item

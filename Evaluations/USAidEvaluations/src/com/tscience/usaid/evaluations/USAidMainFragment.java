@@ -122,33 +122,6 @@ public class USAidMainFragment extends SherlockListFragment {
         
         }
         
-//        switch(currentItemId) {
-//            
-//            case R.id.action_filter_sector_agriculture:
-//            case R.id.action_filter_sector_democracy:
-//            case R.id.action_filter_sector_finance:
-//            case R.id.action_filter_sector_education:
-//            case R.id.action_filter_sector_environment:
-//            case R.id.action_filter_sector_gender:
-//            case R.id.action_filter_sector_health:
-//            case R.id.action_filter_sector_technology:
-//            case R.id.action_filter_sector_water:
-//            case R.id.action_filter_sector_crisis:
-//            case R.id.action_filter_region_afganistan:
-//            case R.id.action_filter_region_pakistan:
-//            case R.id.action_filter_region_asia:
-//            case R.id.action_filter_region_europe:
-//            case R.id.action_filter_region_latin_america:
-//            case R.id.action_filter_region_middle_east:
-//            case R.id.action_filter_region_africa:{
-//                
-//                displaySectors();
-//                return true;
-//                
-//            }
-//            
-//        } // end switch
-        
         return false;
     }
 

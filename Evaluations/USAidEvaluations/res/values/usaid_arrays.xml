@@ -20,6 +20,7 @@
         <item>@string/usaid_action_filter_country_egypt</item>
         <item>@string/usaid_action_filter_country_el_salvador</item>
         <item>@string/usaid_action_filter_country_ethiopia</item>
+        <item>@string/usaid_action_filter_country_gambia</item>
         <item>@string/usaid_action_filter_country_georgia</item>
         <item>@string/usaid_action_filter_country_ghana</item>
         <item>@string/usaid_action_filter_country_guatemala</item>
@@ -68,76 +69,9 @@
         <item>@string/usaid_action_filter_country_zimbabwe</item>
 
     </string-array>
-    
-    <integer-array name="usaid_filter_country_id">
-        
-        <item>1</item> <!-- Afghanistan -->
-        <item>2</item> <!-- Albania -->
-        <item>3</item> <!-- Angola -->
-        <item>4</item> <!-- Armenia -->
-        <item>5</item> <!-- Bangladesh -->
-        <item>6</item> <!-- Bosnia and Hercegovina -->
-        <item>7</item> <!-- Brazil -->
-        <item>8</item> <!-- Burma -->
-        <item>9</item> <!-- Burundi -->
-        <item>10</item> <!-- Cambodia -->
-        <item>11</item> <!-- Chad -->
-        <item>12</item> <!-- Colombia -->
-        <item>13</item> <!-- Dominican Republic -->
-        <item>14</item> <!-- Congo DR -->
-        <item>15</item> <!-- Ecuador -->
-        <item>16</item> <!-- Egypt -->
-        <item>17</item> <!-- El Salvador -->
-        <item>18</item> <!-- Ethiopia -->
-        <item>19</item> <!-- Georgia -->
-        <item>20</item> <!-- Ghana -->
-        <item>21</item> <!-- Guatemala -->
-        <item>22</item> <!-- Haiti -->
-        <item>23</item> <!-- India -->
-        <item>24</item> <!-- Indonesia -->
-        <item>25</item> <!-- Iraq -->
-        <item>26</item> <!-- Kazakhstan -->
-        <item>27</item> <!-- Kenya -->
-        <item>28</item> <!-- Kosovo -->
-        <item>29</item> <!-- Kyrgyzstan -->
-        <item>30</item> <!-- Lebanon -->
-        <item>31</item> <!-- Liberia -->
-        <item>32</item> <!-- Libya -->
-        <item>33</item> <!-- Mali -->
-        <item>34</item> <!-- Mauritania -->
-        <item>35</item> <!-- Mexico -->
-        <item>36</item> <!-- Montenegro -->
-        <item>37</item> <!-- Morocco -->
-        <item>38</item> <!-- Mozambique -->
-        <item>39</item> <!-- Nepal -->
-        <item>40</item> <!-- Nicaragua -->
-        <item>41</item> <!-- Niger -->
-        <item>42</item> <!-- Nigeria -->
-        <item>43</item> <!-- Pakistan -->
-        <item>44</item> <!-- Paraguay -->
-        <item>45</item> <!-- Peru -->
-        <item>46</item> <!-- Philippines -->
-        <item>47</item> <!-- Rwanda -->
-        <item>48</item> <!-- Senegal -->
-        <item>49</item> <!-- Serbia -->
-        <item>50</item> <!-- South Africa -->
-        <item>51</item> <!-- South Sudan -->
-        <item>52</item> <!-- Sri Lanka -->
-        <item>53</item> <!-- Sudan -->
-        <item>54</item> <!-- Tajikistan -->
-        <item>55</item> <!-- Tanzania -->
-        <item>56</item> <!-- Timor-Leste -->
-        <item>57</item> <!-- Turkmenistan -->
-        <item>58</item> <!-- Uganda -->
-        <item>59</item> <!-- Ukraine -->
-        <item>60</item> <!-- Uzbekistan -->
-        <item>61</item> <!-- Vietnam -->
-        <item>62</item> <!-- WB Gaza -->
-        <item>63</item> <!-- Yemen -->
-        <item>64</item> <!-- Zimbabwe -->
 
-    </integer-array>
-    
+
+     
     <string-array name="usaid_filter_regions">
         <item>@string/usaid_action_filter_region_afganistan</item>
         <item>@string/usaid_action_filter_region_pakistan</item>
@@ -158,109 +92,43 @@
         <item>7</item> <!-- SUB SAHARAN AFRICA -->
     </integer-array>
     
-    <integer-array name="usaid_filter_country_region">
-        
-        <item>1</item> <!-- Afghanistan -->
-        <item>4</item> <!-- Albania -->
-        <item>7</item> <!-- Angola -->
-        <item>4</item> <!-- Armenia -->
-        <item>3</item> <!-- Bangladesh -->
-        <item>4</item> <!-- Bosnia and Hercegovina -->
-        <item>5</item> <!-- Brazil -->
-        <item>3</item> <!-- Burma -->
-        <item>7</item> <!-- Burundi -->
-        <item>3</item> <!-- Cambodia -->
-        <item>7</item> <!-- Chad -->
-        <item>5</item> <!-- Colombia -->
-        <item>5</item> <!-- Dominican Republic -->
-        <item>7</item> <!-- Congo DR -->
-        <item>5</item> <!-- Ecuador -->
-        <item>6</item> <!-- Egypt -->
-        <item>5</item> <!-- El Salvador -->
-        <item>7</item> <!-- Ethiopia -->
-        <item>4</item> <!-- Georgia -->
-        <item>7</item> <!-- Ghana -->
-        <item>5</item> <!-- Guatemala -->
-        <item>5</item> <!-- Haiti -->
-        <item>3</item> <!-- India -->
-        <item>3</item> <!-- Indonesia -->
-        <item>6</item> <!-- Iraq -->
-        <item>3</item> <!-- Kazakhstan -->
-        <item>7</item> <!-- Kenya -->
-        <item>4</item> <!-- Kosovo -->
-        <item>3</item> <!-- Kyrgyzstan -->
-        <item>6</item> <!-- Lebanon -->
-        <item>7</item> <!-- Liberia -->
-        <item>6</item> <!-- Libya -->
-        <item>7</item> <!-- Mali -->
-        <item>7</item> <!-- Mauritania -->
-        <item>5</item> <!-- Mexico -->
-        <item>4</item> <!-- Montenegro -->
-        <item>6</item> <!-- Morocco -->
-        <item>7</item> <!-- Mozambique -->
-        <item>3</item> <!-- Nepal -->
-        <item>5</item> <!-- Nicaragua -->
-        <item>7</item> <!-- Niger -->
-        <item>7</item> <!-- Nigeria -->
-        <item>2</item> <!-- Pakistan -->
-        <item>5</item> <!-- Paraguay -->
-        <item>5</item> <!-- Peru -->
-        <item>3</item> <!-- Philippines -->
-        <item>7</item> <!-- Rwanda -->
-        <item>7</item> <!-- Senegal -->
-        <item>4</item> <!-- Serbia -->
-        <item>7</item> <!-- South Africa -->
-        <item>7</item> <!-- South Sudan -->
-        <item>3</item> <!-- Sri Lanka -->
-        <item>7</item> <!-- Sudan -->
-        <item>3</item> <!-- Tajikistan -->
-        <item>7</item> <!-- Tanzania -->
-        <item>3</item> <!-- Timor-Leste -->
-        <item>3</item> <!-- Turkmenistan -->
-        <item>7</item> <!-- Uganda -->
-        <item>4</item> <!-- Ukraine -->
-        <item>3</item> <!-- Uzbekistan -->
-        <item>3</item> <!-- Vietnam -->
-        <item>6</item> <!-- WB Gaza -->
-        <item>6</item> <!-- Yemen -->
-        <item>7</item> <!-- Zimbabwe -->
-
-    </integer-array>
-    
-    <string-array name="usaid_filter_region_afgan">
+    <string-array name="usaid_filter_region_afganistan">
         <item>Afghanistan</item>
+    </string-array>
+    
+    <string-array name="usaid_filter_region_pakistan">
         <item>Pakistan</item>
     </string-array>
     
     <string-array name="usaid_filter_region_asia">
-        <item>Bangladesh</item>
-        <item>Burma</item>
-        <item>Cambodia</item>
-        <item>India</item>
-        <item>Indonesia</item>
-        <item>Kazakhstan</item>
-        <item>Kyrgyzstan</item>
-        <item>Nepal</item>
-        <item>Philippines</item>
-        <item>Sri Lanka</item>
-        <item>Tajikistan</item>
-        <item>Timor-Leste</item>
-        <item>Turkmenistan</item>
-        <item>Uzbekistan</item>
-        <item>Vietnam</item>
+        <item>@string/usaid_action_filter_country_bangladesh</item>
+        <item>@string/usaid_action_filter_country_burma</item>
+        <item>@string/usaid_action_filter_country_cambodia</item>
+        <item>@string/usaid_action_filter_country_india</item>
+        <item>@string/usaid_action_filter_country_indonesia</item>
+        <item>@string/usaid_action_filter_country_kazakhstan</item>
+        <item>@string/usaid_action_filter_country_kyrgyzstan</item>
+        <item>@string/usaid_action_filter_country_nepal</item>
+        <item>@string/usaid_action_filter_country_philippines</item>
+        <item>@string/usaid_action_filter_country_sri_lanka</item>
+        <item>@string/usaid_action_filter_country_tajikistan</item>
+        <item>@string/usaid_action_filter_country_timor_leste</item>
+        <item>@string/usaid_action_filter_country_turkmenistan</item>
+        <item>@string/usaid_action_filter_country_uzbekistan</item>
+        <item>@string/usaid_action_filter_country_vietnam</item>
     </string-array>
     
     <string-array name="usaid_filter_region_east_africa">
-        <item>Burundi</item>
-        <item>Congo DR</item>
-        <item>Egypt</item>
-        <item>Ethiopia</item>
-        <item>Kenya</item>
-        <item>Libya</item>
-        <item>Rwanda</item>
-        <item>Sudan</item>
-        <item>Tanzania</item>
-        <item>Uganda</item>
+        <item>@string/usaid_action_filter_country_burundi</item>
+        <item>@string/usaid_action_filter_country_congo</item>
+        <item>@string/usaid_action_filter_country_egypt</item>
+        <item>@string/usaid_action_filter_country_ethiopia</item>
+        <item>@string/usaid_action_filter_country_kenya</item>
+        <item>@string/usaid_action_filter_country_libya</item>
+        <item>@string/usaid_action_filter_country_rwanda</item>
+        <item>@string/usaid_action_filter_country_sudan</item>
+        <item>@string/usaid_action_filter_country_tanzania</item>
+        <item>@string/usaid_action_filter_country_uganda</item>
     </string-array>
     
     <string-array name="usaid_filter_region_europe">
@@ -303,6 +171,7 @@
         <item>Chad</item>
         <item>Congo DR</item>
         <item>Ethiopia</item>
+        <item>Gamgia</item>
         <item>Ghana</item>
         <item>Kenya</item>
         <item>Liberia</item>
