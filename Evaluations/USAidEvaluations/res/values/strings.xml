@@ -22,6 +22,7 @@
     <string name="action_settings">Settings</string>
     <string name="usaid_action_filter_reset">Reset</string>
     
+    <!-- countries -->
     <string name="usaid_action_filter_country">Country</string>
     <string name="usaid_action_filter_country_afghanistan">Afghanistan</string>
     <string name="usaid_action_filter_country_albania">Albania</string>
@@ -89,6 +90,7 @@
     <string name="usaid_action_filter_country_yemen">Yemen</string>
     <string name="usaid_action_filter_country_zimbabwe">Zimbabwe</string>
     
+    <!-- sectors -->
     <string name="usaid_action_filter_sector">Sector</string>
     <string name="usaid_action_filter_sector_agriculture">Agriculture</string>
     <string name="usaid_action_filter_sector_crisis">Crisis</string>
@@ -101,6 +103,75 @@
     <string name="usaid_action_filter_sector_technology">Technology</string>
     <string name="usaid_action_filter_sector_water">Water</string>
     
+    <!-- sub sectors -->
+    <string name="usaid_action_filter_sector_agriculture_agribusiness">Agribusiness</string>
+    <string name="usaid_action_filter_sector_agriculture_general">Agriculture (General)</string>
+    <string name="usaid_action_filter_sector_agriculture_development">Agricultural development</string>
+    <string name="usaid_action_filter_sector_agriculture_cooperatives">Agricultural enterprises and cooperatives</string>
+    <string name="usaid_action_filter_sector_agriculture_finance">Agricultural finance</string>
+    <string name="usaid_action_filter_sector_agriculture_market">Agricultural markets</string>
+    <string name="usaid_action_filter_sector_agriculture_aquaculture">Aquaculture and fisheries</string>
+    <string name="usaid_action_filter_sector_agriculture_forestry">Forestry</string>
+    
+    <string name="usaid_action_filter_sector_democracy_civil_society">Civil society</string>
+    <string name="usaid_action_filter_sector_democracy_democratization">Democratization</string>
+    <string name="usaid_action_filter_sector_democracy_elections">Elections</string>
+    <string name="usaid_action_filter_sector_democracy_governance">Governance</string>
+    <string name="usaid_action_filter_sector_democracy_reform">Government reform</string>
+    <string name="usaid_action_filter_sector_democracy_human_rights">Human rights and social justice</string>
+    <string name="usaid_action_filter_sector_democracy_international_politics">International politics</string>
+    <string name="usaid_action_filter_sector_democracy_political_development">Political development</string>
+    <string name="usaid_action_filter_sector_democracy_public_land_records">Public land records and registration</string>
+    <string name="usaid_action_filter_sector_democracy_rule_of_law">Rule of law</string>
+    <string name="usaid_action_filter_sector_democracy_social_problems">Social problems</string>
+    
+    <string name="usaid_action_filter_sector_finance_administration">Economic administration</string>
+    <string name="usaid_action_filter_sector_finance_growth">Economic growth and development</string>
+    <string name="usaid_action_filter_sector_finance_reform">Economic reform</string>
+    <string name="usaid_action_filter_sector_finance_sectors">Economic sectors</string>
+    <string name="usaid_action_filter_sector_finance_employment">Employment</string>
+    <string name="usaid_action_filter_sector_finance_finance">Finance</string>
+    <string name="usaid_action_filter_sector_finance_institutions">Financial institutions</string>
+    <string name="usaid_action_filter_sector_finance_health">Health finance</string>
+    <string name="usaid_action_filter_sector_finance_capacity_development">Human capacity development</string>
+    <string name="usaid_action_filter_sector_finance_trade">International trade</string>
+    <string name="usaid_action_filter_sector_finance_resources">Natural resources management</string>
+    <string name="usaid_action_filter_sector_finance_public_health_care">Public health care</string>
+    <string name="usaid_action_filter_sector_finance_rural_development">Rural areas / rural development</string>
+    <string name="usaid_action_filter_sector_finance_small_scale">Small scale enterprises</string>
+    <string name="usaid_action_filter_sector_finance_socioeconomic">Socioeconomic development</string>
+    
+    <string name="usaid_action_filter_sector_education_access">Access to education</string>
+    <string name="usaid_action_filter_sector_education_basic">Basic education</string>
+    <string name="usaid_action_filter_sector_education_communications">Communications (General)</string>
+    <string name="usaid_action_filter_sector_education_administration">Education administration</string>
+    <string name="usaid_action_filter_sector_education_higher">Higher education</string>
+    <string name="usaid_action_filter_sector_education_nonformal">Nonformal education</string>
+    
+    <string name="usaid_action_filter_sector_environment_ecology">Biological diversity and ecology</string>
+    <string name="usaid_action_filter_sector_environment_climate_change">Climate change</string>
+    <string name="usaid_action_filter_sector_environment_pollution">Pollution</string>
+    
+    <string name="usaid_action_filter_sector_gender_girls_education">Girls\' education</string>
+    
+    <string name="usaid_action_filter_sector_health_child_survival">Child survival</string>
+    <string name="usaid_action_filter_sector_health_community">Community health care delivery</string>
+    <string name="usaid_action_filter_sector_health_disease_prevention">Disease prevention and control</string>
+    <string name="usaid_action_filter_sector_health_preventive">Environmental / preventive health care</string>
+    <string name="usaid_action_filter_sector_health_family_planning">Family planning</string>
+    <string name="usaid_action_filter_sector_health_family_planning_services">Family planning services</string>
+    <string name="usaid_action_filter_sector_health_malnutrition">Famine and malnutrition</string>
+    <string name="usaid_action_filter_sector_health_general">Health (General)</string>
+    <string name="usaid_action_filter_sector_health_case_management">Health care case management</string>
+    <string name="usaid_action_filter_sector_health_delivery">Health delivery</string>
+    <string name="usaid_action_filter_sector_health_hiv_aids">HIV / AIDS</string>
+    <string name="usaid_action_filter_sector_health_immunization">Immunization</string>
+    <string name="usaid_action_filter_sector_health_malaria">Malaria</string>
+    <string name="usaid_action_filter_sector_health_maternal_child_care">Maternal child health care</string>
+    <string name="usaid_action_filter_sector_health_surveys">Population surveys</string>
+    <string name="usaid_action_filter_sector_health_tuberculosis">Tuberculosis</string>
+    
+    <!-- regions -->
     <string name="usaid_action_filter_region">Region</string>
     <string name="usaid_action_filter_region_afganistan">AFGHANISTAN</string>
     <string name="usaid_action_filter_region_pakistan">PAKISTAN</string>

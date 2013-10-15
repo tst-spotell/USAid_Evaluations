@@ -70,7 +70,7 @@
 
     </string-array>
 
-
+    <!-- regions -->
      
     <string-array name="usaid_filter_regions">
         <item>@string/usaid_action_filter_region_afganistan</item>
@@ -82,22 +82,12 @@
         <item>@string/usaid_action_filter_region_africa</item>
     </string-array>
     
-    <integer-array name="usaid_filter_regions_id">
-        <item>1</item> <!-- AFGHANISTAN -->
-        <item>2</item> <!-- PAKISTAN -->
-        <item>3</item> <!-- ASIA -->
-        <item>4</item> <!-- EUROPE AND EURASIA -->
-        <item>5</item> <!-- LATIN AMERICA AND THE CARRIBEAN -->
-        <item>6</item> <!-- MIDDLE EAST -->
-        <item>7</item> <!-- SUB SAHARAN AFRICA -->
-    </integer-array>
-    
     <string-array name="usaid_filter_region_afganistan">
-        <item>Afghanistan</item>
+        <item>@string/usaid_action_filter_country_afghanistan</item>
     </string-array>
     
     <string-array name="usaid_filter_region_pakistan">
-        <item>Pakistan</item>
+        <item>@string/usaid_action_filter_country_pakistan</item>
     </string-array>
     
     <string-array name="usaid_filter_region_asia">
@@ -188,6 +178,8 @@
         <item>@string/usaid_action_filter_country_uganda</item>
         <item>@string/usaid_action_filter_country_zimbabwe</item>
     </string-array>
+
+    <!-- sectors -->
     
     <string-array name="usaid_filter_sectors">
         <item>Agriculture and Food Security</item>
@@ -202,80 +194,67 @@
         <item>Working in Crises and Conflict</item>
     </string-array>
     
-    <integer-array name="usaid_filter_sectors_id">
-        <item>1</item> <!-- Agriculture and Food Security -->
-        <item>2</item> <!-- Democracy, Human Rights and Governance -->
-        <item>3</item> <!-- Economic Growth and Trade -->
-        <item>4</item> <!-- Education -->
-        <item>5</item> <!-- Environment and Global Climate Change -->
-        <item>6</item> <!-- Gender Equality and Women\'s Empowerment -->
-        <item>7</item> <!-- Global Health -->
-        <item>8</item> <!-- Science, Technology and Innovation -->
-        <item>9</item> <!-- Water and Sanitation -->
-        <item>10</item> <!-- Working in Crises and Conflict -->
-    </integer-array>
-    
     <string-array name="usaid_filter_sectors_types">
-        <item>Agribusiness</item>
-        <item>Agriculture (General)</item>
-        <item>Agricultural development</item>
-        <item>Agricultural enterprises and cooperatives</item>
-        <item>Agricultural finance</item>
-        <item>Agricultural markets</item>
-        <item>Aquaculture and fisheries</item>
-        <item>Forestry</item>
-        <item>Civil society</item>
-        <item>Democratization</item>
-        <item>Elections</item>
-        <item>Governance</item>
-        <item>Government reform</item>
-        <item>Human rights and social justice</item>
-        <item>International politics</item>
-        <item>Political development</item>
-        <item>Public land records and registration</item>
-        <item>Rule of law</item>
-        <item>Social problems</item>
-        <item>Economic administration</item>
-        <item>Economic growth and development</item>
-        <item>Economic reform</item>
-        <item>Economic sectors</item>
-        <item>Employment</item>
-        <item>Finance</item>
-        <item>Financial institutions</item>
-        <item>Health finance</item>
-        <item>Human capacity development</item>
-        <item>International trade</item>
-        <item>Natural resources management</item>
-        <item>Public health care</item>
-        <item>Rural areas / rural development</item>
-        <item>Small scale enterprises</item>
-        <item>Socioeconomic development</item>
-        <item>Access to education</item>
-        <item>Basic education</item>
-        <item>Communications (General)</item>
-        <item>Education administration</item>
-        <item>Higher education</item>
-        <item>Nonformal education</item>
-        <item>Biological diversity and ecology</item>
-        <item>Climate change</item>
-        <item>Pollution</item>
-        <item>Girls\' education</item>
-        <item>Child survival</item>
-        <item>Community health care delivery</item>
-        <item>Disease prevention and control</item>
-        <item>Environmental / preventive health care</item>
-        <item>Family planning</item>
-        <item>Family planning services</item>
-        <item>Famine and malnutrition</item>
-        <item>Health (General)</item>
-        <item>Health care case management</item>
-        <item>Health delivery</item>
-        <item>HIV / AIDS</item>
-        <item>Immunization</item>
-        <item>Malaria</item>
-        <item>Maternal child health care</item>
-        <item>Population surveys</item>
-        <item>Tuberculosis</item>
+        <item>@string/usaid_action_filter_sector_agriculture_agribusiness</item>
+        <item>@string/usaid_action_filter_sector_agriculture_general</item>
+        <item>@string/usaid_action_filter_sector_agriculture_development</item>
+        <item>@string/usaid_action_filter_sector_agriculture_cooperatives</item>
+        <item>@string/usaid_action_filter_sector_agriculture_finance</item>
+        <item>@string/usaid_action_filter_sector_agriculture_market</item>
+        <item>@string/usaid_action_filter_sector_agriculture_aquaculture</item>
+        <item>@string/usaid_action_filter_sector_agriculture_forestry</item>
+        <item>@string/usaid_action_filter_sector_democracy_civil_society</item>
+        <item>@string/usaid_action_filter_sector_democracy_democratization</item>
+        <item>@string/usaid_action_filter_sector_democracy_elections</item>
+        <item>@string/usaid_action_filter_sector_democracy_governance</item>
+        <item>@string/usaid_action_filter_sector_democracy_reform</item>
+        <item>@string/usaid_action_filter_sector_democracy_human_rights</item>
+        <item>@string/usaid_action_filter_sector_democracy_international_politics</item>
+        <item>@string/usaid_action_filter_sector_democracy_political_development</item>
+        <item>@string/usaid_action_filter_sector_democracy_public_land_records</item>
+        <item>@string/usaid_action_filter_sector_democracy_rule_of_law</item>
+        <item>@string/usaid_action_filter_sector_democracy_social_problems</item>
+        <item>@string/usaid_action_filter_sector_finance_administration</item>
+        <item>@string/usaid_action_filter_sector_finance_growth</item>
+        <item>@string/usaid_action_filter_sector_finance_reform</item>
+        <item>@string/usaid_action_filter_sector_finance_sectors</item>
+        <item>@string/usaid_action_filter_sector_finance_employment</item>
+        <item>@string/usaid_action_filter_sector_finance_finance</item>
+        <item>@string/usaid_action_filter_sector_finance_institutions</item>
+        <item>@string/usaid_action_filter_sector_finance_health</item>
+        <item>@string/usaid_action_filter_sector_finance_capacity_development</item>
+        <item>@string/usaid_action_filter_sector_finance_trade</item>
+        <item>@string/usaid_action_filter_sector_finance_resources</item>
+        <item>@string/usaid_action_filter_sector_finance_public_health_care</item>
+        <item>@string/usaid_action_filter_sector_finance_rural_development</item>
+        <item>@string/usaid_action_filter_sector_finance_small_scale</item>
+        <item>@string/usaid_action_filter_sector_finance_socioeconomic</item>
+        <item>@string/usaid_action_filter_sector_education_access</item>
+        <item>@string/usaid_action_filter_sector_education_basic</item>
+        <item>@string/usaid_action_filter_sector_education_communications</item>
+        <item>@string/usaid_action_filter_sector_education_administration</item>
+        <item>@string/usaid_action_filter_sector_education_higher</item>
+        <item>@string/usaid_action_filter_sector_education_nonformal</item>
+        <item>@string/usaid_action_filter_sector_environment_ecology</item>
+        <item>@string/usaid_action_filter_sector_environment_climate_change</item>
+        <item>@string/usaid_action_filter_sector_environment_pollution</item>
+        <item>@string/usaid_action_filter_sector_gender_girls_education</item>
+        <item>@string/usaid_action_filter_sector_health_child_survival</item>
+        <item>@string/usaid_action_filter_sector_health_community</item>
+        <item>@string/usaid_action_filter_sector_health_disease_prevention</item>
+        <item>@string/usaid_action_filter_sector_health_preventive</item>
+        <item>@string/usaid_action_filter_sector_health_family_planning</item>
+        <item>@string/usaid_action_filter_sector_health_family_planning_services</item>
+        <item>@string/usaid_action_filter_sector_health_malnutrition</item>
+        <item>@string/usaid_action_filter_sector_health_general</item>
+        <item>@string/usaid_action_filter_sector_health_case_management</item>
+        <item>@string/usaid_action_filter_sector_health_delivery</item>
+        <item>@string/usaid_action_filter_sector_health_hiv_aids</item>
+        <item>@string/usaid_action_filter_sector_health_immunization</item>
+        <item>@string/usaid_action_filter_sector_health_malaria</item>
+        <item>@string/usaid_action_filter_sector_health_maternal_child_care</item>
+        <item>@string/usaid_action_filter_sector_health_surveys</item>
+        <item>@string/usaid_action_filter_sector_health_tuberculosis</item>
         <item>Communications media and equipment</item>
         <item>Energy (General and research)</item>
         <item>Energy conservation</item>

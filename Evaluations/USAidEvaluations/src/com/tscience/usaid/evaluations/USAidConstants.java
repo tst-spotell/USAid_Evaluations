@@ -151,16 +151,16 @@ public class USAidConstants {
     };
 	
 	// sector image values
-	public static final int USAID_SECTOR_AGRICULTURE = 1;
-	public static final int USAID_SECTOR_DEMOCRACY = 2;
-	public static final int USAID_SECTOR_ECONOMIC = 3;
-	public static final int USAID_SECTOR_EDUCATION = 4;
-	public static final int USAID_SECTOR_ENVIRONMENT = 5;
-	public static final int USAID_SECTOR_GENDER = 6;
-	public static final int USAID_SECTOR_HEALTH = 7;
-	public static final int USAID_SECTOR_SCIENCE = 8;
-	public static final int USAID_SECTOR_WATER = 9;
-	public static final int USAID_SECTOR_CRISIS = 10;
+	public static final int USAID_SECTOR_AGRICULTURE = 1;  // Agriculture and Food Security
+	public static final int USAID_SECTOR_DEMOCRACY = 2;  // Democracy, Human Rights and Governance
+	public static final int USAID_SECTOR_ECONOMIC = 3;  // Economic Growth and Trade
+	public static final int USAID_SECTOR_EDUCATION = 4;  // Education
+	public static final int USAID_SECTOR_ENVIRONMENT = 5;  // Environment and Global Climate Change
+	public static final int USAID_SECTOR_GENDER = 6;  // Gender Equality and Women's Empowerment
+	public static final int USAID_SECTOR_HEALTH = 7;  // Global Health
+	public static final int USAID_SECTOR_SCIENCE = 8;  // Science, Technology and Innovation
+	public static final int USAID_SECTOR_WATER = 9;  // Water and Sanitation
+	public static final int USAID_SECTOR_CRISIS = 10;  // Working in Crises and Conflict
 	
 	public static final String USAID_BUNDLE_DATA_OBJECT = "usaid_data";
 	public static final String LESS_THAN_SIGN = "<";
