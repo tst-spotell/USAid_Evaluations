@@ -132,61 +132,61 @@
     </string-array>
     
     <string-array name="usaid_filter_region_europe">
-        <item>Albania</item>
-        <item>Armenia</item>
-        <item>Bosnia and Hercegovina</item>
-        <item>Georgia</item>
-        <item>Kosovo</item>
-        <item>Montenegro</item>
-        <item>Serbia</item>
-        <item>Ukraine</item>
+        <item>@string/usaid_action_filter_country_albania</item>
+        <item>@string/usaid_action_filter_country_armenia</item>
+        <item>@string/usaid_action_filter_country_bosnia</item>
+        <item>@string/usaid_action_filter_country_georgia</item>
+        <item>@string/usaid_action_filter_country_kosovo</item>
+        <item>@string/usaid_action_filter_country_montenegro</item>
+        <item>@string/usaid_action_filter_country_serbia</item>
+        <item>@string/usaid_action_filter_country_ukraine</item>
     </string-array>
     
     <string-array name="usaid_filter_region_latin">
-        <item>Brazil</item>
-        <item>Colombia</item>
-        <item>Dominican Republic</item>
-        <item>Ecuador</item>
-        <item>El Salvador</item>
-        <item>Guatemala</item>
-        <item>Haiti</item>
-        <item>Mexico</item>
-        <item>Nicaragua</item>
-        <item>Paraguay</item>
-        <item>Peru</item>
+        <item>@string/usaid_action_filter_country_brazil</item>
+        <item>@string/usaid_action_filter_country_colombia</item>
+        <item>@string/usaid_action_filter_country_dominican_republic</item>
+        <item>@string/usaid_action_filter_country_ecuador</item>
+        <item>@string/usaid_action_filter_country_el_salvador</item>
+        <item>@string/usaid_action_filter_country_guatemala</item>
+        <item>@string/usaid_action_filter_country_haiti</item>
+        <item>@string/usaid_action_filter_country_mexico</item>
+        <item>@string/usaid_action_filter_country_nicaragua</item>
+        <item>@string/usaid_action_filter_country_paraguay</item>
+        <item>@string/usaid_action_filter_country_peru</item>
     </string-array>
     
     <string-array name="usaid_filter_region_middle_east">
-        <item>Egypt</item>
-        <item>Iraq</item>
-        <item>Lebanon</item>
-        <item>Morocco</item>
-        <item>WB Gaza</item>
-        <item>Yemen</item>
+        <item>@string/usaid_action_filter_country_egypt</item>
+        <item>@string/usaid_action_filter_country_iraq</item>
+        <item>@string/usaid_action_filter_country_lebanon</item>
+        <item>@string/usaid_action_filter_country_morocco</item>
+        <item>@string/usaid_action_filter_country_gaza</item>
+        <item>@string/usaid_action_filter_country_yemen</item>
     </string-array>
     
     <string-array name="usaid_filter_region_africa">
-        <item>Angola</item>
-        <item>Burundi</item>
-        <item>Chad</item>
-        <item>Congo DR</item>
-        <item>Ethiopia</item>
-        <item>Gamgia</item>
-        <item>Ghana</item>
-        <item>Kenya</item>
-        <item>Liberia</item>
-        <item>Mali</item>
-        <item>Mauritania</item>
-        <item>Mozambique</item>
-        <item>Niger</item>
-        <item>Nigeria</item>
-        <item>Rwanda</item>
-        <item>Senegal</item>
-        <item>South Africa</item>
-        <item>South Sudan</item>
-        <item>Tanzania</item>
-        <item>Uganda</item>
-        <item>Zimbabwe</item>
+        <item>@string/usaid_action_filter_country_angola</item>
+        <item>@string/usaid_action_filter_country_burundi</item>
+        <item>@string/usaid_action_filter_country_chad</item>
+        <item>@string/usaid_action_filter_country_congo</item>
+        <item>@string/usaid_action_filter_country_ethiopia</item>
+        <item>@string/usaid_action_filter_country_gambia</item>
+        <item>@string/usaid_action_filter_country_ghana</item>
+        <item>@string/usaid_action_filter_country_kenya</item>
+        <item>@string/usaid_action_filter_country_liberia</item>
+        <item>@string/usaid_action_filter_country_mali</item>
+        <item>@string/usaid_action_filter_country_mauritania</item>
+        <item>@string/usaid_action_filter_country_mozambique</item>
+        <item>@string/usaid_action_filter_country_niger</item>
+        <item>@string/usaid_action_filter_country_nigeria</item>
+        <item>@string/usaid_action_filter_country_rwanda</item>
+        <item>@string/usaid_action_filter_country_senegal</item>
+        <item>@string/usaid_action_filter_country_south_africa</item>
+        <item>@string/usaid_action_filter_country_south_sudan</item>
+        <item>@string/usaid_action_filter_country_tanzania</item>
+        <item>@string/usaid_action_filter_country_uganda</item>
+        <item>@string/usaid_action_filter_country_zimbabwe</item>
     </string-array>
     
     <string-array name="usaid_filter_sectors">
