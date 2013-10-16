@@ -117,6 +117,9 @@
     <string name="usaid_action_filter_sector_agriculture_aquaculture">Aquaculture and fisheries</string>
     <string name="usaid_action_filter_sector_agriculture_forestry">Forestry</string>
     
+    <string name="usaid_action_filter_sector_crisis_conflict_prevention">Conflict prevention</string>
+    <string name="usaid_action_filter_sector_crisis_disaster_recovery">Disaster recovery</string>
+    
     <string name="usaid_action_filter_sector_democracy_civil_society">Civil society</string>
     <string name="usaid_action_filter_sector_democracy_democratization">Democratization</string>
     <string name="usaid_action_filter_sector_democracy_elections">Elections</string>
@@ -174,6 +177,18 @@
     <string name="usaid_action_filter_sector_health_maternal_child_care">Maternal child health care</string>
     <string name="usaid_action_filter_sector_health_surveys">Population surveys</string>
     <string name="usaid_action_filter_sector_health_tuberculosis">Tuberculosis</string>
+    
+    <string name="usaid_action_filter_sector_technology_communications">Communications media and equipment</string>
+    <string name="usaid_action_filter_sector_technology_general">Energy (General and research)</string>
+    <string name="usaid_action_filter_sector_technology_conservation">Energy conservation</string>
+    <string name="usaid_action_filter_sector_technology_economics">Energy economics</string>
+    <string name="usaid_action_filter_sector_technology_supply">Energy supply</string>
+    <string name="usaid_action_filter_sector_technology_energy">Energy technology</string>
+    <string name="usaid_action_filter_sector_technology_equipment">Information management, systems and equipment</string>
+    <string name="usaid_action_filter_sector_technology_training">Participant training</string>
+    
+    <string name="usaid_action_filter_sector_water_sanitation_engineering">Sanitation engineering</string>
+    <string name="usaid_action_filter_sector_water_supply">Water supply and sanitation</string>
     
     <!-- regions -->
     <string name="usaid_action_filter_region">Region</string>

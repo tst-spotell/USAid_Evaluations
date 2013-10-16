@@ -255,18 +255,18 @@
         <item>@string/usaid_action_filter_sector_health_maternal_child_care</item>
         <item>@string/usaid_action_filter_sector_health_surveys</item>
         <item>@string/usaid_action_filter_sector_health_tuberculosis</item>
-        <item>Communications media and equipment</item>
-        <item>Energy (General and research)</item>
-        <item>Energy conservation</item>
-        <item>Energy economics</item>
-        <item>Energy supply</item>
-        <item>Energy technology</item>
-        <item>Information management, systems and equipment</item>
-        <item>Participant training</item>
-        <item>Sanitation engineering</item>
-        <item>Water supply and sanitation</item>
-        <item>Conflict prevention</item>
-        <item>Disaster recovery</item>
+        <item>@string/usaid_action_filter_sector_technology_communications</item>
+        <item>@string/usaid_action_filter_sector_technology_general</item>
+        <item>@string/usaid_action_filter_sector_technology_conservation</item>
+        <item>@string/usaid_action_filter_sector_technology_economics</item>
+        <item>@string/usaid_action_filter_sector_technology_supply</item>
+        <item>@string/usaid_action_filter_sector_technology_energy</item>
+        <item>@string/usaid_action_filter_sector_technology_equipment</item>
+        <item>@string/usaid_action_filter_sector_technology_training</item>
+        <item>@string/usaid_action_filter_sector_water_sanitation_engineering</item>
+        <item>@string/usaid_action_filter_sector_water_supply</item>
+        <item>@string/usaid_action_filter_sector_crisis_conflict_prevention</item>
+        <item>@string/usaid_action_filter_sector_crisis_disaster_recovery</item>
     </string-array>
     
     <integer-array name="usaid_filter_sectors_types_id">
