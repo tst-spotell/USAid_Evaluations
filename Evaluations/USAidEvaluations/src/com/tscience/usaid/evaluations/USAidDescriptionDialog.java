@@ -77,7 +77,7 @@ public class USAidDescriptionDialog extends SherlockDialogFragment {
     	
     	webView.getSettings().setBuiltInZoomControls(true);
     	
-    	if (currentData.abstractString == null) {
+    	if (currentData.abstractString.length() == 0) {
     	    webView.loadData(getActivity().getString(R.string.usaid_description_value_none), "text/html", null);
     	} else {
     	    webView.loadData(currentData.abstractString, "text/html", null);
