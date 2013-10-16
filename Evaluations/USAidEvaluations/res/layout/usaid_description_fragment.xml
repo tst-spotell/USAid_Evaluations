@@ -17,13 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/usaid_description_image"
         android:text="@string/usaid_description_title_none" />
-
-    <TextView
-        android:id="@+id/usaid_description_value_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/usaid_description_title"
-        android:text="@string/usaid_description_value_none" />
     
     <WebView
         android:id="@+id/usaid_description_value_web"

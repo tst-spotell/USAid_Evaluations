@@ -72,28 +72,16 @@ public class USAidDescriptionDialog extends SherlockDialogFragment {
         ImageView imageView = (ImageView) descriptionView.findViewById(R.id.usaid_description_image);
         imageView.setImageDrawable(getActivity().getResources().getDrawable(USAidUtils.getImageId(currentData.sectorValue)));
         
-        // show or hide text or webview
-        if (currentData.abstractString.startsWith(USAidConstants.LESS_THAN_SIGN)) {
-        	
-        	// hide the text view
-        	TextView textView = (TextView) descriptionView.findViewById(R.id.usaid_description_value_text);
-        	textView.setVisibility(View.GONE);
-        	
-        	// load the webview
-        	WebView webView = (WebView) descriptionView.findViewById(R.id.usaid_description_value_web);
-        	webView.loadData(currentData.abstractString, "text/html", null);
-        	
-        } else {
-        	
-        	// load the textview
-        	TextView textView = (TextView) descriptionView.findViewById(R.id.usaid_description_value_text);
-        	textView.setText(currentData.abstractString);
-        	
-        	// hide the webview
-        	WebView webView = (WebView) descriptionView.findViewById(R.id.usaid_description_value_web);
-        	webView.setVisibility(View.GONE);
-        	
-        }
+    	// load the webview
+    	WebView webView = (WebView) descriptionView.findViewById(R.id.usaid_description_value_web);
+    	
+    	webView.getSettings().setBuiltInZoomControls(true);
+    	
+    	if (currentData.abstractString == null) {
+    	    webView.loadData(getActivity().getString(R.string.usaid_description_value_none), "text/html", null);
+    	} else {
+    	    webView.loadData(currentData.abstractString, "text/html", null);
+    	}
         
         builder.setView(descriptionView)
         

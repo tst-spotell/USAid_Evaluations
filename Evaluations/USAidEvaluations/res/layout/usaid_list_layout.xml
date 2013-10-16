@@ -38,8 +38,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/usaid_title"
         android:layout_alignLeft="@id/usaid_title"
-        android:maxLines="2"
-        android:layout_marginLeft="4sp" />
+        android:layout_marginLeft="4sp"
+        android:maxLines="2" />
     
     
 </RelativeLayout>
