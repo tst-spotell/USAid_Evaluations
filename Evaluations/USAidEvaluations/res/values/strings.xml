@@ -198,7 +198,7 @@
     <string name="usaid_action_filter_region_europe">EUROPE AND EURASIA</string>
     <string name="usaid_action_filter_region_latin_america">LATIN AMERICA AND THE CARRIBEAN</string>
     <string name="usaid_action_filter_region_middle_east">MIDDLE EAST</string>
-    <string name="usaid_action_filter_region_africa">SUB SAHARAN AFRIC</string>
+    <string name="usaid_action_filter_region_africa">SUB SAHARAN AFRICA</string>
     
     <string name="usaid_action_download_pdf_viewer">Download PDF Viewer</string>
     <string name="usaid_action_about">About</string>
