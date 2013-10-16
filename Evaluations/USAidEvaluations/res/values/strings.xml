@@ -4,7 +4,11 @@
     <string name="app_name">USAid Evaluations</string>
     <string name="usaid_fragment_list_no_data">There is currently no available evaluations.</string>
     
+    <!-- about -->
+    <string name="usaid_about" >The USAID evaluation policy \"sets ambitious standards for the quality and transparency of evaluation to demonstrate results, generate evidence to inform decisions, promote learning and ensure accountability.\" The Development Experience Clearinghouse (DEC), USAID\'s online document archive, provides access to USAID funded evaluation reports. This mobile app improves access to USAID funded evaluation reports by providing a mobile solution for accessing a subset of DEC documents.</string>
+    
     <!-- buttons -->
+    <string name="usaid_ok_button">OK</string>
     <string name="usaid_cancel_button">Cancel</string>
     <string name="usaid_get_pdf_button">Get PDF</string>
     

@@ -106,6 +106,12 @@ public class USAidMainFragment extends SherlockListFragment {
             USAidUtils.getAdobeReader(getActivity());
             return true;
             
+        } else if (currentItemId == R.id.action_about) {
+            
+            // create the view
+            USAidAboutFragment usaidAboutFragment = new USAidAboutFragment();
+            usaidAboutFragment.show(getActivity().getSupportFragmentManager(), "about");
+            
         }
         
         // handle if checkbox
