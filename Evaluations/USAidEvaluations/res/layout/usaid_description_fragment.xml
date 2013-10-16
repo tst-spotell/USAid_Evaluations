@@ -1,26 +1,35 @@
 <!-- Copyright (c) 2013 Thermopylae Sciences and Technology. All rights reserved. -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="#FFFFFF"
     android:paddingBottom="18dp" >
     
+    <ImageView
+        android:id="@+id/usaid_description_image"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/usaid_image" />
+    
     <TextView
+        style="@style/usaid_medium_text.bold"
         android:id="@+id/usaid_description_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/usaid_description_image"
         android:text="@string/usaid_description_title_none" />
 
     <TextView
         android:id="@+id/usaid_description_value_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24sp"
+        android:layout_below="@id/usaid_description_title"
         android:text="@string/usaid_description_value_none" />
     
     <WebView
         android:id="@+id/usaid_description_value_web"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/usaid_description_title"
         android:layout_marginTop="24sp" />
     
-</LinearLayout>
+</RelativeLayout>

@@ -956,63 +956,66 @@ public class USAidMainFragment extends SherlockListFragment {
             
             Log.d(LOG_TAG, "----------------------------------------useThisImage: " + useThisImage);
             
-            switch (useThisImage) {
-                
-                case USAidConstants.USAID_SECTOR_AGRICULTURE: {
-                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_agriculture_icon));
-                    break;
-                }
-
-                case USAidConstants.USAID_SECTOR_DEMOCRACY: {
-                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_democracy_icon));
-                    break;
-                }
-
-                case USAidConstants.USAID_SECTOR_ECONOMIC: {
-                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_fincance_icon));
-                    break;
-                }
-
-                case USAidConstants.USAID_SECTOR_EDUCATION: {
-                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_education_icon));
-                    break;
-                }
-
-                case USAidConstants.USAID_SECTOR_ENVIRONMENT: {
-                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_environment_icon));
-                    break;
-                }
-
-                case USAidConstants.USAID_SECTOR_GENDER: {
-                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_gender_icon));
-                    break;
-                }
-
-                case USAidConstants.USAID_SECTOR_HEALTH: {
-                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_health_icon));
-                    break;
-                }
-
-                case USAidConstants.USAID_SECTOR_SCIENCE: {
-                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_technology_icon));
-                    break;
-                }
-
-                case USAidConstants.USAID_SECTOR_WATER: {
-                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_water_icon));
-                    break;
-                }
-
-                case USAidConstants.USAID_SECTOR_CRISIS: {
-                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_crisis_icon));
-                    break;
-                }
-                
-                default: {
-                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_default_icon));
-                }
-                    
-            } // end switch
+            
+            usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(USAidUtils.getImageId(useThisImage)));
+            
+//            switch (useThisImage) {
+//                
+//                case USAidConstants.USAID_SECTOR_AGRICULTURE: {
+//                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_agriculture_icon));
+//                    break;
+//                }
+//
+//                case USAidConstants.USAID_SECTOR_DEMOCRACY: {
+//                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_democracy_icon));
+//                    break;
+//                }
+//
+//                case USAidConstants.USAID_SECTOR_ECONOMIC: {
+//                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_fincance_icon));
+//                    break;
+//                }
+//
+//                case USAidConstants.USAID_SECTOR_EDUCATION: {
+//                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_education_icon));
+//                    break;
+//                }
+//
+//                case USAidConstants.USAID_SECTOR_ENVIRONMENT: {
+//                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_environment_icon));
+//                    break;
+//                }
+//
+//                case USAidConstants.USAID_SECTOR_GENDER: {
+//                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_gender_icon));
+//                    break;
+//                }
+//
+//                case USAidConstants.USAID_SECTOR_HEALTH: {
+//                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_health_icon));
+//                    break;
+//                }
+//
+//                case USAidConstants.USAID_SECTOR_SCIENCE: {
+//                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_technology_icon));
+//                    break;
+//                }
+//
+//                case USAidConstants.USAID_SECTOR_WATER: {
+//                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_water_icon));
+//                    break;
+//                }
+//
+//                case USAidConstants.USAID_SECTOR_CRISIS: {
+//                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_crisis_icon));
+//                    break;
+//                }
+//                
+//                default: {
+//                    usaidViewHolder.imageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.sectorlist_default_icon));
+//                }
+//                    
+//            } // end switch
             
             // show the title
             usaidViewHolder.titleView.setText(usaidViewHolder.usaidDataObject.title);

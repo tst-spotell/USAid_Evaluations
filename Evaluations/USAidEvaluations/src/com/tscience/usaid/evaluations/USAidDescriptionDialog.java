@@ -14,10 +14,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockDialogFragment;
 import com.tscience.usaid.evaluations.utils.USAidDataObject;
+import com.tscience.usaid.evaluations.utils.USAidUtils;
 
 
 /**
@@ -65,6 +67,10 @@ public class USAidDescriptionDialog extends SherlockDialogFragment {
         // display the title
         TextView titleView = (TextView) descriptionView.findViewById(R.id.usaid_description_title);
         titleView.setText(currentData.title);
+        
+        // display the image
+        ImageView imageView = (ImageView) descriptionView.findViewById(R.id.usaid_description_image);
+        imageView.setImageDrawable(getActivity().getResources().getDrawable(USAidUtils.getImageId(currentData.sectorValue)));
         
         // show or hide text or webview
         if (currentData.abstractString.startsWith(USAidConstants.LESS_THAN_SIGN)) {

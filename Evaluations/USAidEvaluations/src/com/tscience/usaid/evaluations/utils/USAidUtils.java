@@ -124,4 +124,64 @@ public class USAidUtils {
         
     } // end makeCountryHashMap
     
+    /**
+     * Gets the image id for a given sector.
+     * 
+     * @param value The sector image id we are looking for.
+     * 
+     * @return  The image id to display for this sector.
+     */
+    public static int getImageId(int value) {
+        
+        switch (value) {
+            
+            case USAidConstants.USAID_SECTOR_AGRICULTURE: {
+                return R.drawable.sectorlist_agriculture_icon;
+            }
+
+            case USAidConstants.USAID_SECTOR_DEMOCRACY: {
+                return R.drawable.sectorlist_democracy_icon;
+            }
+
+            case USAidConstants.USAID_SECTOR_ECONOMIC: {
+                return R.drawable.sectorlist_fincance_icon;
+            }
+
+            case USAidConstants.USAID_SECTOR_EDUCATION: {
+                return R.drawable.sectorlist_education_icon;
+
+            }
+
+            case USAidConstants.USAID_SECTOR_ENVIRONMENT: {
+                return R.drawable.sectorlist_environment_icon;
+            }
+
+            case USAidConstants.USAID_SECTOR_GENDER: {
+                return R.drawable.sectorlist_gender_icon;
+            }
+
+            case USAidConstants.USAID_SECTOR_HEALTH: {
+                return R.drawable.sectorlist_health_icon;
+            }
+
+            case USAidConstants.USAID_SECTOR_SCIENCE: {
+                return R.drawable.sectorlist_technology_icon;
+            }
+
+            case USAidConstants.USAID_SECTOR_WATER: {
+                return R.drawable.sectorlist_water_icon;
+            }
+
+            case USAidConstants.USAID_SECTOR_CRISIS: {
+                return R.drawable.sectorlist_crisis_icon;
+            }
+            
+            default: {
+                return R.drawable.sectorlist_default_icon;
+            }
+                
+        } // end switch
+        
+    }
+    
 } // end USAidUtils
