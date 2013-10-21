@@ -456,6 +456,7 @@ public class USAidMainFragment extends SherlockListFragment {
          * 
          * @return Current displayed arraylist.
          */
+        @SuppressWarnings("unused")
         public ArrayList<USAidDataObject> getCurrentDisplayedArrayList() {
             
             return items;
