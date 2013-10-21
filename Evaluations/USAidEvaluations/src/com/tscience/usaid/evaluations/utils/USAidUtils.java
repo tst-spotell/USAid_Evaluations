@@ -112,7 +112,6 @@ public class USAidUtils {
         HashMap<String, Integer> countryMap = new HashMap<String, Integer>();
         
         String[] country_array = context.getResources().getStringArray(R.array.usaid_filter_country);
-//        int[] country_id_array = context.getResources().getIntArray(R.array.usaid_filter_country_id);
         
         int loopSize = country_array.length;
         

@@ -39,6 +39,9 @@ public class USAidMainActivity extends SherlockFragmentActivity {
         
     }
 
+    /**
+     * This is the alert dialog if the user has nothing to view pdf files with.
+     */
     public void noPdfViewer() {
         
         // No application to view, ask to download one
@@ -55,8 +58,6 @@ public class USAidMainActivity extends SherlockFragmentActivity {
         builder.setNegativeButton(getString(R.string.usaid_nopdf_no_thanks), null);
         builder.create().show();
         
-    }
-    
-    
+    } // end noPdfViewer
     
 } // end USAidMainActivity

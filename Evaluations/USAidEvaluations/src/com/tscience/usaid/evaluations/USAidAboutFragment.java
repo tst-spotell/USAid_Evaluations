@@ -48,7 +48,5 @@ public class USAidAboutFragment extends SherlockDialogFragment {
         return d;
         
     }
-
-    
     
 } // end USAidAboutFragment

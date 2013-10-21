@@ -23,6 +23,8 @@ import com.tscience.usaid.evaluations.utils.USAidUtils;
 
 
 /**
+ * This class displays the description dialog with more data about a list item.
+ * 
  * @author spotell at t-sciences.com
  *
  */
