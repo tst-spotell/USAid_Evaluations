@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockListFragment;
 import com.actionbarsherlock.view.Menu;
@@ -94,7 +95,7 @@ public class USAidMainFragment extends SherlockListFragment {
         
         if (currentItemId == R.id.action_filter_reset) {
             
-            setTheListData(currentData, false);
+            setTheListData(currentData, false, false);
             
             // uncheck everything
             getActivity().invalidateOptionsMenu();
@@ -136,8 +137,9 @@ public class USAidMainFragment extends SherlockListFragment {
      * 
      * @param value The array of USAidDataObject's to display.
      * @param update    Update the current data (only when pull from server).
+     * @param cachedData    False this is live data or True this is cached data.
      */
-    public void setTheListData(ArrayList<USAidDataObject> value, boolean update) {
+    public void setTheListData(ArrayList<USAidDataObject> value, boolean update, boolean cachedData) {
         
         if (update) {
             currentData = value;
@@ -161,7 +163,14 @@ public class USAidMainFragment extends SherlockListFragment {
             Log.e(LOG_TAG, "---------------------------------------- " + ignore.toString());
         }
         
-    }
+        // if cached data show toast
+        if (cachedData) {
+            
+            Toast.makeText(getActivity(), R.string.usaid_json_cache_file_toast, Toast.LENGTH_LONG).show();
+            
+        }
+        
+    } // end setTheListData
     
     /**
      * Creates a new array of USAidDataObject's for a sector.
@@ -363,7 +372,7 @@ public class USAidMainFragment extends SherlockListFragment {
         
         Log.d(LOG_TAG, "---------------------------------------- final number reports: " + newData.size());
         
-        setTheListData(newData, false);
+        setTheListData(newData, false, false);
         
     } // end displayRegions
     
