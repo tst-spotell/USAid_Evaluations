@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <integer name="usaid_sector_agriculture" >1</integer>
+    <integer name="usaid_sector_democracy" >2</integer>
+    <integer name="usaid_sector_finance" >3</integer>
+    <integer name="usaid_sector_education" >4</integer>
+    <integer name="usaid_sector_environment" >5</integer>
+    <integer name="usaid_sector_gender" >6</integer>
+    <integer name="usaid_sector_health" >7</integer>
+    <integer name="usaid_sector_technology" >8</integer>
+    <integer name="usaid_sector_water" >9</integer>
+    <integer name="usaid_sector_crisis" >10</integer>
+    
+</resources>

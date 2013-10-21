@@ -270,78 +270,78 @@
     </string-array>
     
     <integer-array name="usaid_filter_sectors_types_id">
-        <item>1</item> <!-- Agribusiness -->
-        <item>1</item> <!-- Agriculture (General) -->
-        <item>1</item> <!-- Agricultural development -->
-        <item>1</item> <!-- Agricultural enterprises and cooperatives -->
-        <item>1</item> <!-- Agricultural finance -->
-        <item>1</item> <!-- Agricultural markets -->
-        <item>1</item> <!-- Aquaculture and fisheries -->
-        <item>1</item> <!-- Forestry -->
-        <item>2</item> <!-- Civil society -->
-        <item>2</item> <!-- Democratization -->
-        <item>2</item> <!-- Elections -->
-        <item>2</item> <!-- Governance -->
-        <item>2</item> <!-- Government reform -->
-        <item>2</item> <!-- Human rights and social justice -->
-        <item>2</item> <!-- International politics -->
-        <item>2</item> <!-- Political development -->
-        <item>2</item> <!-- Public land records and registration -->
-        <item>2</item> <!-- Rule of law -->
-        <item>2</item> <!-- Social problems -->
-        <item>3</item> <!-- Economic administration -->
-        <item>3</item> <!-- Economic growth and development -->
-        <item>3</item> <!-- Economic reform -->
-        <item>3</item> <!-- Economic sectors -->
-        <item>3</item> <!-- Employment -->
-        <item>3</item> <!-- Finance -->
-        <item>3</item> <!-- Financial institutions -->
-        <item>3</item> <!-- Health finance -->
-        <item>3</item> <!-- Human capacity development -->
-        <item>3</item> <!-- International trade -->
-        <item>3</item> <!-- Natural resources management -->
-        <item>3</item> <!-- Public health care -->
-        <item>3</item> <!-- Rural areas / rural development -->
-        <item>3</item> <!-- Small scale enterprises -->
-        <item>3</item> <!-- Socioeconomic development -->
-        <item>4</item> <!-- Access to education -->
-        <item>4</item> <!-- Basic education -->
-        <item>4</item> <!-- Communications (General) -->
-        <item>4</item> <!-- Education administration -->
-        <item>4</item> <!-- Higher education -->
-        <item>4</item> <!-- Nonformal education -->
-        <item>5</item> <!-- Biological diversity and ecology -->
-        <item>5</item> <!-- Climate change -->
-        <item>5</item> <!-- Pollution -->
-        <item>6</item> <!-- Girls' education -->
-        <item>7</item> <!-- Child survival -->
-        <item>7</item> <!-- Community health care delivery -->
-        <item>7</item> <!-- Disease prevention and control -->
-        <item>7</item> <!-- Environmental / preventive health care -->
-        <item>7</item> <!-- Family planning -->
-        <item>7</item> <!-- Family planning services -->
-        <item>7</item> <!-- Famine and malnutrition -->
-        <item>7</item> <!-- Health (General) -->
-        <item>7</item> <!-- Health care case management -->
-        <item>7</item> <!-- Health delivery -->
-        <item>7</item> <!-- HIV / AIDS -->
-        <item>7</item> <!-- Immunization -->
-        <item>7</item> <!-- Malaria -->
-        <item>7</item> <!-- Maternal child health care -->
-        <item>7</item> <!-- Population surveys -->
-        <item>7</item> <!-- Tuberculosis -->
-        <item>8</item> <!-- Communications media and equipment -->
-        <item>8</item> <!-- Energy (General and research) -->
-        <item>8</item> <!-- Energy conservation -->
-        <item>8</item> <!-- Energy economics -->
-        <item>8</item> <!-- Energy supply -->
-        <item>8</item> <!-- Energy technology -->
-        <item>8</item> <!-- Information management, systems and equipment -->
-        <item>8</item> <!-- Participant training -->
-        <item>9</item> <!-- Sanitation engineering -->
-        <item>9</item> <!-- Water supply and sanitation -->
-        <item>10</item> <!-- Conflict prevention -->
-        <item>10</item> <!-- Disaster recovery -->
+        <item>@integer/usaid_sector_agriculture</item> <!-- Agribusiness -->
+        <item>@integer/usaid_sector_agriculture</item> <!-- Agriculture (General) -->
+        <item>@integer/usaid_sector_agriculture</item> <!-- Agricultural development -->
+        <item>@integer/usaid_sector_agriculture</item> <!-- Agricultural enterprises and cooperatives -->
+        <item>@integer/usaid_sector_agriculture</item> <!-- Agricultural finance -->
+        <item>@integer/usaid_sector_agriculture</item> <!-- Agricultural markets -->
+        <item>@integer/usaid_sector_agriculture</item> <!-- Aquaculture and fisheries -->
+        <item>@integer/usaid_sector_agriculture</item> <!-- Forestry -->
+        <item>@integer/usaid_sector_democracy</item> <!-- Civil society -->
+        <item>@integer/usaid_sector_democracy</item> <!-- Democratization -->
+        <item>@integer/usaid_sector_democracy</item> <!-- Elections -->
+        <item>@integer/usaid_sector_democracy</item> <!-- Governance -->
+        <item>@integer/usaid_sector_democracy</item> <!-- Government reform -->
+        <item>@integer/usaid_sector_democracy</item> <!-- Human rights and social justice -->
+        <item>@integer/usaid_sector_democracy</item> <!-- International politics -->
+        <item>@integer/usaid_sector_democracy</item> <!-- Political development -->
+        <item>@integer/usaid_sector_democracy</item> <!-- Public land records and registration -->
+        <item>@integer/usaid_sector_democracy</item> <!-- Rule of law -->
+        <item>@integer/usaid_sector_democracy</item> <!-- Social problems -->
+        <item>@integer/usaid_sector_finance</item> <!-- Economic administration -->
+        <item>@integer/usaid_sector_finance</item> <!-- Economic growth and development -->
+        <item>@integer/usaid_sector_finance</item> <!-- Economic reform -->
+        <item>@integer/usaid_sector_finance</item> <!-- Economic sectors -->
+        <item>@integer/usaid_sector_finance</item> <!-- Employment -->
+        <item>@integer/usaid_sector_finance</item> <!-- Finance -->
+        <item>@integer/usaid_sector_finance</item> <!-- Financial institutions -->
+        <item>@integer/usaid_sector_finance</item> <!-- Health finance -->
+        <item>@integer/usaid_sector_finance</item> <!-- Human capacity development -->
+        <item>@integer/usaid_sector_finance</item> <!-- International trade -->
+        <item>@integer/usaid_sector_finance</item> <!-- Natural resources management -->
+        <item>@integer/usaid_sector_finance</item> <!-- Public health care -->
+        <item>@integer/usaid_sector_finance</item> <!-- Rural areas / rural development -->
+        <item>@integer/usaid_sector_finance</item> <!-- Small scale enterprises -->
+        <item>@integer/usaid_sector_finance</item> <!-- Socioeconomic development -->
+        <item>@integer/usaid_sector_education</item> <!-- Access to education -->
+        <item>@integer/usaid_sector_education</item> <!-- Basic education -->
+        <item>@integer/usaid_sector_education</item> <!-- Communications (General) -->
+        <item>@integer/usaid_sector_education</item> <!-- Education administration -->
+        <item>@integer/usaid_sector_education</item> <!-- Higher education -->
+        <item>@integer/usaid_sector_education</item> <!-- Nonformal education -->
+        <item>@integer/usaid_sector_environment</item> <!-- Biological diversity and ecology -->
+        <item>@integer/usaid_sector_environment</item> <!-- Climate change -->
+        <item>@integer/usaid_sector_environment</item> <!-- Pollution -->
+        <item>@integer/usaid_sector_gender</item> <!-- Girls' education -->
+        <item>@integer/usaid_sector_health</item> <!-- Child survival -->
+        <item>@integer/usaid_sector_health</item> <!-- Community health care delivery -->
+        <item>@integer/usaid_sector_health</item> <!-- Disease prevention and control -->
+        <item>@integer/usaid_sector_health</item> <!-- Environmental / preventive health care -->
+        <item>@integer/usaid_sector_health</item> <!-- Family planning -->
+        <item>@integer/usaid_sector_health</item> <!-- Family planning services -->
+        <item>@integer/usaid_sector_health</item> <!-- Famine and malnutrition -->
+        <item>@integer/usaid_sector_health</item> <!-- Health (General) -->
+        <item>@integer/usaid_sector_health</item> <!-- Health care case management -->
+        <item>@integer/usaid_sector_health</item> <!-- Health delivery -->
+        <item>@integer/usaid_sector_health</item> <!-- HIV / AIDS -->
+        <item>@integer/usaid_sector_health</item> <!-- Immunization -->
+        <item>@integer/usaid_sector_health</item> <!-- Malaria -->
+        <item>@integer/usaid_sector_health</item> <!-- Maternal child health care -->
+        <item>@integer/usaid_sector_health</item> <!-- Population surveys -->
+        <item>@integer/usaid_sector_health</item> <!-- Tuberculosis -->
+        <item>@integer/usaid_sector_technology</item> <!-- Communications media and equipment -->
+        <item>@integer/usaid_sector_technology</item> <!-- Energy (General and research) -->
+        <item>@integer/usaid_sector_technology</item> <!-- Energy conservation -->
+        <item>@integer/usaid_sector_technology</item> <!-- Energy economics -->
+        <item>@integer/usaid_sector_technology</item> <!-- Energy supply -->
+        <item>@integer/usaid_sector_technology</item> <!-- Energy technology -->
+        <item>@integer/usaid_sector_technology</item> <!-- Information management, systems and equipment -->
+        <item>@integer/usaid_sector_technology</item> <!-- Participant training -->
+        <item>@integer/usaid_sector_water</item> <!-- Sanitation engineering -->
+        <item>@integer/usaid_sector_water</item> <!-- Water supply and sanitation -->
+        <item>@integer/usaid_sector_crisis</item> <!-- Conflict prevention -->
+        <item>@integer/usaid_sector_crisis</item> <!-- Disaster recovery -->
     </integer-array>
     
     <string-array name="usaid_filter_initiatives">
