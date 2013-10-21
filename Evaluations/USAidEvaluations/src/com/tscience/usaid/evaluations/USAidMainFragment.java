@@ -451,18 +451,6 @@ public class USAidMainFragment extends SherlockListFragment {
             
         }
         
-        /**
-         * Gets the current displayed array list for sorting.
-         * 
-         * @return Current displayed arraylist.
-         */
-        @SuppressWarnings("unused")
-        public ArrayList<USAidDataObject> getCurrentDisplayedArrayList() {
-            
-            return items;
-            
-        }
-        
     } // end USAidListAdapter
     
     /**
