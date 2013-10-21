@@ -1,15 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2013 Thermopylae Sciences and Technology. All rights reserved. -->
 <resources>
     
+    <!-- Agriculture and Food Security -->
     <integer name="usaid_sector_agriculture" >1</integer>
+    <!-- Democracy, Human Rights and Governance -->
     <integer name="usaid_sector_democracy" >2</integer>
+    <!-- Economic Growth and Trade -->
     <integer name="usaid_sector_finance" >3</integer>
+    <!-- Education -->
     <integer name="usaid_sector_education" >4</integer>
+    <!-- Environment and Global Climate Change -->
     <integer name="usaid_sector_environment" >5</integer>
+    <!-- Gender Equality and Women's Empowerment -->
     <integer name="usaid_sector_gender" >6</integer>
+    <!-- Global Health -->
     <integer name="usaid_sector_health" >7</integer>
+    <!-- Science, Technology and Innovation -->
     <integer name="usaid_sector_technology" >8</integer>
+    <!-- Water and Sanitation -->
     <integer name="usaid_sector_water" >9</integer>
+    <!-- Working in Crises and Conflict -->
     <integer name="usaid_sector_crisis" >10</integer>
     
 </resources>

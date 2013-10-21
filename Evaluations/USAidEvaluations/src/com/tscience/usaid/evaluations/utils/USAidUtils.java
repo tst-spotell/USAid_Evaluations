@@ -10,6 +10,7 @@ import java.util.Map;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 
 import com.tscience.usaid.evaluations.R;
 import com.tscience.usaid.evaluations.USAidConstants;
@@ -53,6 +54,7 @@ public class USAidUtils {
         int loopSize = sector_array.length;
         
         for (int i = 0; i < loopSize; i++) {
+            Log.d("Utils", "-------------------- sector: " + sector_array[i] + " ------ id: " + sector_id_array[i]);
             sectorMap.put(sector_array[i], sector_id_array[i]);
         }
         
@@ -132,51 +134,52 @@ public class USAidUtils {
      */
     public static int getImageId(int value) {
         
+        Log.d("getImageId", "---------------------------------------- value: " + value);
+        
         switch (value) {
             
             case USAidConstants.USAID_SECTOR_AGRICULTURE: {
-                return R.drawable.sectorlist_agriculture_icon;
+                return R.drawable.usaid_sectorlist_agriculture_icon;
             }
 
             case USAidConstants.USAID_SECTOR_DEMOCRACY: {
-                return R.drawable.sectorlist_democracy_icon;
+                return R.drawable.usaid_sectorlist_democracy_icon;
             }
 
             case USAidConstants.USAID_SECTOR_ECONOMIC: {
-                return R.drawable.sectorlist_fincance_icon;
+                return R.drawable.usaid_sectorlist_fincance_icon;
             }
 
             case USAidConstants.USAID_SECTOR_EDUCATION: {
-                return R.drawable.sectorlist_education_icon;
-
+                return R.drawable.usaid_sectorlist_education_icon;
             }
 
             case USAidConstants.USAID_SECTOR_ENVIRONMENT: {
-                return R.drawable.sectorlist_environment_icon;
+                return R.drawable.usaid_sectorlist_environment_icon;
             }
 
             case USAidConstants.USAID_SECTOR_GENDER: {
-                return R.drawable.sectorlist_gender_icon;
+                return R.drawable.usaid_sectorlist_gender_icon;
             }
 
             case USAidConstants.USAID_SECTOR_HEALTH: {
-                return R.drawable.sectorlist_health_icon;
+                return R.drawable.usaid_sectorlist_health_icon;
             }
 
             case USAidConstants.USAID_SECTOR_SCIENCE: {
-                return R.drawable.sectorlist_technology_icon;
+                return R.drawable.usaid_sectorlist_technology_icon;
             }
 
             case USAidConstants.USAID_SECTOR_WATER: {
-                return R.drawable.sectorlist_water_icon;
+                return R.drawable.usaid_sectorlist_water_icon;
             }
 
             case USAidConstants.USAID_SECTOR_CRISIS: {
-                return R.drawable.sectorlist_crisis_icon;
+                return R.drawable.usaid_sectorlist_crisis_icon;
             }
             
             default: {
-                return R.drawable.sectorlist_default_icon;
+                return R.drawable.usaid_sectorlist_default_icon;
             }
                 
         } // end switch
