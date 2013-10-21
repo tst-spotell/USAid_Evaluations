@@ -446,6 +446,11 @@
     </item>
     
     <item
+        android:id="@+id/action_load_cache"
+        android:showAsAction="never"
+        android:title="@string/usaid_action_load_cache"/>
+    
+    <item
         android:id="@+id/action_download_pdf_viewer"
         android:showAsAction="never"
         android:title="@string/usaid_action_download_pdf_viewer"/>

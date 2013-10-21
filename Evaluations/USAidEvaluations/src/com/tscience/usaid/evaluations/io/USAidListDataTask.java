@@ -113,8 +113,6 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
                 
                 urlString = params[0];
                 
-                
-                
             } else {
                 // no values passed in we are done
                 return null;

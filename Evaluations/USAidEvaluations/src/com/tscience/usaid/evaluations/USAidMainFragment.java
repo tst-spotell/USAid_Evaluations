@@ -102,7 +102,12 @@ public class USAidMainFragment extends SherlockListFragment {
             
             return true;
             
-        } else if (currentItemId == R.id.action_download_pdf_viewer) {
+        } else if (currentItemId == R.id.action_load_cache) {
+            
+            USAidListDataTask usaidListDataTask = new USAidListDataTask(this);
+            usaidListDataTask.execute("");
+                
+        }  else if (currentItemId == R.id.action_download_pdf_viewer) {
             
             USAidUtils.getAdobeReader(getActivity());
             return true;

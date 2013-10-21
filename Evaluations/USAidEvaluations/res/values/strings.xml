@@ -96,7 +96,7 @@
     
     <!-- json file -->
     <string name="usaid_json_cache_file">jsonCacheFile</string>
-    <string name="usaid_json_cache_file_toast">Unable to connect to network, using cached data.</string>
+    <string name="usaid_json_cache_file_toast">Using cached data.</string>
     
     <!-- sectors -->
     <string name="usaid_action_filter_sector">Sector</string>
@@ -205,6 +205,7 @@
     <string name="usaid_action_filter_region_africa">SUB SAHARAN AFRICA</string>
     
     <string name="usaid_action_download_pdf_viewer">Download PDF Viewer</string>
+    <string name="usaid_action_load_cache">Load Cached Data</string>
     <string name="usaid_action_about">About</string>
     
     <!-- pdf viewer -->
