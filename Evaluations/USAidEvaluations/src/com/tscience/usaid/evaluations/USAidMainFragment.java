@@ -104,6 +104,9 @@ public class USAidMainFragment extends SherlockListFragment {
             
         } else if (currentItemId == R.id.action_load_cache) {
             
+            // uncheck everything
+            getActivity().invalidateOptionsMenu();
+            
             USAidListDataTask usaidListDataTask = new USAidListDataTask(this);
             usaidListDataTask.execute("");
                 

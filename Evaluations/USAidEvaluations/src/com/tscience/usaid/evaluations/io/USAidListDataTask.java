@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Map;
 
 import org.apache.http.HttpEntity;
@@ -310,7 +311,7 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
         
         // date formater
         String format = "yyyy-mm-dd";
-        SimpleDateFormat formater = new SimpleDateFormat(format);
+        SimpleDateFormat formater = new SimpleDateFormat(format, Locale.US);
         
         // parse the JSONArray and create the USAidDataObject array
         for (int i = 0; i < arraySize; i++) {
