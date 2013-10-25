@@ -226,6 +226,19 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
                 
             }
             catch (Exception ignore) {
+                
+                // turn the progress dialog off
+                try {
+                    progressDialog.dismiss();
+                } catch (Exception ignoreAgain) {}
+                
+                if (usaidMainFragmentReference != null) {
+                    
+                    USAidMainFragment usaidMainFragment = usaidMainFragmentReference.get();
+                    usaidMainFragment.noCachedData();
+                    
+                }
+                
                 ignore.printStackTrace();
                 return;
             }
@@ -255,12 +268,18 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
 
             // write the json object
             try {
-              outputStream = context.openFileOutput(filename, Context.MODE_PRIVATE);
-              outputStream.write(string.getBytes());
-              outputStream.close();
+                outputStream = context.openFileOutput(filename, Context.MODE_PRIVATE);
+                outputStream.write(string.getBytes());
+                outputStream.close();
             } catch (Exception e) {
-              e.printStackTrace();
-              return;
+                
+                // turn the progress dialog off
+                try {
+                    progressDialog.dismiss();
+                } catch (Exception ignoreAgain) {}
+                
+                e.printStackTrace();
+                return;
             }
             
         } // end cache data

@@ -177,12 +177,25 @@ public class USAidMainFragment extends SherlockListFragment {
         
     } // end setTheListData
     
+    public void noCachedData() {
+        
+        Toast.makeText(getActivity(), R.string.usaid_cache_nodata, Toast.LENGTH_LONG).show();
+        
+    }
+    
     /**
      * Creates a new array of USAidDataObject's for a sector.
      * 
      * @param value The sorted list with sector selections.
      */
     private void displaySectors() {
+        
+        if ((currentData == null) || (currentData.size() == 0)) {
+            
+            setTheListData(null, false, false);
+            return;
+            
+        }
         
         // get the submenu
         SubMenu subMenu = myMenu.findItem(R.id.action_sector).getSubMenu();
@@ -258,6 +271,13 @@ public class USAidMainFragment extends SherlockListFragment {
      */
     private void displayCountryAndRegions(ArrayList<USAidDataObject> value) {
         
+        if ((value == null) || (value.size() == 0)) {
+            
+            setTheListData(null, false, false);
+            return;
+            
+        }
+        
         // get the region submenu
         SubMenu subMenu = myMenu.findItem(R.id.action_region).getSubMenu();
         
@@ -331,7 +351,7 @@ public class USAidMainFragment extends SherlockListFragment {
             newData = value;
             
         } else {
-            
+                
             // only display filtered items
             newData = new ArrayList<USAidDataObject>();
             
@@ -376,6 +396,7 @@ public class USAidMainFragment extends SherlockListFragment {
         }
         
         Log.d(LOG_TAG, "---------------------------------------- final number reports: " + newData.size());
+        
         
         setTheListData(newData, false, false);
         
