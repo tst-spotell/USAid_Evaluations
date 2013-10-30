@@ -111,6 +111,7 @@
     <string name="usaid_action_filter_sector_health">Health</string>
     <string name="usaid_action_filter_sector_technology">Technology</string>
     <string name="usaid_action_filter_sector_water">Water</string>
+    <string name="usaid_action_filter_sector_other">Other</string>
     
     <!-- sub sectors -->
     <string name="usaid_action_filter_sector_agriculture_agribusiness">Agribusiness</string>

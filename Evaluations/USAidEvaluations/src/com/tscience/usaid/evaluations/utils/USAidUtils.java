@@ -286,6 +286,10 @@ public class USAidUtils {
                 return USAidConstants.USAID_SECTOR_CRISIS;
             }
             
+            case R.id.action_filter_sector_other: {
+                return USAidConstants.USAID_SECTOR_OTHER;
+            }
+            
         } // end switch
 
         return 0;

@@ -220,7 +220,7 @@ public class USAidMainFragment extends SherlockListFragment {
                 
                 int checkedNum = Integer.valueOf(USAidUtils.getMenuItemSectorConstant(menuItem.getItemId()));
                 
-                if (checkedNum > 0) {
+                if (checkedNum >= 0) {
                     checkedVector.add(checkedNum);
                 }
                 

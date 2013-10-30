@@ -151,6 +151,7 @@ public class USAidConstants {
     };
 	
 	// sector image values
+    public static final int USAID_SECTOR_OTHER = 0;  // undefined sector
 	public static final int USAID_SECTOR_AGRICULTURE = 1;  // Agriculture and Food Security
 	public static final int USAID_SECTOR_DEMOCRACY = 2;  // Democracy, Human Rights and Governance
 	public static final int USAID_SECTOR_ECONOMIC = 3;  // Economic Growth and Trade
