@@ -165,6 +165,7 @@ public class USAidConstants {
 	public static final String USAID_BUNDLE_DATA_OBJECT = "usaid_data";
 	public static final String LESS_THAN_SIGN = "<";
 	
+	public static final int USAID_REGION_OTHER = 0;
 	public static final int USAID_REGION_AFGHANISTAN = 1;
     public static final int USAID_REGION_PAKISTAN = 2;
     public static final int USAID_REGION_ASIA = 3;

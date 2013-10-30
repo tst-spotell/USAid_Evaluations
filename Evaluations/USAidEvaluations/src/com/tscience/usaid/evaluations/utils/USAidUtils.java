@@ -225,6 +225,10 @@ public class USAidUtils {
                 return USAidConstants.USAID_REGION_AFRICA;
             }
             
+            case R.id.action_filter_region_other: {
+                return USAidConstants.USAID_REGION_OTHER;
+            }
+            
         } // end switch
 
         return 0;
