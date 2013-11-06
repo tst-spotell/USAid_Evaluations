@@ -98,14 +98,14 @@ public class USAidMainFragment extends SherlockListFragment {
             setTheListData(currentData, false, false);
             
             // uncheck everything
-            getActivity().invalidateOptionsMenu();
+            getActivity().supportInvalidateOptionsMenu();
             
             return true;
             
         } else if (currentItemId == R.id.action_load_cache) {
             
             // uncheck everything
-            getActivity().invalidateOptionsMenu();
+            getActivity().supportInvalidateOptionsMenu();
             
             USAidListDataTask usaidListDataTask = new USAidListDataTask(this);
             usaidListDataTask.execute("");
