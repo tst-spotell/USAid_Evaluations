@@ -52,7 +52,7 @@ public class USAidMainFragment extends SherlockListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         
-        View listView = inflater.inflate(R.layout.fragment_usaid_main, container, false);
+        View listView = inflater.inflate(R.layout.usaid_main_fragment, container, false);
             
         // start getting data
         USAidListDataTask usaidListDataTask = new USAidListDataTask(this);

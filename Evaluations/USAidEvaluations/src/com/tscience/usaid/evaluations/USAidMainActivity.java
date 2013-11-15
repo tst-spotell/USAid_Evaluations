@@ -24,7 +24,7 @@ public class USAidMainActivity extends SherlockFragmentActivity {
         super.onCreate(savedInstanceState);
         
         // set the view
-        setContentView(R.layout.activity_usaid_main);
+        setContentView(R.layout.usaid_main_activity);
         
         USAidMainFragment usaidMainFragment = new USAidMainFragment();
         

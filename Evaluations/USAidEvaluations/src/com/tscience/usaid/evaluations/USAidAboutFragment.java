@@ -31,7 +31,7 @@ public class USAidAboutFragment extends SherlockDialogFragment {
         
         // Inflate and set the layout for the dialog
         // Pass null as the parent view because its going in the dialog layout
-        View descriptionView = inflater.inflate(R.layout.fragment_usaid_about, null);
+        View descriptionView = inflater.inflate(R.layout.usaid_about_fragment, null);
         
         builder.setView(descriptionView)
         
