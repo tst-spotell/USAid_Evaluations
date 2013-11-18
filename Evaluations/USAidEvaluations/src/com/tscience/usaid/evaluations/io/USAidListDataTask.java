@@ -292,6 +292,9 @@ public class USAidListDataTask extends UsaidHttpsAsyncTask<String, Void, JSONObj
         }
         catch (JSONException e1) {
             e1.printStackTrace();
+            
+            // TODO error here is fatal 
+            
         }
         
         // get the size of the array

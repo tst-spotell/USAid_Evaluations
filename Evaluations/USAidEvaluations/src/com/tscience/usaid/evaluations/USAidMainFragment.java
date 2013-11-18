@@ -180,6 +180,9 @@ public class USAidMainFragment extends SherlockListFragment {
         
     } // end setTheListData
     
+    /**
+     * Called when there is no network or cached data to display.
+     */
     public void noCachedData() {
         
         Toast.makeText(getActivity(), R.string.usaid_cache_nodata, Toast.LENGTH_LONG).show();
