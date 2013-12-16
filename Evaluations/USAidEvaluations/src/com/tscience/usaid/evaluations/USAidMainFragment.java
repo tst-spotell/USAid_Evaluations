@@ -455,7 +455,7 @@ public class USAidMainFragment extends SherlockListFragment {
                 
             }
             
-            // the jagwireDataObject object we are working with
+            // the usaid DataObject object we are working with
             usaidViewHolder.usaidDataObject = items.get(position);
             
             // show the date published
@@ -471,7 +471,17 @@ public class USAidMainFragment extends SherlockListFragment {
             if (usaidViewHolder.usaidDataObject.abstractString.length() == 0) {
                 usaidViewHolder.descriptionView.setText(getActivity().getString(R.string.usaid_description_value_none));
             } else {
-                usaidViewHolder.descriptionView.setText(usaidViewHolder.usaidDataObject.abstractString);
+                
+                if (usaidViewHolder.usaidDataObject.abstractString.startsWith("<")) {
+                    
+                    String desString = usaidViewHolder.usaidDataObject.abstractString.replaceAll("\\<.*?>","");
+                    usaidViewHolder.descriptionView.setText(desString);
+                    
+                } else {
+                
+                    usaidViewHolder.descriptionView.setText(usaidViewHolder.usaidDataObject.abstractString);
+                
+                }
             }
             
             return currentView;
